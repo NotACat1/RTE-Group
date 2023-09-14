@@ -1,8 +1,7 @@
 .advantages-text {
-    font-family: Montserrat;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 130%;
-    color: #fff;
+	font-family: Montserrat;
+	font-style: normal;
+	color: #fff;
+	margin: 0;
+	padding: 0;
 }
