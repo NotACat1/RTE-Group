@@ -6,16 +6,16 @@
 Самый верхний в списке будет Prettier - Code Formatter.
 Нажимаем Install
 
-В настройках VSCode выбираем Settings
+В настройках VSCode выбираем Settings 
 Вбиваем @ext:esbenp.prettier-vscode
 
-В поле Prettier: Config Path вносим путь до файла
+В поле Prettier: Config Path вносим путь до файла 
 .prettierrc.json
 (Путь берем путем нажатия на файл .prettierrc.json правой кнопкой мыши - Copy Path)
 
-Установка завершена.
+Установка завершена. 
 
-## Использование:
+## Использование: 
 
 Для выбора доступных команд открываем меню нажатием клавиш:
 Ctrl - Shift - P (Windows)
@@ -32,4 +32,6 @@ Shift - Option - F (MacOS)
 Переходим в настройки VSCode
 Вбиваем Formatter
 В поле Editor: Default Formatter выбираем Prettier
-В поле Editor: Format On Save ставим галку.
+В поле Editor: Format On Save ставим галку. 
+
+
