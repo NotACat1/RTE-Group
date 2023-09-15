@@ -20,17 +20,14 @@ npm install lint-staged --save-dev
 // package.json
 {
   // ...
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{js,jsx}": "eslint --fix",
     "*.{css,scss}": "stylelint --fix",
     "*.{json,md}": "prettier --write",
-    "*.html": "htmlhint"
+    "*.html": [
+      "prettier --write",
+      "htmlhint"
+    ]
   }
   // ...
 }
@@ -71,16 +68,18 @@ npm install lint-staged --save-dev
 npm install husky --save-dev
 ```
 
-Затем в вашем `package.json` добавьте секцию `"commit-msg"`:
+Добавление скриптов:
 
-```json
-// package.json
-"husky": {
-  "hooks": {
-    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-    "pre-commit": "lint-staged"
-  }
-}
+```bash
+# ./.husky/commit-msg
+#!/bin/sh
+npx commitlint --edit $1
+```
+
+```bash
+# ./.husky/pre-commit
+#!/bin/sh
+npx lint-staged
 ```
 
 ## Установка линтеров
@@ -102,8 +101,22 @@ npm install eslint --save-dev
 ```js
 // .eslintrc.js
 module.exports = {
-  extends: ['eslint:recommended'],
-}
+  'env': {
+    'browser': true,
+    'node': true,
+    'es2021': true
+  },
+  'extends': 'eslint:recommended',
+  'parserOptions': {
+    'ecmaVersion': 12,
+    'sourceType': 'module'
+  },
+  'rules': {
+    'indent': ['error', 2],
+    'quotes': ['error', 'single'],
+    'semi': ['error', 'always']
+  }
+};
 ```
 
 ### Установка линтера `Stylelint`
@@ -220,6 +233,9 @@ npm install lint-staged --save-dev
   "*.{js,jsx}": "eslint --fix",
   "*.{css,scss}": "stylelint --fix",
   "*.{json,md}": "prettier --write",
-  "*.html": "htmlhint"
+  "*.html": [
+    "prettier --write",
+    "htmlhint"
+  ]
 }
 ```
