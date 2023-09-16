@@ -1,0 +1,77 @@
+{
+  "name": "rte-group",
+  "version": "1.0.0",
+  "description": "Транспортная компания, специализирующаяся на крупногабаритных и негабаритных перевозках",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "HTML5",
+    "CSS",
+    "РТ Экспресс"
+  ],
+  "authors": [
+    {
+      "name": "Ильяс Сибгатуллин",
+      "email": "i.sibgatullin59@gmail.com",
+      "url": "https://github.com/BJuice1984"
+    },
+    {
+      "name": "Даниил Рябов",
+      "email": "notacat.mail@gmail.com",
+      "url": "https://github.com/NotACat1"
+    },
+    {
+      "name": "Виктор Воронков",
+      "email": "Victorv1986@yandex.ru",
+      "url": "https://github.com/VictorV77"
+    },
+    {
+      "name": "Анна Кособуцкая",
+      "email": "akosobutskaya@yandex.ru",
+      "url": "https://github.com/akosobutskaya"
+    },
+    {
+      "name": "Екатерина Яковлева",
+      "email": "regspamm@yandex.ru",
+      "url": "https://github.com/llanaba"
+    },
+    {
+      "name": "Андрей Ланцов",
+      "email": "andreyonohin88@gmail.com",
+      "url": "https://github.com/Raido13"
+    },
+    {
+      "name": "Богдан Тимощук",
+      "email": "bogdan10050@gmail.com",
+      "url": "https://github.com/bogdaryan"
+    },
+    {
+      "name": "Светлана Подсобляева",
+      "email": "sa.podsoblyaeva@gmail.com",
+      "url": "https://github.com/Sapodsoblyaeva"
+    }
+  ],
+  "license": "ISC",
+  "lint-staged": {
+    "*.{js,jsx}": "eslint --fix",
+    "*.{css,scss}": "stylelint --fix",
+    "*.{json,md}": "prettier --write",
+    "*.html": [
+      "prettier --write",
+      "htmlhint"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "eslint": "^8.49.0",
+    "htmlhint": "^1.1.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "normalize.css": "^8.0.1",
+    "prettier": "^3.0.3",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "webpack": "^5.88.2"
+  }
+}
