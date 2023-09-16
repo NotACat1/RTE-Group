@@ -2,16 +2,10 @@
 
 ## Минимальные действия
 
-Откройте терминал в корневой папке вашего проекта и выполните команды:
+Откройте терминал в корневой папке вашего проекта и выполните команду:
 
 ```bash
-npm install husky --save-dev
-npm install eslint --save-dev
-npm install stylelint --save-dev
-npm install prettier --save-dev
-npm install htmlhint --save-dev
-npm install @commitlint/{config-conventional,cli} --save-dev
-npm install lint-staged --save-dev
+./init.sh
 ```
 
 Затем в вашем `package.json` (для разработчика, настраивающего `WebPack`):
