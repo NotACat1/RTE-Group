@@ -9,6 +9,7 @@
   font-size: $size;
   font-weight: $weight;
   line-height: $line-height;
+}
 
 @mixin background-color($color) {
   background-color: $color;
@@ -21,4 +22,4 @@
 
 @mixin border-color($color) {
   border-color: $color;
-
+}

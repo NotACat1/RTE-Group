@@ -18,10 +18,7 @@
     "*.{js,jsx}": "eslint --fix",
     "*.{css,scss}": "stylelint --fix",
     "*.{json,md}": "prettier --write",
-    "*.html": [
-      "prettier --write",
-      "htmlhint"
-    ]
+    "*.html": ["prettier --write", "htmlhint"]
   }
   // ...
 }
@@ -95,21 +92,21 @@ npm install eslint --save-dev
 ```js
 // .eslintrc.js
 module.exports = {
-  'env': {
-    'browser': true,
-    'node': true,
-    'es2021': true
+  env: {
+    browser: true,
+    node: true,
+    es2021: true,
   },
-  'extends': 'eslint:recommended',
-  'parserOptions': {
-    'ecmaVersion': 12,
-    'sourceType': 'module'
+  extends: "eslint:recommended",
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: "module",
   },
-  'rules': {
-    'indent': ['error', 2],
-    'quotes': ['error', 'single'],
-    'semi': ['error', 'always']
-  }
+  rules: {
+    indent: ["error", 2],
+    quotes: ["error", "single"],
+    semi: ["error", "always"],
+  },
 };
 ```
 
@@ -202,7 +199,7 @@ npm install @commitlint/{config-conventional,cli} --save-dev
 
 ```js
 // commitlint.config.js
-module.exports = { extends: ['@commitlint/config-conventional'] }
+module.exports = { extends: ["@commitlint/config-conventional"] };
 ```
 
 Этот файл указывает `commitlint` использовать стандартные настройки соглашения о стиле коммитов.
