@@ -17,7 +17,7 @@
 Импортируйте `normalize.css` в вашем проекте: В файле, где вы хотите использовать `normalize.css`, добавьте следующую строку в начало файла:
 
 ```js
-import 'normalize.css';
+import "normalize.css";
 ```
 
 Этот импорт добавит стили из `normalize.css` в ваш проект.
