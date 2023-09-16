@@ -1,0 +1,25 @@
+
+@mixin section-title($size, $weight, $line-height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin paragraph-styles($size, $weight, $line-height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin background-color($color) {
+  background-color: $color;
+}
+
+@mixin button-card-styles($color) {
+  border: 1px solid $color;
+  color: $color;
+}
+
+@mixin border-color($color) {
+  border-color: $color;
+}
