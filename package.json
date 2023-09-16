@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "Транспортная компания, специализирующаяся на крупногабаритных и негабаритных перевозках",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "install": "sh ./scripts/install.sh",
+    "lint-fix": "npx eslint --fix ./*.{js,jsx}",
+    "stylelint-fix": "npx stylelint --fix **/*.{css,scss}",
+    "prettier-fix": "npx prettier --write ./*.{json,md}",
+    "htmlhint-fix": "npx prettier --write ./*.html && npx htmlhint",
+    "all-fix": "npm run lint-fix && npm run stylelint-fix && npm run prettier-fix && npm run htmlhint-fix"
+  },
   "keywords": [
     "HTML5",
     "CSS",
