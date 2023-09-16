@@ -6,7 +6,7 @@ if ! npm i webpack --save-dev; then
   exit 1;
 fi
 
-packages=("husky" "eslint" "stylelint" "prettier" "htmlhint" "lint-staged" "normalize.css");
+packages=("husky" "eslint" "stylelint" "stylelint-config-standard" "prettier" "htmlhint" "lint-staged" "normalize.css");
 
 for package in "${packages[@]}"
 do
