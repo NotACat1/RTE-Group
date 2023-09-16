@@ -1,113 +1,63 @@
-@mixin header-link($size, $weight, $line-height) {
-  font-size: $size;
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin text {
+  text-rendering: optimizeLegibility;
+  text-decoration: none;
+  letter-spacing: 0;
   font-style: normal;
-  font-weight: $weight;
+}
+
+@mixin text-format($font-size, $font-weight, $line-height) {
+  font-size: $font-size;
+  font-weight: $font-weight;
   line-height: $line-height;
+}
+
+@mixin text_type_section {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+@mixin text_type_regular {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@mixin text_type_card-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+
+@mixin text_type_fail {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: $color_type_fail;
+}
+
+@mixin text_type_form {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@mixin text_type_header {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+@mixin text_type_footer {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
   text-decoration-line: underline;
-}
-
-@mixin footer-link($size, $weight, $line-height) {
-  font-size: $size;
-  font-style: normal;
-  font-weight: $weight;
-  line-height: $line-height;
-  text-decoration-line: underline;
-}
-
-@mixin section-title($size, $weight, $line-height) {
-  font-size: $size;
-  font-weight: $weight;
-  line-height: $line-height;
-}
-
-@mixin paragraph($size, $weight, $line-height) {
-  font-size: $size;
-  font-weight: $weight;
-  line-height: $line-height;
-}
-
-// HERO //
-@mixin hero-title($color, $font-size, $font-weight, $line-height) {
-  font-size: $font-size;
-  line-height: $line-height;
-  font-weight: $font-weight;
-  color: $color;
-  font-style: normal;
-}
-
-@mixin hero-subtitle($color, $font-size, $font-weight, $line-height) {
-  font-size: $font-size;
-  line-height: $line-height;
-  font-weight: $font-weight;
-  color: $color;
-  font-style: normal;
-}
-
-@mixin hero-text-accent($color) {
-  color: $color;
-}
-
-// CASE PAGE //
-@mixin case-card($bg-color, $radius-size, $border-color, $text-color) {
-  background-color: $bg-color;
-  border-radius: $radius-size;
-  border: 1px solid $border-color;
-  color: $text-color;
-
-  &:hover {
-    border: 1px solid #fff;
-  }
-}
-
-@mixin case-card-img($width, $height) {
-  max-width: $width;
-  max-height: $height;
-  object-fit: cover;
-}
-
-@mixin case-card-title($color, $font-size, $font-weight, $line-height) {
-  font-size: $font-size;
-  line-height: $line-height;
-  font-weight: $font-weight;
-  color: $color;
-  font-style: normal;
-}
-
-@mixin case-card-text($color, $font-size, $font-weight, $line-height) {
-  font-size: $font-size;
-  line-height: $line-height;
-  font-weight: $font-weight;
-  color: $color;
-  font-style: normal;
-}
-
-@mixin case-card-paragraph(
-  $color,
-  $font-size,
-  $font-weight,
-  $line-height,
-  $bg-color,
-  $radius-size
-) {
-  color: $color;
-  font-size: $font-size;
-  font-style: normal;
-  font-weight: $font-weight;
-  line-height: $line-height;
-  background-color: $bg-color;
-  border-radius: $radius-size;
-}
-
-// COLORS //
-@mixin background-color($color) {
-  background-color: $color;
-}
-
-@mixin button-card($color) {
-  border: 1px solid $color;
-  color: $color;
-}
-
-@mixin border-color($color) {
-  border-color: $color;
+  color: $colorLinkFooter;
 }
