@@ -1,0 +1,41 @@
+/* Лицензия SIL Open Font License v1.10 */
+
+/* normal */
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+
+  /* 800  — Montserrat-ExtraBold */
+  @if font-weight == 800 {
+    src:
+      url('@fonts/Montserrat/Montserrat-ExtraBold.woff2') format('woff2'),
+      url('@fonts/Montserrat/Montserrat-ExtraBold.woff') format('woff');
+  }
+
+  /* 700  — Montserrat-Bold */
+  @if font-weight == 700 {
+    src:
+      url('@fonts/Montserrat/Montserrat-Bold.woff2') format('woff2'),
+      url('@fonts/Montserrat/Montserrat-Bold.woff') format('woff');
+  }
+
+  /* 600  — Montserrat-SemiBold */
+  @if font-weight == 600 {
+    src:
+      url('@fonts/Montserrat/Montserrat-SemiBold.woff2') format('woff2'),
+      url('@fonts/Montserrat/Montserrat-SemiBold.woff') format('woff');
+  }
+
+  /* 500  — Montserrat-Medium */
+  @if font-weight == 500 {
+    src:
+      url('@fonts/Montserrat/Montserrat-Medium.woff2') format('woff2'),
+      url('@fonts/Montserrat/Montserrat-Medium.woff') format('woff');
+  }
+
+  /* 400  — Montserrat-Regular */
+  font-weight: 400;
+  src:
+    url('@fonts/Montserrat/Montserrat-Regular.woff2') format('woff2'),
+    url('@fonts/Montserrat/Montserrat-Regular.woff') format('woff');
+}
