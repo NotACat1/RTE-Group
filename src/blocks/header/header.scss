@@ -1,10 +1,10 @@
-@import '../../vendor/variables.scss';
-@import '../../vendor/mixins.scss';
+@import url('../../scss/mixins/mixins.scss');
+@import url('../../scss/mixins/variables.scss');
 
 .header {
   display: flex;
   flex-direction: column;
-  margin: 0 auto 0;
+  margin: 0 auto;
 
   &__container {
     background-color: $bgGrayColor;
@@ -38,6 +38,7 @@
 
   &__phone-number {
     @include text_type_header;
+
     margin: 0;
     white-space: nowrap;
   }
@@ -46,6 +47,7 @@
     @include text_type_header;
     @include button_type_fill;
     @include button_type_outline;
+
     margin-left: 24px;
     border-radius: 32px;
     color: $white;
@@ -70,6 +72,7 @@
   &__link {
     @include text_type_header;
     @include text;
+
     color: $white;
     padding: 8px 16px;
     margin-right: 16px;
@@ -78,6 +81,7 @@
   &__link:last-of-type {
     margin-right: 0;
   }
+
   &__popup {
     visibility: hidden;
     opacity: 0;
@@ -87,12 +91,12 @@
   }
 }
 
-@media screen and (max-width: $screenWidthMedium) {
+@media screen and (width <= 1079px) {
   .header {
     max-width: 768px;
 
     &__logo {
-      margin: 8px 0 8px 0;
+      margin: 8px 0;
     }
 
     &__contacts {
@@ -106,7 +110,7 @@
   }
 }
 
-@media screen and (max-width: $screenWidthSmall) {
+@media screen and (width <= 767px) {
   .header {
     max-width: 360px;
     width: 100%;
@@ -160,7 +164,8 @@
       opacity: 1;
       visibility: visible;
     }
-//ВАЖНО!!! Внимание!! Код частично дублируется
+
+    /* ВАЖНО!!! Внимание!! Код частично дублируется */
     &__popup-nav-links {
       max-width: 312px;
       width: 100%;
@@ -174,6 +179,7 @@
       @include text_type_header;
       @include button_type_fill;
       @include button_type_outline;
+
       margin: 216px 16px 24px;
       border-radius: 32px;
       color: $white;
