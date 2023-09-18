@@ -1,0 +1,198 @@
+@import '../../vendor/variables.scss';
+@import '../../vendor/mixins.scss';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0;
+
+  &__container {
+    background-color: $bgGrayColor;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    margin: 8px auto 8px 100px;
+  }
+
+  &__logo_small {
+    display: none;
+  }
+
+  &__contacts {
+    margin: 8px 100px 8px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__call-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+
+  &__phone-number {
+    @include text_type_header;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  &__place-order-btn {
+    @include text_type_header;
+    @include button_type_fill;
+    @include button_type_outline;
+    margin-left: 24px;
+    border-radius: 32px;
+    color: $white;
+    width: 173px;
+    height: 40px;
+    padding: 0;
+  }
+
+  &__list-btn {
+    display: none;
+  }
+
+  &__list-close-btn {
+    display: none;
+  }
+
+  &__nav-links {
+    margin: 0 100px 8px;
+    padding-top: 8px;
+  }
+
+  &__link {
+    @include text_type_header;
+    @include text;
+    color: $white;
+    padding: 8px 16px;
+    margin-right: 16px;
+  }
+
+  &__link:last-of-type {
+    margin-right: 0;
+  }
+  &__popup {
+    visibility: hidden;
+    opacity: 0;
+    max-width: 360px;
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: $screenWidthMedium) {
+  .header {
+    max-width: 768px;
+
+    &__logo {
+      margin: 8px 0 8px 0;
+    }
+
+    &__contacts {
+      margin: 8px 0;
+    }
+
+    &__nav-links {
+      margin: 0 0 8px;
+      padding-top: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: $screenWidthSmall) {
+  .header {
+    max-width: 360px;
+    width: 100%;
+
+    &__container {
+      background-color: $bgDarkColor;
+    }
+
+    &__logo {
+      display: none;
+    }
+
+    &__logo_small {
+      display: block;
+      margin: 8px 38px 8px 16px;
+      width: 48px;
+      height: 48px;
+    }
+
+    &__contacts {
+      margin: 0;
+    }
+
+    &__place-order-btn {
+      display: none;
+    }
+
+    &__list-btn {
+      background-image: url('../../images/header_list.svg');
+      background-color: $bgDarkColor;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: none;
+      display: block;
+      width: 36px;
+      height: 36px;
+      margin: 8px;
+      margin-left: 50px;
+    }
+
+    &__nav-links {
+      display: none;
+    }
+
+    &__link {
+      padding: 0;
+      margin: 16px 0;
+    }
+
+    &__popup_opened {
+      opacity: 1;
+      visibility: visible;
+    }
+//ВАЖНО!!! Внимание!! Код частично дублируется
+    &__popup-nav-links {
+      max-width: 312px;
+      width: 100%;
+      padding-top: 0;
+      margin: 0 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__popup-place-order-btn {
+      @include text_type_header;
+      @include button_type_fill;
+      @include button_type_outline;
+      margin: 216px 16px 24px;
+      border-radius: 32px;
+      color: $white;
+      width: 328px;
+      height: 56px;
+      padding: 0;
+    }
+
+    &__list-close-btn {
+      background-image: url('../../images/close-btn.png');
+      background-color: $bgDarkColor;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: none;
+      display: block;
+      width: 36px;
+      height: 36px;
+      margin: 8px;
+      margin-left: 50px;
+    }
+  }
+}
