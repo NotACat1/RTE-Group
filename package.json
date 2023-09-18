@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "sh ./scripts/postinstall.sh",
+    "build": "webpack --mode production ",
+    "dev": "webpack server",
     "lint-fix": "npx eslint --fix ./*.{js,jsx}",
     "stylelint-fix": "npx stylelint --fix **/*.{css,scss}",
     "prettier-fix": "npx prettier --write ./*.{json,md}",
@@ -70,16 +72,29 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.8.1",
+    "cssnano": "^6.0.1",
     "eslint": "^8.49.0",
+    "html-webpack-plugin": "^5.5.3",
     "htmlhint": "^1.1.4",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
+    "mini-css-extract-plugin": "^2.7.6",
     "normalize.css": "^8.0.1",
     "prettier": "^3.0.3",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.67.0",
+    "sass-loader": "^13.3.2",
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
-    "webpack": "^5.88.2"
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

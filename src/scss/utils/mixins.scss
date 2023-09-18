@@ -7,11 +7,12 @@
   outline: none;
   border: none;
   background: transparent;
-  @include reset()
+
+  @include reset();
 }
 
 @mixin text {
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
   text-decoration: none;
   letter-spacing: 0;
   font-style: normal;
@@ -62,8 +63,6 @@
   color: $colorLinkFooter;
 }
 
-// Button
-
 @mixin _button() {
   padding-left: 16px;
   padding-right: 16px;
@@ -73,6 +72,7 @@
 
 @mixin button_type_fill {
   @include _button();
+
   background-color: $primaryGreenColor;
 
   &:hover {
@@ -82,8 +82,8 @@
 
 @mixin button_type_outline {
   @include _button();
-  border: 1px solid $primaryGreenColor;
 
+  border: 1px solid $primaryGreenColor;
 
   &:hover {
     border-color: $colorGreenDarker;
@@ -92,11 +92,10 @@
 
 @mixin button_type_transparent {
   @include _button();
+
   background-color: transparent;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.04);;
+    background-color: rgb(255 255 255 / 4%);
   }
 }
-
-// Input 
