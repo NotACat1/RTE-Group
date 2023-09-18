@@ -22,7 +22,7 @@ module.exports = {
   resolve: {
     alias: {
       '@': projectRoot + '/src',
-      '@fonts': projectRoot + '/src/vendor/fonts/',
+      '@fonts': projectRoot + '/src/fonts',
     },
     extensions: [
       '.js',
