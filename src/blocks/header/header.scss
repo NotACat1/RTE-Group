@@ -44,8 +44,8 @@
 
   &__place-order-btn {
     @include text_type_header;
-    background-color: $primaryGreenColor;
-    border: none;
+    @include button_type_fill;
+    @include button_type_outline;
     margin-left: 24px;
     border-radius: 32px;
     color: $white;
@@ -160,7 +160,7 @@
       opacity: 1;
       visibility: visible;
     }
-
+//ВАЖНО!!! Внимание!! Код частично дублируется
     &__popup-nav-links {
       max-width: 312px;
       width: 100%;
@@ -172,8 +172,8 @@
 
     &__popup-place-order-btn {
       @include text_type_header;
-      background-color: $primaryGreenColor;
-      border: none;
+      @include button_type_fill;
+      @include button_type_outline;
       margin: 216px 16px 24px;
       border-radius: 32px;
       color: $white;
