@@ -8,7 +8,7 @@
     "build": "webpack --mode production ",
     "dev": "webpack server",
     "lint-fix": "npx eslint --fix ./*.{js,jsx}",
-    "stylelint-fix": "npx stylelint --fix **/*.{css,scss}",
+    "stylelint-fix": "npx prettier --write **/*.{css,scss} && npx stylelint --fix",
     "prettier-fix": "npx prettier --write ./*.{json,md}",
     "htmlhint-fix": "npx prettier --write ./*.html && npx htmlhint",
     "all-fix": "npm run lint-fix && npm run stylelint-fix && npm run prettier-fix && npm run htmlhint-fix",
@@ -64,7 +64,10 @@
   "license": "ISC",
   "lint-staged": {
     "*.{js,jsx}": "eslint --fix",
-    "*.{css,scss}": "stylelint --fix",
+    "*.{css,scss}": [
+      "prettier --write",
+      "stylelint --fix"
+    ],
     "*.{json,md}": "prettier --write",
     "*.html": [
       "prettier --write",
