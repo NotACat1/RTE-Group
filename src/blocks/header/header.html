@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <!-- Meta tags of site pages -->
@@ -25,7 +25,7 @@
     <meta property="og:site_name" content="РТ Экспресс" />
     <meta property="og:locale" content="ru_RU" />
     <link rel="stylesheet" href="../../css/style.css" />
-    <title></title>
+    <title>Header</title>
   </head>
 
   <body class="page">
@@ -38,152 +38,97 @@
             alt="Логотип компании РТ Экспресс"
           />
           <img
-          class="header__logo_small"
-          src="../../images/header_logo_small.png"
-          alt="Логотип компании РТ Экспресс"
-        />
-          <div class="header__contacts">
-          <img
-            class="header__call-icon"
-            src="../../images/call_Icon.png"
-            alt="Иконка трубки телефона"
-          />
-          <h2 class="header__phone-number">
-            +7 917 275-90-13
-          </h2>
-          <button
-            class="header__place-order-btn"
-            type="submit"
-            aria-label="Кнопка разместить заказ"
-          >
-            Оформить заказ
-          </button>
-          <button
-          class="header__list-btn"
-          type="button"
-          aria-label="Значок выпадающего списка"
-        ></button>
-        </div>
-        </div>
-        <nav class="header__nav-links">
-          <a
-            class="header__link"
-            rel="link"
-            target="_blank"
-            href="#"
-            >Услуги</a
-          >
-          <a
-            class="header__link"
-            rel="link"
-            target="_blank"
-            href="#"
-          >
-            Автопарк
-          </a>
-          <a
-            class="header__link"
-            rel="link"
-            target="_blank"
-            href="#"
-          >
-            Кейсы
-          </a>
-          <a
-            class="header__link"
-            rel="link"
-            target="_blank"
-            href="#"
-          >
-            Города
-          </a>
-          <a
-            class="header__link"
-            rel="link"
-            target="_blank"
-            href="#"
-          >
-            О Компании
-          </a>
-        </nav>
-        <!-- !!!!! ВАЖНО! Дублирование кода, для попада используются те же компоненты, что и для самого Header
-        Нужно поправить после верстки меня навигации-->
-        <div class="popup header__popup header__popup_opened">
-          <div class="header__container">
-            <img
             class="header__logo_small"
             src="../../images/header_logo_small.png"
             alt="Логотип компании РТ Экспресс"
           />
-            <div class="header__contacts">
+          <div class="header__contacts">
             <img
               class="header__call-icon"
               src="../../images/call_Icon.png"
               alt="Иконка трубки телефона"
             />
-            <h2 class="header__phone-number">
-              +7 917 275-90-13
-            </h2>
-          <button
-          class="header__list-close-btn"
-          type="button"
-          aria-label="Кнопка Закрыть"
-        ></button>
+            <h2 class="header__phone-number">+7 917 275-90-13</h2>
+            <button
+              class="header__place-order-btn"
+              type="submit"
+              aria-label="Кнопка разместить заказ"
+            >
+              Оформить заказ
+            </button>
+            <button
+              class="header__list-btn"
+              type="button"
+              aria-label="Значок выпадающего списка"
+            ></button>
           </div>
+        </div>
+        <nav class="header__nav-links">
+          <a class="header__link" rel="link" target="_blank" href="#">Услуги</a>
+          <a class="header__link" rel="link" target="_blank" href="#">
+            Автопарк
+          </a>
+          <a class="header__link" rel="link" target="_blank" href="#">
+            Кейсы
+          </a>
+          <a class="header__link" rel="link" target="_blank" href="#">
+            Города
+          </a>
+          <a class="header__link" rel="link" target="_blank" href="#">
+            О Компании
+          </a>
+        </nav>
+        <!-- !!!!! ВАЖНО! Дублирование кода, для попада используются те же компоненты, что и для самого Header
+        Нужно поправить после верстки меня навигации.-->
+        <div class="popup header__popup header__popup_opened">
+          <div class="header__container">
+            <img
+              class="header__logo_small"
+              src="../../images/header_logo_small.png"
+              alt="Логотип компании РТ Экспресс"
+            />
+            <div class="header__contacts">
+              <img
+                class="header__call-icon"
+                src="../../images/call_Icon.png"
+                alt="Иконка трубки телефона"
+              />
+              <h2 class="header__phone-number">+7 917 275-90-13</h2>
+              <button
+                class="header__list-close-btn"
+                type="button"
+                aria-label="Кнопка Закрыть"
+              ></button>
+            </div>
           </div>
           <nav class="header__popup-nav-links">
-            <a
-              class="header__link"
-              rel="link"
-              target="_blank"
-              href="#"
+            <a class="header__link" rel="link" target="_blank" href="#"
               >Услуги</a
             >
-            <a
-              class="header__link"
-              rel="link"
-              target="_blank"
-              href="#"
-            >
+            <a class="header__link" rel="link" target="_blank" href="#">
               Автопарк
             </a>
-            <a
-              class="header__link"
-              rel="link"
-              target="_blank"
-              href="#"
-            >
+            <a class="header__link" rel="link" target="_blank" href="#">
               Кейсы
             </a>
-            <a
-              class="header__link"
-              rel="link"
-              target="_blank"
-              href="#"
-            >
+            <a class="header__link" rel="link" target="_blank" href="#">
               Города
             </a>
-            <a
-              class="header__link"
-              rel="link"
-              target="_blank"
-              href="#"
-            >
+            <a class="header__link" rel="link" target="_blank" href="#">
               О компании
             </a>
           </nav>
           <button
-          class="header__popup-place-order-btn"
-          type="submit"
-          aria-label="Кнопка разместить заказ"
-        >
-          Оформить заказ
-        </button>
-          </div>
+            class="header__popup-place-order-btn"
+            type="submit"
+            aria-label="Кнопка разместить заказ"
+          >
+            Оформить заказ
+          </button>
+        </div>
       </header>
       <main></main>
       <footer></footer>
-    </div>
     </div>
     <script src="../../components/script-header.js"></script>
   </body>
