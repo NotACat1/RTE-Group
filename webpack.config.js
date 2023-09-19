@@ -1,16 +1,24 @@
 const path = require('path');
+const fs = require('fs');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const projectRoot = path.resolve(__dirname);
+const pageRoot = './src/pages/';
 
-const readline = require('readline-sync');
-const selectedHtmlFile = readline.question('Write name of HTML file: ');
+function getPages(root) {
+  const files = fs.readdirSync(root, {
+    encoding: 'utf-8',
+    withFileTypes: true,
+  });
 
-if (!selectedHtmlFile) {
-  console.error('Укажите имя файла HTML для сборки.');
-  process.exit(1);
+  return files
+    .filter((entry) => entry.isFile())
+    .filter((entry) => path.extname(entry.name))
+    .map((entry) => entry.name);
 }
 
 module.exports = {
@@ -31,6 +39,10 @@ module.exports = {
     alias: {
       '@': projectRoot + '/src',
       '@fonts': projectRoot + '/src/fonts',
+      '@components': projectRoot + '/src/components',
+      '@images': projectRoot + '/src/images',
+      '@blocks': projectRoot + '/src/blocks',
+      '@pages': projectRoot + '/src/pages',
     },
     extensions: [
       '.js',
@@ -62,9 +74,21 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: `./src/pages/${selectedHtmlFile}.html`,
+    ...getPages(pageRoot).map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          template: pageRoot + page,
+          inject: 'body',
+          filename: page,
+        })
+    ),
+
+    new HtmlWebpackPartialsPlugin({
+      path: './src/blocks/header/header.html',
+      location: 'template-header',
+      template_filename: getPages(pageRoot),
     }),
+
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
   ],
