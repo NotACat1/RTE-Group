@@ -1,24 +1,24 @@
-const path = require('path')
-const fs = require('fs')
+const path = require('path');
+const fs = require('fs');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const projectRoot = path.resolve(__dirname)
-const pageRoot = './src/pages/'
+const projectRoot = path.resolve(__dirname);
+const pageRoot = './src/pages/';
 
 function getPages(root) {
   const files = fs.readdirSync(root, {
     encoding: 'utf-8',
     withFileTypes: true,
-  })
+  });
 
   return files
     .filter((entry) => entry.isFile())
     .filter((entry) => path.extname(entry.name))
-    .map((entry) => entry.name)
+    .map((entry) => entry.name);
 }
 
 module.exports = {
@@ -92,4 +92,4 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
   ],
-}
+};
