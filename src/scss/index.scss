@@ -1,6 +1,7 @@
-@import url("normalize.css");
-@import url("./mixins/variables.scss");
-@import url("./mixins/mixins.scss");
-@import url("./fonts");
-@import url("../blocks/page/page.scss");
-@import url("../blocks/header/header.scss");
+@import 'normalize.css';
+@import './utills/variables.scss';
+@import './utills/mixins.scss';
+@import './fonts';
+
+@import '../blocks/page/page';
+@import '../blocks/header/header';
