@@ -1,5 +1,5 @@
-@import url("../../scss/mixins/mixins.scss");
-@import url("../../scss/mixins/variables.scss");
+@import url("../../scss/mixins/mixins"); // подключение миксинов
+@import url("../../scss/mixins/variables"); // подключение констант
 
 .header {
   display: flex;
@@ -139,7 +139,7 @@
     }
 
     &__list-btn {
-      background-image: url("../../images/header_list.svg");
+      //background-image: url("../../images/header_list.svg");
       background-color: $bgDarkColor;
       background-repeat: no-repeat;
       background-position: center;
