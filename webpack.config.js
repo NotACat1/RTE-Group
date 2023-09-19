@@ -5,6 +5,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const projectRoot = path.resolve(__dirname);
 
+const readline = require('readline-sync');
+const selectedHtmlFile = readline.question('Write name of HTML file: ');
+
+if (!selectedHtmlFile) {
+  console.error('Укажите имя файла HTML для сборки.');
+  process.exit(1);
+}
+
 module.exports = {
   entry: { main: './src/index.js' },
   output: {
@@ -55,7 +63,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/pages/index.html',
+      template: `./src/pages/${selectedHtmlFile}.html`,
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
