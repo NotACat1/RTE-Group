@@ -53,14 +53,22 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'resolve-url-loader', {
+          loader: 'sass-loader',
+          options: {
+            sourceMap: true,
+            sassOptions: {
+              includePaths: ['src/scss']
+            }
+          }
+        }],
       },
       {
         test: /\.css$/i,
-        use: [ MiniCssExtractPlugin.loader, 'css-loader' ],
+        use: [ MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader' ],
       },
       {
-        test: /\.(woff(2)?|ttf|eot)$/i,
+        test: /\.(woff2?|ttf|eot)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[hash][ext][query]'
