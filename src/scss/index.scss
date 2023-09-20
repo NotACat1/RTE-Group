@@ -1,7 +1,8 @@
-@import url("normalize.css");
-@import url("./mixins/variables.scss");
-@import url("./mixins/mixins.scss");
-@import url("./fonts");
-@import url("../blocks/page/page.scss");
-@import url("../blocks/header/header.scss");
-@import url("../blocks/footer.scss");
+/* stylelint-disable */
+@import "./style";
+@import "@blocks/page/page";
+@import "@blocks/header/header";
+@import "@blocks/big-logo";
+@import "@blocks/map";
+@import "@blocks/footer";
+/* stylelint-enable */
