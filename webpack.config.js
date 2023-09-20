@@ -2,33 +2,29 @@ const path = require('path');
 const fs = require('fs');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+const pagesDir = path.resolve(__dirname, 'src/pages');
+const pages = fs.readdirSync(pagesDir);
+
+const htmlPlugins = pages.map(page => {
+  return new HtmlWebpackPlugin({
+    filename: page,
+    template: path.resolve(pagesDir, page),
+    chunks: [page],
+  });
+});
 
 const projectRoot = path.resolve(__dirname);
-const pageRoot = './src/pages/';
-
-function getPages(root) {
-  const files = fs.readdirSync(root, {
-    encoding: 'utf-8',
-    withFileTypes: true,
-  });
-
-  return files
-    .filter((entry) => entry.isFile())
-    .filter((entry) => path.extname(entry.name))
-    .map((entry) => entry.name);
-}
 
 module.exports = {
+  mode: 'production',
   entry: { main: './src/index.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
-    publicPath: '',
   },
-  mode: 'development',
   devServer: {
     static: path.resolve(__dirname, './dist'),
     compress: true,
@@ -39,56 +35,62 @@ module.exports = {
     alias: {
       '@': projectRoot + '/src',
       '@fonts': projectRoot + '/src/fonts',
+      '@scss': projectRoot + '/src/scss',
       '@components': projectRoot + '/src/components',
       '@images': projectRoot + '/src/images',
       '@blocks': projectRoot + '/src/blocks',
       '@pages': projectRoot + '/src/pages',
     },
-    extensions: [
-      '.js',
-      '.json',
-      '.css',
-      '.scss',
-      '.sass',
-      '.svg',
-      '.png',
-      '.jpeg',
-      '.gif',
-    ],
+    extensions: [ '.js', '.json', '.css', '.scss', '.sass', '.svg', '.png', '.jpeg', '.gif', ],
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js(x)?$/i,
         use: 'babel-loader',
         exclude: '/node_modules/',
       },
       {
-        test: /\.(scss|sass|css)$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        test: /\.ejs$/i,
+        loader: 'ejs-loader',
+        options: {
+          esModule: false,
+        },
       },
       {
-        test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/,
+        test: /\.s[ac]ss$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'resolve-url-loader', {
+          loader: 'sass-loader',
+          options: {
+            sourceMap: true,
+            sassOptions: {
+              includePaths: ['src/scss']
+            }
+          }
+        }],
+      },
+      {
+        test: /\.css$/i,
+        use: [ MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader' ],
+      },
+      {
+        test: /\.(woff2?|ttf|eot)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[hash][ext][query]'
+        }
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|mp4|webm|ogg|mp3|wav|flac|aac)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'media/[hash][ext][query]'
+        },
       },
     ],
   },
   plugins: [
-    ...getPages(pageRoot).map(
-      (page) =>
-        new HtmlWebpackPlugin({
-          template: pageRoot + page,
-          inject: 'body',
-          filename: page,
-        })
-    ),
-
-    new HtmlWebpackPartialsPlugin({
-      path: './src/blocks/header/header.html',
-      location: 'template-header',
-      template_filename: getPages(pageRoot),
-    }),
-
+    ...htmlPlugins,
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
   ],
