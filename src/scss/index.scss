@@ -1,3 +1,6 @@
-@import url("./styles.scss");
-@import url("../blocks/page/page.scss");
-@import url("../blocks/header/header.scss");
+/* stylelint-disable */
+@import "./styles.scss";
+@import "../blocks/page/page.scss";
+@import "../blocks/header/header.scss";
+@import "../blocks/big-logo.scss";
+/* stylelint-enable */
