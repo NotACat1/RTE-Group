@@ -1,8 +1,10 @@
+/* stylelint-disable */
 @import '@scss/utills/_variables';
 @import '@scss/utills/_mixins';
 @import '@blocks/page/page';
 @import '@blocks/input/input';
 @import '@blocks/button/button';
+/* stylelint-enable */
 
 .UI {
   max-width: 1280px;
