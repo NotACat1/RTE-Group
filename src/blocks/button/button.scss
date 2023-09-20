@@ -1,0 +1,57 @@
+.button {
+  border: 1px solid $primaryGreenColor;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 16px 24px;
+  border-radius: 32px;
+  background-color: $primaryGreenColor;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: $colorGreenDarker;
+    border: 1px solid $colorGreenDarker;
+  }
+
+  &_type_dark {
+    @extend .button;
+
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+      border-color: $colorGreenDarker;
+    }
+
+    &:hover p {
+      color: $colorGreenDarker;
+    }
+  }
+
+  &_type_disabled {
+    @extend .button;
+
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover {
+      background-color: $colorButtonDisabledHover;
+      border-color: $colorButtonDisabledHover;
+    }
+  }
+
+  &__text {
+    @include reset();
+    @include text();
+    @include text-format(16px, 600, 1.5);
+
+    color: $white;
+
+    &_type_dark {
+      @extend .button__text;
+
+      color: $primaryGreenColor;
+    }
+  }
+}

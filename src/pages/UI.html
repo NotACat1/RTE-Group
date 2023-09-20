@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>Юзер Интерфейс</title>
+    <link rel="stylesheet" href="../scss/UI.css" />
+  </head>
+  <body class="page">
+    <main class="content">
+      <section class="UI">
+        <h1 class="UI__title">Юзер Интерфейс</h1>
+        <div class="UI__container">
+          <div class="UI__item">
+            <button class="button">
+              <p class="button__text">Кнопка</p>
+            </button>
+            <button class="button_type_dark">
+              <p class="button__text_type_dark">Кнопка</p>
+            </button>
+            <button class="button_type_disabled">
+              <p class="button__text">Кнопка</p>
+            </button>
+          </div>
+          <div class="UI__item">
+            <div class="input">
+              <div class="input__container">
+                <input
+                  type="text"
+                  class="input__field input__text_type_field"
+                />
+                <label class="input__placeholder input__text_type_placeholder"
+                  >Поле</label
+                >
+              </div>
+              <div class="input__caption">
+                <p class="input__text_type_caption">Ошибка</p>
+              </div>
+            </div>
+            <div class="input">
+              <div class="input__container input__container_type_error">
+                <input
+                  type="text"
+                  class="input__field input__text_type_field input__text_type_error"
+                />
+                <label
+                  class="input__placeholder input__text_type_placeholder input__text_type_error"
+                  >Поле</label
+                >
+              </div>
+              <div class="input__caption">
+                <p class="input__text_type_caption input__text_type_error">
+                  Ошибка
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
