@@ -1,0 +1,148 @@
+/* stylelint-disable */
+@import "@scss/utills/variables";
+/* stylelint-enable */
+
+.big-logo {
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 400px;
+  position: absolute;
+  z-index: 2;
+
+  &_bg {
+    z-index: 1;
+  }
+
+  &_sizes {
+    &_slim {
+      width: 400px;
+      height: 880px;
+    }
+    &_first {
+      width: 600px;
+      height: 900px;
+    }
+    &_second {
+      width: 900px;
+      height: 600px;
+    }
+  }
+
+  &_position {
+    &_first {
+      top: -539px;
+      left: -382px;
+    }
+    &_second {
+      top: -59px;
+      left: -525px;
+    }
+    &_third {
+      top: -312px;
+      right: -177px;
+    }
+    &_fourth {
+      top: -329px;
+      right: -161px;
+    }
+  }
+
+  &_fill {
+    background: $colorGreenDarker;
+  }
+
+  &_border {
+    border: 2px solid $primaryGreenColor;
+  }
+
+  &_rotate {
+    &_120 {
+      transform: rotate(120deg);
+      & > * {
+        transform: rotate(-120deg);
+      }
+    }
+    &_330 {
+      transform: rotate(-30deg);
+      & > * {
+        transform: rotate(30deg);
+      }
+    }
+    &_45 {
+      transform: rotate(45deg);
+      & > * {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: -133px;
+    right: -128px;
+
+    width: 831px;
+    height: 1093px;
+
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .big-logo {
+    &_sizes {
+      &_slim {
+        width: 681px;
+        height: 310px;
+      }
+      &_second {
+        width: 160px;
+        height: 300px;
+      }
+    }
+
+    &_border:not(&_bg) {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &_rotate {
+      &_330 {
+        transform: rotate(-45deg);
+        & > * {
+          transform: rotate(45deg);
+        }
+      }
+      &_45 {
+        transform: rotate(-45deg);
+        & > * {
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    &_position {
+      &_second {
+        top: -218px;
+        left: -138px;
+      }
+      &_third {
+        top: -146px;
+        right: -316px;
+      }
+      &_fourth {
+        top: -165px;
+        right: -318px;
+      }
+    }
+
+    &__content {
+      top: -350px;
+      right: 56px;
+
+      width: 643px;
+      height: 846px;
+    }
+  }
+}
