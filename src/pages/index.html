@@ -32,13 +32,43 @@
     <meta property="og:locale" content="ru_RU" />
 
     <title>RTE Group - главная страница</title>
+
+    <link rel="stylesheet" href="main.css" />
   </head>
 
   <body class="page">
     <div class="page__container">
       <template-header></template-header>
       <main>
-        <section class="greeting"></section>
+        <section class="greeting">
+          <div class="greeting__content">
+            <h1 class="greeting__content-title">RTE Group</h1>
+            <p class="greeting__content-subtitle">
+              Когда размер имеет значение
+            </p>
+            <p class="greeting__content-paragraph">
+              <span class="greeting__content-paragraph_darkening"
+                >Транспортная компания, специализирующаяся на&nbsp;</span
+              >крупногабаритных
+              <span class="greeting__content-paragraph_darkening">и&nbsp;</span
+              >негабаритных перевозках
+            </p>
+          </div>
+          <div class="greeting__media">
+            <div
+              class="big-logo big-logo_sizes_slim big-logo_position_fourth big-logo_rotate_45"
+            >
+              <img
+                class="big-logo__content"
+                src="<%= require('@images/fleet.jpg') %>"
+                alt="Автопарк"
+              />
+            </div>
+            <div
+              class="big-logo big-logo_bg big-logo_border big-logo_sizes_slim big-logo_position_third big-logo_rotate_45"
+            ></div>
+          </div>
+        </section>
         <section class="contact-form"></section>
         <section class="gallery-info-cards"></section>
         <section class="advantages"></section>
