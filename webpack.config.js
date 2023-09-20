@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -34,6 +35,11 @@ module.exports = {
     alias: {
       '@': projectRoot + '/src',
       '@fonts': projectRoot + '/src/fonts',
+      '@scss': projectRoot + '/src/scss',
+      '@components': projectRoot + '/src/components',
+      '@images': projectRoot + '/src/images',
+      '@blocks': projectRoot + '/src/blocks',
+      '@pages': projectRoot + '/src/pages',
     },
     extensions: [ '.js', '.json', '.css', '.scss', '.sass', '.svg', '.png', '.jpeg', '.gif', ],
   },

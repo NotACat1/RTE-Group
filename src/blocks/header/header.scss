@@ -1,5 +1,7 @@
-@import url("../../scss/mixins/mixins");
-@import url("../../scss/mixins/variables");
+/* stylelint-disable */
+@import "@scss/utills/variables";
+@import "@scss/utills/variables";
+/* stylelint-enable */
 
 .header {
   display: flex;
@@ -139,7 +141,7 @@
     }
 
     &__list-btn {
-      //background-image: url("../../images/header_list.svg");
+      background-image: url("~@images/header_list.svg");
       background-color: $bgDarkColor;
       background-repeat: no-repeat;
       background-position: center;
@@ -189,7 +191,7 @@
     }
 
     &__list-close-btn {
-      background-image: url("../../images/close-btn.png");
+      background-image: url("~@images/close-btn.png");
       background-color: $bgDarkColor;
       background-repeat: no-repeat;
       background-position: center;

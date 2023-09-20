@@ -1,4 +1,7 @@
-@import url("../../scss/mixins/variables");
+/* stylelint-disable */
+@import "@scss/utills/variables";
+@import "@scss/utills/mixins";
+/* stylelint-enable */
 
 .page {
   margin: 0 auto;
