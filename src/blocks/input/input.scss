@@ -32,22 +32,15 @@
     color: $gray;
 
     &_type_placeholder {
-      @extend .input__text;
-
       @include text-format(16px, 400, 1.5);
     }
 
     &_type_caption {
-      @extend .input__text;
-
       @include text-format(12px, 500, 1.2);
     }
 
     &_type_field {
-      @extend .input__text;
-
       @include text-format(16px, 400, 1.5);
-
       color: $white;
     }
 
