@@ -1,8 +1,8 @@
-@import url("../scss/mixins/variables");
-@import url("../scss/mixins/mixins");
-@import url("../blocks/page/page");
-@import url("../blocks/button/button");
-@import url("../blocks/input/input");
+@import './utills/_variables';
+@import './utills/_mixins';
+@import '../blocks/page/page';
+@import '../blocks/input/input';
+@import '../blocks/button/button';
 
 .UI {
   max-width: 1280px;
@@ -21,7 +21,7 @@
     display: grid;
     row-gap: 20px;
     column-gap: 20px;
-    grid-template-columns: 146px 323px;
+    grid-template-columns: 200px 323px;
   }
 
   &__item {

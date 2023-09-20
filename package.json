@@ -7,6 +7,7 @@
     "postinstall": "sh ./scripts/postinstall.sh",
     "build": "webpack --mode production ",
     "dev": "webpack server",
+    "deploy": "gh-pages -d dist",
     "lint-fix": "npx eslint --fix \"**/*.{js,jsx}\"",
     "stylelint-fix": "npx prettier --write \"**/*.{css,scss}\" && npx stylelint --fix --custom-syntax postcss-scss \"**/*.{css,scss}\"",
     "prettier-fix": "npx prettier --write \"**/*.{json,md}\"",
@@ -72,7 +73,9 @@
     "*.html": [
       "prettier --write",
       "htmlhint"
-    ]
+    ],
+    "!header.html": "",
+    "!index.scss": ""
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
@@ -84,14 +87,19 @@
     "css-loader": "^6.8.1",
     "cssnano": "^6.0.1",
     "eslint": "^8.49.0",
+    "gh-pages": "^6.0.0",
+    "html-webpack-partials-plugin": "^0.8.0",
     "html-webpack-plugin": "^5.5.3",
     "htmlhint": "^1.1.4",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "mini-css-extract-plugin": "^2.7.6",
+    "node-sass": "^9.0.0",
     "normalize.css": "^8.0.1",
+    "postcss-loader": "^7.3.3",
     "postcss-scss": "^4.0.8",
     "prettier": "^3.0.3",
+    "readline-sync": "^1.4.10",
     "resolve-url-loader": "^5.0.0",
     "sass": "^1.67.0",
     "sass-loader": "^13.3.2",
