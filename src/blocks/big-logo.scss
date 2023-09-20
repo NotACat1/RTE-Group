@@ -3,120 +3,13 @@
 /* stylelint-enable */
 
 //.big-logo {
-//	overflow: hidden;
-//	transform: rotate(-45deg);
 //	width: 600px;
 //	height: 900px;
+//	transform: rotate(120deg);
+
+//	box-sizing: border-box;
 //	border-radius: 400px;
-//	position: absolute;
-//	z-index: 2;
-
-//	&_bg {
-//		z-index: 1;
-//	}
-
-//	&_position {
-//		&_right-top {
-//			top: -90px;
-//			right: -300px;
-//		}
-//		&_right-top-dop {
-//			top: -74px;
-//			right: -316px;
-//		}
-//		&_left-top {
-//			top: -470px;
-//			left: -359px;
-//		}
-//		&_left-top-dop {
-//			top: -171px;
-//			left: -307px;
-//		}
-//	}
-
-//	&_slim {
-//		width: 880px;
-//		height: 400px;
-//	}
-
-//	&_rotate {
-//		&_315 {
-//			transform: rotate(-45deg);
-//			& > * {
-//				transform: rotate(45deg);
-//			}
-//		}
-//		&_240 {
-//			transform: rotate(120deg);
-//			& > * {
-//				transform: rotate(-120deg);
-//			}
-//		}
-//		&_60 {
-//			transform: rotate(60deg);
-//			& > * {
-//				transform: rotate(-60deg);
-//			}
-//		}
-//	}
-
-//	&_border {
-//		box-sizing: border-box;
-//		border: 2px solid $primaryGreenColor;
-//	}
-
-//	&_fill {
-//		background-color: $colorGreenDarker;
-//	}
-
-//	&__content {
-//		background-color: #D9D9D9;
-//		width: 905px;
-//		height: 905px;
-//		position: absolute;
-//		left: -25px;
-//		top: -252px;
-//		z-index: 1;
-//		object-position: center center;
-//		object-fit: cover;
-//	}
-
-//	&_position {
-//		&_right-top {
-//			top: -90px;
-//			right: -300px;
-//		}
-//		&_right-top-dop {
-//			top: -74px;
-//			right: -316px;
-//		}
-//		&_left-top {
-//			top: -470px;
-//			left: -359px;
-//		}
-//	}
-//}
-
-//@media screen and (width <= 767px) {
-//	.big-logo {
-//		width: 160px;
-//		height: 300px;
-//		border-radius: 113px;
-
-//		&_border:not(.big-logo_bg) {
-//			visibility: hidden;
-//			opacity: 0;
-//		}
-
-//		&_rotate {
-//			&_60 {
-//				transform: rotate(-60deg);
-//				& > * {
-//					transform: rotate(60deg);
-//				}
-//			}
-//		}
-//	}
+//	border: 2px solid $primaryGreenColor;
 //}
 
 //.page__container {
@@ -130,6 +23,5 @@
 //	overflow: hidden;
 //	position: relative;
 //	border: 1px solid red;
-//	height: 80vh;
 //	width: 100vw;
 //}
