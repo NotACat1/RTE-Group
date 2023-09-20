@@ -1,5 +1,7 @@
-@import url("../scss/mixins/variables");
-@import url("../scss/mixins/mixins");
+/* stylelint-disable */
+@import "@scss/mixins/variables";
+@import "@scss/mixins/mixins";
+/* stylelint-enable */
 
 .footer {
   background-color: $bgDarkColor;
