@@ -1,0 +1,88 @@
+.input {
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    display: block;
+    position: relative;
+    height: 56px;
+    box-sizing: border-box;
+    padding: 16px 24px 9px;
+    border-radius: 36px;
+    border: 1px solid $colorInputBorderDefault;
+
+    &:hover {
+      border-color: $white;
+    }
+
+    &_type_error {
+      border-color: $colorTypeFail;
+    }
+  }
+
+  &__caption {
+    box-sizing: border-box;
+    padding: 8px 24px;
+  }
+
+  &__text {
+    @include reset();
+    @include text();
+
+    color: $gray;
+
+    &_type_placeholder {
+      @include text-format(16px, 400, 1.5);
+    }
+
+    &_type_caption {
+      @include text-format(12px, 500, 1.2);
+    }
+
+    &_type_field {
+      @include text-format(16px, 400, 1.5);
+
+      color: $white;
+    }
+
+    &_type_error {
+      color: $colorTypeFail;
+    }
+  }
+
+  &__placeholder {
+    display: block;
+    position: absolute;
+    top: 16px;
+    cursor: text;
+    z-index: 1;
+    transition: top 0.3s;
+  }
+
+  &__field {
+    position: absolute;
+    top: 16px;
+    background-color: transparent;
+    border: none;
+    z-index: 2;
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      outline: none;
+      top: 21px;
+    }
+
+    &:focus ~ .input__placeholder,
+    &:not(:placeholder-shown) ~ .input__placeholder {
+      @include text-format(12px, 400, 1.2);
+
+      color: $white;
+      top: 9px;
+    }
+
+    &:focus ~ .input__text_type_error,
+    &:not(:placeholder-shown) ~ .input__text_type_error {
+      color: $colorTypeFail;
+    }
+  }
+}
