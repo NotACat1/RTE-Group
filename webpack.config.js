@@ -35,7 +35,7 @@ module.exports = {
     alias: {
       '@': projectRoot + '/src',
       '@fonts': projectRoot + '/src/fonts',
-			'@scss': projectRoot + '/src/scss',
+      '@scss': projectRoot + '/src/scss',
       '@components': projectRoot + '/src/components',
       '@images': projectRoot + '/src/images',
       '@blocks': projectRoot + '/src/blocks',
