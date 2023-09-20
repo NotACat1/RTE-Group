@@ -11,34 +11,7 @@
 
   &:hover {
     background-color: $colorGreenDarker;
-    border: 1px solid $colorGreenDarker;
-  }
-
-  &_type_dark {
-    @extend .button;
-
-    background-color: transparent;
-
-    &:hover {
-      background-color: transparent;
-      border-color: $colorGreenDarker;
-    }
-
-    &:hover p {
-      color: $colorGreenDarker;
-    }
-  }
-
-  &_type_disabled {
-    @extend .button;
-
-    background-color: transparent;
-    border-color: transparent;
-
-    &:hover {
-      background-color: $colorButtonDisabledHover;
-      border-color: $colorButtonDisabledHover;
-    }
+    border-color: $colorGreenDarker;
   }
 
   &__text {
@@ -52,6 +25,33 @@
       @extend .button__text;
 
       color: $primaryGreenColor;
+    }
+  }
+
+  &_type_dark {
+    @extend .button;
+
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+      border-color: $colorGreenDarker;
+    }
+
+    &:hover > .button__text_type_dark {
+      color: $colorGreenDarker;
+    }
+  }
+
+  &_type_disabled {
+    @extend .button;
+
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover {
+      background-color: $colorButtonDisabledHover;
+      border-color: $colorButtonDisabledHover;
     }
   }
 }

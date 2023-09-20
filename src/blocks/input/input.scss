@@ -12,7 +12,7 @@
     border: 1px solid $colorInputBorderDefault;
 
     &:hover {
-      border: 1px solid $white;
+      border-color: $white;
     }
 
     &_type_error {
@@ -35,8 +35,6 @@
       @extend .input__text;
 
       @include text-format(16px, 400, 1.5);
-
-      color: $gray;
     }
 
     &_type_caption {
@@ -74,18 +72,22 @@
     border: none;
     z-index: 2;
 
-    &:focus {
+    &:focus,
+    &:not(:placeholder-shown) {
       outline: none;
+      top: 21px;
     }
 
-    &:focus ~ .input__placeholder {
+    &:focus ~ .input__placeholder,
+    &:not(:placeholder-shown) ~ .input__placeholder {
       @include text-format(12px, 400, 1.2);
 
       color: $white;
       top: 9px;
     }
 
-    &:focus ~ .input__text_type_error {
+    &:focus ~ .input__text_type_error,
+    &:not(:placeholder-shown) ~ .input__text_type_error {
       color: $colorTypeFail;
     }
   }
