@@ -13,6 +13,7 @@
     @include reset();
     @include text();
     @include text-format(20px, 700, 1.3);
+
     color: $white;
     grid-row: 1;
   }
@@ -36,9 +37,11 @@
   &__field-name {
     grid-row: 3;
   }
+
   &__field-phone {
     grid-row: 5;
   }
+
   &__field-details {
     grid-row: 7;
     height: auto;
@@ -68,13 +71,14 @@
     bottom: 0;
     height: 24px;
     width: 24px;
-    background-image: url('../images/form__checkbox-empty@2x.png');
+    background-image: url("../images/form__checkbox-empty@2x.png");
     background-size: contain;
     z-index: 1;
   }
 
   &__checkbox-control {
     @include reset();
+
     position: absolute;
     top: 0;
     bottom: 0;
@@ -85,7 +89,7 @@
     z-index: 2;
 
     &:checked ~ .form__checkbox-viewer {
-      background-image: url('../images/form__checkbox-filled@2x.png');
+      background-image: url("../images/form__checkbox-filled@2x.png");
     }
   }
 }
