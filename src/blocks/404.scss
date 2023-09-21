@@ -1,0 +1,79 @@
+/* stylelint-disable */
+@import '@scss/utills/variables';
+@import '@scss/utills/mixins';
+/* stylelint-enable */
+
+.not-found {
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 96px;
+  padding-bottom: 80px;
+
+  &__title {
+    @include text;
+    @include reset;
+    @include text-format(54px, 800, 1.2);
+  }
+
+  &__subtitle {
+    @include text;
+    @include reset;
+    @include text-format(28px, 700, 1.25);
+    margin-top: 40px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    @include text;
+    @include reset;
+    max-width: 300px;
+    color: $gray;
+    @include text-format(24px, 500, 1.45);
+  }
+
+  &__btn {
+    @include reset_button;
+    @include button_type_fill;
+    @include text;
+    @include text-format(16px, 600, 1.5);
+    padding: 16px 24px;
+    margin-top: 40px;
+    cursor: pointer;
+
+    &-link {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  &__img {
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .not-found {
+    justify-content: center;
+    text-align: center;
+    padding-top: 56px;
+    padding-bottom: 80px;
+
+    &__subtitle {
+      font-size: 20px;
+      margin-top: 32px;
+    }
+
+    &__btn {
+      width: 100%;
+      margin-top: 32px;
+    }
+
+    &__text {
+      @include text-format(24px, 500, 1.45);
+    }
+
+    &__img {
+      display: none;
+    }
+  }
+}
