@@ -1,9 +1,11 @@
 /* stylelint-disable */
-@import "@scss/utills/_variables";
-@import "@scss/utills/_mixins";
-@import "@blocks/page/page";
-@import "@blocks/input/input";
-@import "@blocks/button/button";
+@import '@scss/utills/_variables';
+@import '@scss/utills/_mixins';
+@import '@blocks/page';
+@import '@blocks/input';
+@import '@blocks/button';
+@import '@blocks/service';
+@import '@blocks/form';
 /* stylelint-enable */
 
 .UI {
@@ -21,9 +23,8 @@
 
   &__container {
     display: grid;
-    row-gap: 20px;
-    column-gap: 20px;
-    grid-template-columns: 200px 323px;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, max-content);
   }
 
   &__item {
