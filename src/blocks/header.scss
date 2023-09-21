@@ -48,7 +48,7 @@
   &__place-order-btn {
     @include text_type_header;
     @include button_type_fill;
-    @include button_type_outline;
+    @include reset_button;
 
     margin-left: 24px;
     border-radius: 32px;
@@ -180,7 +180,7 @@
     &__popup-place-order-btn {
       @include text_type_header;
       @include button_type_fill;
-      @include button_type_outline;
+      @include reset_button;
 
       margin: 216px 16px 24px;
       border-radius: 32px;
