@@ -32,11 +32,13 @@
     <meta property="og:locale" content="ru_RU" />
 
     <title>Перевозка экскаватора</title>
+
+    <link rel="stylesheet" href="main.css" />
   </head>
 
   <body class="page">
     <div class="page__container">
-      <header></header>
+      <%= require('@common.blocks/header.ejs').default %>
       <main>
         <section
           class="info-form"
@@ -56,7 +58,7 @@
         <section class="gallery-reviews" id="customer-reviews"></section>
         <section class="list-drop-down-items" id="frequent-questions"></section>
       </main>
-      <footer></footer>
+      <%= require('@common.blocks/footer.ejs').default %>
     </div>
   </body>
 </html>
