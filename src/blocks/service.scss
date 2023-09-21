@@ -1,0 +1,43 @@
+.service {
+  display: block;
+  padding: 24px 32px;
+  max-width: 528px;
+  box-sizing: border-box;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 464px;
+  }
+
+  &__icon {
+    width: 96px;
+    height: 96px;
+  }
+
+  &__title {
+    @include reset();
+    @include text();
+    @include text-format(20px, 700, 1.3);
+
+    color: $white;
+  }
+
+  &__about {
+    @include reset();
+    @include text();
+    @include text-format(16px, 400, 1.5);
+
+    color: $gray;
+  }
+
+  &_type_even {
+    background-color: $bgDarkColor;
+  }
+
+  &_type_odd {
+    background-color: $bgGrayColor;
+  }
+}
