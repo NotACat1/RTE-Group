@@ -32,11 +32,13 @@
     <meta property="og:locale" content="ru_RU" />
 
     <title>Города: Казань</title>
+
+    <link rel="stylesheet" href="main.css" />
   </head>
 
   <body class="page">
     <div class="page__container">
-      <header></header>
+      <%= require('@common.blocks/header.ejs').default %>
       <main>
         <section class="intro" id="intro-cities-kazan"></section>
         <section
@@ -48,7 +50,7 @@
         <section class="cases-cards" id="list-cases-kazan"></section>
         <section class="gallery-reviews" id="list-reviews-kazan"></section>
       </main>
-      <footer></footer>
+      <%= require('@common.blocks/footer.ejs').default %>
     </div>
   </body>
 </html>

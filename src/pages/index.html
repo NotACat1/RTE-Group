@@ -38,7 +38,7 @@
 
   <body class="page">
     <div class="page__container">
-      <template-header></template-header>
+      <%= require('@common.blocks/header.ejs').default %>
       <main>
         <section class="greeting">
           <div class="greeting__content">
@@ -86,7 +86,7 @@
         </section>
         <section class="cases"></section>
       </main>
-      <footer></footer>
+      <%= require('@common.blocks/footer.ejs').default %>
     </div>
   </body>
 </html>

@@ -32,16 +32,18 @@
     <meta property="og:locale" content="ru_RU" />
 
     <title>Услуги</title>
+
+    <link rel="stylesheet" href="main.css" />
   </head>
 
   <body class="page">
     <div class="page__container">
-      <header></header>
+      <%= require('@common.blocks/header.ejs').default %>
       <main>
         <section class="info-form" id="get-service"></section>
         <section class="gallery-info-cards" id="list-services"></section>
       </main>
-      <footer></footer>
+      <%= require('@common.blocks/footer.ejs').default %>
     </div>
   </body>
 </html>
