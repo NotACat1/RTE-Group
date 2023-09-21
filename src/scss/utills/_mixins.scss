@@ -1,3 +1,7 @@
+/* stylelint-disable */
+@import url("@scss/utills/variables");
+/* stylelint-enable */
+
 @mixin reset {
   margin: 0;
   padding: 0;
@@ -22,6 +26,24 @@
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
+}
+
+@mixin text_h_h1 {
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+@mixin text_h_h3 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+@mixin text_type_lead {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.45;
 }
 
 @mixin text_type_section {
@@ -97,5 +119,33 @@
 
   &:hover {
     background-color: rgb(255 255 255 / 4%);
+  }
+}
+
+@mixin media-breakpoint-up($breakpoint) {
+  $min-width: map-get($breakpoints, $breakpoint);
+
+  @media (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin container-max-widths {
+  @each $breakpoint, $size in $container-max-widths {
+    @include media-breakpoint-up($breakpoint) {
+      max-width: $size;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@mixin media($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint #{$breakpoint} не найден в переменной $breakpoints";
   }
 }
