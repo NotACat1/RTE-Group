@@ -10,6 +10,7 @@
   &__text {
     @include reset();
     @include text();
+
     color: $white;
 
     &_type_title {
@@ -22,14 +23,17 @@
 
     &_type_info {
       @include text-format(16px, 400, 1.5);
+
       display: inline-block;
     }
 
     &_type_link {
       @include text-format(16px, 400, 1.5);
+
       text-decoration: underline;
     }
   }
+
   &__item {
     display: flex;
     flex-direction: column;
