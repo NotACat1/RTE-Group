@@ -1,0 +1,24 @@
+{
+  "infoPages": [
+    {
+      "name": "Услуги",
+      "href": "@pages/services.html"
+    },
+    {
+      "name": "Автопарк",
+      "href": "@pages/autopark.html"
+    },
+    {
+      "name": "Кейсы",
+      "href": "@pages/cases.html"
+    },
+    {
+      "name": "Города",
+      "href": "@pages/cities.html"
+    },
+    {
+      "name": "О компании",
+      "href": "@pages/about.htmll"
+    }
+  ]
+}
