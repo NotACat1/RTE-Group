@@ -9,18 +9,21 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const pagesDir = path.resolve(__dirname, 'src/pages');
 const pages = fs.readdirSync(pagesDir);
 
-const casesData = require('./src/mocks/mock-cases-data.json');
-const feedbacksData = require('./src/mocks/mock-feedbacks-data.json');
-const feedbacksStaffData = require('./src/mocks/mock-feedbacksStaff-data.json');
-const infoCitiesData = require('./src/mocks/mock-infoCities-data.json');
-const servicesData = require('./src/mocks/mock-services-data.json');
-const templateParameters = {
-  casesData,
-  feedbacksData,
-  feedbacksStaffData,
-  infoCitiesData,
-  servicesData
-};
+const files = [
+  'cases',
+  'feedbacks',
+  'feedbacksStaff',
+  'infoCities',
+  'infoPages',
+  'services',
+  'sliders'
+];
+
+const templateParameters = {};
+
+files.forEach(file => {
+  templateParameters[`${file}Data`] = require(`./src/mocks/mock-${file}-data.json`);
+});
 
 const htmlPlugins = pages.map(page => {
   return new HtmlWebpackPlugin({
