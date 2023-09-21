@@ -1,0 +1,25 @@
+.city {
+  box-sizing: border-box;
+  padding: 24px;
+  border-radius: 16px;
+  background: $bgGrayColor;
+  max-width: 348px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 198px;
+  }
+
+  &__image {
+    width: 52px;
+    height: 64px;
+  }
+
+  &__name {
+    @include reset();
+    @include text();
+    @include text-format(24px, 500, 1.45);
+  }
+}
