@@ -12,4 +12,4 @@ export const price = [
   },
   { rowNumber: '4', serviceName: 'Аренда трала', price: '13 000 ₽' },
   { rowNumber: '5', serviceName: 'Перевозка экскаватора', price: '14 000 ₽' },
-]
+];

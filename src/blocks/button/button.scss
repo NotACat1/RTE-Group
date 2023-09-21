@@ -1,0 +1,52 @@
+.button {
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 16px 24px;
+  border-radius: 32px;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  &__text {
+    @include reset();
+    @include text();
+    @include text-format(16px, 600, 1.5);
+
+    color: $white;
+
+    &_type_dark {
+      color: $primaryGreenColor;
+    }
+  }
+
+  &_type_default {
+    border-color: $primaryGreenColor;
+    background-color: $primaryGreenColor;
+
+    &:hover {
+      background-color: $colorGreenDarker;
+      border-color: $colorGreenDarker;
+    }
+  }
+
+  &_type_dark {
+    border-color: $primaryGreenColor;
+
+    &:hover {
+      border-color: $colorGreenDarker;
+    }
+
+    &:hover > .button__text_type_dark {
+      color: $colorGreenDarker;
+    }
+  }
+
+  &_type_disabled {
+    &:hover {
+      background-color: $colorButtonDisabledHover;
+      border-color: $colorButtonDisabledHover;
+    }
+  }
+}

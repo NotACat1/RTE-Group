@@ -1,0 +1,35 @@
+/* stylelint-disable */
+@import "@scss/utills/_variables";
+@import "@scss/utills/_mixins";
+@import "@blocks/page/page";
+@import "@blocks/input/input";
+@import "@blocks/button/button";
+/* stylelint-enable */
+
+.UI {
+  max-width: 1280px;
+  width: 100vw;
+  padding-top: 50px;
+  display: grid;
+  row-gap: 20px;
+
+  &__title {
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  &__container {
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: 200px 323px;
+  }
+
+  &__item {
+    padding: 30px 20px;
+    display: grid;
+    row-gap: 20px;
+    box-shadow: 1px 5px 12px rgb(0 0 0 / 70%);
+  }
+}
