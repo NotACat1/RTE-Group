@@ -42,7 +42,9 @@
       <main>
         <section class="info-form" id="get-service"></section>
         <section class="gallery-info-cards">
-          <%= require('@common.blocks/services/servises.ejs').default %>
+          <div class="gallery-info-cards__gallery">
+            <%= require('@common.blocks/services/servises.ejs').default %>
+          </div>
         </section>
       </main>
       <%= require('@common.blocks/footer.ejs').default %>

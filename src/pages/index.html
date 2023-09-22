@@ -71,14 +71,17 @@
         </section>
         <section class="contact-form"></section>
         <section class="gallery-info-cards">
-          <article class="service service_type_even">
-            <h2 class="service__header">Наши услуги</h2>
-            <div
-              class="big-logo big-logo_bg big-logo_sizes_first big-logo_position_first big-logo_border big-logo_rotate_120"
-            ></div>
-          </article>
-          <%=
-          require('@common.blocks/services/servises-with-header.ejs').default %>
+          <div class="gallery-info-cards__gallery">
+            <article class="service service_type_even">
+              <h2 class="service__header">Наши услуги</h2>
+              <div
+                class="big-logo big-logo_bg big-logo_sizes_first big-logo_position_first big-logo_border big-logo_rotate_120"
+              ></div>
+            </article>
+            <%=
+            require('@common.blocks/services/servises-with-header.ejs').default
+            %>
+          </div>
         </section>
         <section class="advantages"></section>
         <section class="map">
