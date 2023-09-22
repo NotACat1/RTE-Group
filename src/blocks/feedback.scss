@@ -1,0 +1,53 @@
+.feedback {
+  max-width: 300px;
+
+  &__container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 48px auto;
+    align-items: center;
+    row-gap: 16px;
+    column-gap: 16px;
+  }
+
+  &__text {
+    @include reset();
+    @include text();
+
+    color: $white;
+
+    &_type_title {
+      @include text-format(16px, 600, 1.5);
+    }
+
+    &_type_about {
+      @include text-format(16px, 400, 1.5);
+    }
+  }
+
+  &__short {
+    grid-column: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+  }
+
+  &__image {
+    position: absolute;
+    background-color: $colorButtonDisabledHover;
+    border-radius: 48px;
+    height: 48px;
+    width: 48px;
+  }
+
+  &__title {
+    grid-column: 2;
+  }
+
+  &__about {
+    grid-column: span 2;
+  }
+}
