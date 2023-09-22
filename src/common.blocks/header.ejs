@@ -32,11 +32,9 @@
     </div>
   </div>
   <nav class="header__nav-links">
-    <a class="header__link" rel="link" href="#">Услуги</a>
-    <a class="header__link" rel="link" href="#">Автопарк</a>
-    <a class="header__link" rel="link" href="#">Кейсы</a>
-    <a class="header__link" rel="link" href="#">Города</a>
-    <a class="header__link" rel="link" href="#">О Компании</a>
+    <% navHeaderData.navHeader.forEach(({ name, href }) => { %>
+    <a class="header__link" rel="link" href="<%= href %>"><%= name %></a>
+    <% }); %>
   </nav>
   <!-- !!!!! ВАЖНО! Дублирование кода, 
     для попада используются те же компоненты, что и для самого Header-->
@@ -62,11 +60,9 @@
       </div>
     </div>
     <nav class="header__popup-nav-links">
-      <a class="header__link" rel="link" href="#">Услуги</a>
-      <a class="header__link" rel="link" href="#">Автопарк</a>
-      <a class="header__link" rel="link" href="#">Кейсы</a>
-      <a class="header__link" rel="link" href="#">Города</a>
-      <a class="header__link" rel="link" href="#">О компании</a>
+      <% navHeaderData.navHeader.forEach(({ name, href }) => { %>
+      <a class="header__link" rel="link" href="href">name</a>
+      <% }); %>
     </nav>
     <button
       class="header__popup-place-order-btn"
