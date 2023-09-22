@@ -47,15 +47,17 @@
         ></section>
         <section class="intro" id="intro-cities-kazan-d"></section>
         <section class="gallery-info-cards">
-          <article class="service service_type_even">
-            <h2 class="service__header">Транспортные услуги в Казани</h2>
-            <div
-              class="big-logo big-logo_bg big-logo_border big-logo_sizes_slim big-logo_position_third big-logo_rotate_45"
-            ></div>
-          </article>
-          <%=
-          require('@common.blocks/gallery-info-cards-with-header.ejs').default
-          %>
+          <div class="gallery-info-cards__gallery">
+            <article class="service service_type_even">
+              <h2 class="service__header">Транспортные услуги в Казани</h2>
+              <div
+                class="big-logo big-logo_bg big-logo_border big-logo_sizes_slim big-logo_position_third big-logo_rotate_45"
+              ></div>
+            </article>
+            <%=
+            require('@common.blocks/services/servises-with-header.ejs').default
+            %>
+          </div>
         </section>
         <section class="cases-cards" id="list-cases-kazan"></section>
         <section class="gallery-reviews" id="list-reviews-kazan"></section>
