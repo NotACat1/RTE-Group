@@ -1,5 +1,6 @@
 .feedback {
   max-width: 300px;
+
   &__container {
     display: grid;
     grid-template-rows: auto;
@@ -12,11 +13,13 @@
   &__text {
     @include reset();
     @include text();
+
     color: $white;
 
     &_type_title {
       @include text-format(16px, 600, 1.5);
     }
+
     &_type_about {
       @include text-format(16px, 400, 1.5);
     }
@@ -31,6 +34,7 @@
     width: 48px;
     height: 48px;
   }
+
   &__image {
     position: absolute;
     background-color: $colorButtonDisabledHover;
@@ -38,9 +42,11 @@
     height: 48px;
     width: 48px;
   }
+
   &__title {
     grid-column: 2;
   }
+
   &__about {
     grid-column: span 2;
   }
