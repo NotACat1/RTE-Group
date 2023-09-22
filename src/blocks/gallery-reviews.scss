@@ -1,6 +1,6 @@
 /* stylelint-disable */
-@import '../scss/utills/_variables';
-@import '../scss/utills/_mixins';
+@import '@scss/utills/_variables';
+@import '@scss/utills/_mixins';
 /* stylelint-enable */
 
 .gallery-reviews {
@@ -47,7 +47,7 @@
     background: rgba(255, 255, 255, 0.04);
   }
 
-  &__card-tittle {
+  &__card-title {
     display: flex;
     justify-content: start;
     align-items: center;
