@@ -49,6 +49,9 @@
     @include media(lg) {
       width: 80px;
     }
+    &_small {
+      width: 56px;
+    }
   }
 
   &__title {
@@ -64,7 +67,7 @@
     @include text();
     @include text-format(16px, 400, 1.5);
 
-    color: $gray;
+    color: $white;
   }
 
   &_type_even {
