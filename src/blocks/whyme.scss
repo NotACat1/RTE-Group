@@ -1,0 +1,53 @@
+.whyme {
+  padding: 16px 16px 32px;
+  box-sizing: border-box;
+  max-width: 528px;
+
+  &__text {
+    @include reset();
+    @include text();
+    color: $white;
+
+    &_type_number {
+      @include text-format(24px, 500, 1);
+      color: $primaryGreenColor;
+    }
+    &_type_title {
+      @include text-format(20px, 700, 1.3);
+    }
+    &_type_about {
+      @include text-format(16px, 400, 1.5);
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 56x auto;
+    grid-template-rows: 50px auto;
+    column-gap: 32px;
+  }
+  &__circle {
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    width: 56px;
+    height: 56px;
+    box-sizing: border-box;
+    border-radius: 32px;
+    border: 2px solid $primaryGreenColor;
+  }
+  &__number {
+    @include text-format(24px, 500, 1);
+    color: $primaryGreenColor;
+  }
+  &__title {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  &__about {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}

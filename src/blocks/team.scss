@@ -1,0 +1,44 @@
+.team {
+  max-width: 323px;
+  &__container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 72px auto;
+    align-items: center;
+    row-gap: 16px;
+    column-gap: 24px;
+  }
+
+  &__text {
+    @include reset();
+    @include text();
+    color: $white;
+
+    &_type_title {
+      @include text-format(16px, 600, 1.5);
+    }
+    &_type_job {
+      @include text-format(16px, 400, 1.5);
+      opacity: 0.5;
+    }
+    &_type_about {
+      @include text-format(16px, 400, 1.5);
+    }
+  }
+
+  &__image {
+    grid-column: 1;
+    border-radius: 80px;
+    height: 72px;
+    width: 72px;
+  }
+  &__title {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  &__about {
+    grid-column: span 2;
+  }
+}
