@@ -10,6 +10,7 @@ const pagesDir = path.resolve(__dirname, 'src/pages');
 const pages = fs.readdirSync(pagesDir);
 
 const files = [
+  'advantages',
   'cases',
   'feedbacks',
   'feedbacksStaff',
