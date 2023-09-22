@@ -1,67 +1,31 @@
 <footer class="footer">
-  <img
-    class="footer__logo"
-    src="~@images/footer_logo_desktop_horizontal.png"
-    alt="Логотип РТ Экспресс"
-  />
-  <img
-    class="footer__logo_mobile"
-    src="~@images/footer_logo_mobile_vertical.png"
-    alt="Логотип РТ Экспресс"
-  />
-  <div class="footer__columns">
-    <div class="footer__column">
-      <nav class="footer__menu">
-        <ul class="footer__menu-list">
-          <li class="footer__list-item">
-            <a class="footer__menu-link" href="../../pages/services.html"
-              >Услуги</a
-            >
-          </li>
-          <li class="footer__list-item">
-            <a class="footer__menu-link" href="../../pages/about.html"
-              >О компании</a
-            >
-          </li>
-          <li class="footer__list-item">
-            <a class="footer__menu-link" href="../../pages/autopark.html"
-              >Автопарк</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="footer__column">
-      <nav class="footer__menu">
-        <ul class="footer__menu-list">
-          <li class="footer__list-item">
-            <a class="footer__menu-link" href="../../pages/cases.html">Кейсы</a>
-          </li>
-          <li class="footer__list-item">
-            <a class="footer__menu-link" href="../../pages/cities.html"
-              >Города</a
-            >
-          </li>
-          <li class="footer__list-item">
-            <a class="footer__menu-link" href="../../pages/contacts.html"
-              >Контакты</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="footer__column">
-      <nav class="footer__menu">
-        <ul class="footer__menu-list">
-          <li class="footer__list-item">
-            <a class="footer__menu-link">Работа у нас</a>
-          </li>
-          <li class="footer__list-item">
-            <a class="footer__menu-link">Политика конфиденциальности</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+  <div class="footer__content">
+    <img
+      class="footer__logo footer__logo_desktop"
+      src="~@images/footer_logo_desktop_horizontal.svg"
+      alt="Логотип РТ Экспресс"
+    />
+    <img
+      class="footer__logo footer__logo_mobile"
+      src="~@images/footer_logo_mobile_vertical.svg"
+      alt="Логотип РТ Экспресс"
+    />
+    <nav class="footer__menu">
+			<% let dataArr = navFooterData.navFooter; %>
+			<% while (dataArr.length > 0) { %>
+				<ul class="footer__menu-list">
+				<% const threeItems = dataArr.slice(0, 3); %>
+				<% threeItems.forEach(({ name, href }) => { %>
+					<li class="footer__list-item">
+						<a class="footer__menu-link" href="<%= href %>"
+							><%= name %></a
+						>
+					</li>
+					<% }); %>
+					<% dataArr = dataArr.slice(3); %>
+				</ul>
+					<% } %>
+    </nav>
+    <p class="footer__copyright">2023&nbsp©&nbspRTE&nbspGroup</p>
   </div>
-  <p class="footer__copyright">2023&nbsp©&nbspRTE&nbspGroup</p>
 </footer>

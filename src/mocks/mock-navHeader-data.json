@@ -1,24 +1,24 @@
 {
-  "infoPages": [
+  "navHeader": [
     {
       "name": "Услуги",
-      "href": "@pages/services.html"
+      "href": "./services.html"
     },
     {
       "name": "Автопарк",
-      "href": "@pages/autopark.html"
+      "href": "./autopark.html"
     },
     {
       "name": "Кейсы",
-      "href": "@pages/cases.html"
+      "href": "./cases.html"
     },
     {
       "name": "Города",
-      "href": "@pages/cities.html"
+      "href": "./cities.html"
     },
     {
       "name": "О компании",
-      "href": "@pages/about.htmll"
+      "href": "./about.htmll"
     }
   ]
 }
