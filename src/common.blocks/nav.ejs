@@ -1,20 +1,10 @@
 <nav class="nav">
   <ul class="nav__list">
-    <li class="nav__list-item">
-      <a class="nav__link" href="./services.html">Услуги</a>
-    </li>
-    <li class="nav__list-item">
-      <a class="nav__link" href="./autopark.html">Автопарк</a>
-    </li>
-    <li class="nav__list-item">
-      <a class="nav__link" href="./cases.html">Кейсы</a>
-    </li>
-    <li class="nav__list-item">
-      <a class="nav__link" href="./cities.html">Города</a>
-    </li>
-    <li class="nav__list-item">
-      <a class="nav__link" href="./about.html">О компании</a>
-    </li>
+		<% infoPagesData.infoPages.forEach(({ name, href }) => { %>
+			<li class="nav__list-item">
+				<a class="nav__link" href="<%= href %>"><%= name %></a>
+			</li>
+		<% }); %>
   </ul>
   <button class="nav__order-button"></button>
 </nav>
