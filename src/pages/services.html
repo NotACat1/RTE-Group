@@ -41,7 +41,9 @@
       <%= require('@common.blocks/header.ejs').default %>
       <main>
         <section class="info-form" id="get-service"></section>
-        <section class="gallery-info-cards" id="list-services"></section>
+        <section class="gallery-info-cards">
+          <%= require('@common.blocks/gallery-info-cards.ejs').default %>
+        </section>
       </main>
       <%= require('@common.blocks/footer.ejs').default %>
     </div>
