@@ -15,9 +15,10 @@ const files = [
   'feedbacks',
   'feedbacksStaff',
   'infoCities',
-  'infoPages',
   'services',
-  'sliders'
+  'sliders',
+  'navFooter',
+  'navHeader'
 ];
 
 const templateParameters = {};
