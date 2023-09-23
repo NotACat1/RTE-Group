@@ -65,22 +65,17 @@
   "license": "ISC",
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ],
     "*.{css,scss}": [
-      "prettier --write",
       "stylelint --fix --custom-syntax postcss-scss",
-      "git add"
+      "prettier --write"
     ],
     "*.{json,md}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.html": [
-      "prettier --write",
-      "htmlhint",
-      "git add"
+      "prettier --write"
     ]
   },
   "devDependencies": {
