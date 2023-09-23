@@ -4,36 +4,30 @@
 /* stylelint-enable */
 
 .nav {
-  max-width: 1280px;
-  padding: 8px 100px;
-  background-color: $bgDarkColor;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-
   &__list {
+    @include reset();
     display: flex;
     flex-direction: row;
     justify-content: start;
     gap: 16px;
     list-style: none;
-    padding: 0;
+    @include media(md) {
+      flex-direction: column;
+      gap: 0;
+    }
   }
 
   &__list-item {
     padding: 8px 16px;
+    @include media(md) {
+      padding: 16px 24px;
+    }
   }
 
   &__link {
-    text-align: center;
     @include text_type_header;
+    text-align: center;
     text-decoration: none;
     color: $white;
-  }
-
-  &__order-button {
-    display: none;
   }
 }
