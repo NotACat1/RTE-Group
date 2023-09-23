@@ -1,7 +1,6 @@
 /* stylelint-disable */
 @import "./style";
 @import "@blocks/page";
-@import "@blocks/header";
 @import "@blocks/big-logo";
 @import "@blocks/greeting";
 @import "@blocks/map";
@@ -12,4 +11,5 @@
 @import "@blocks/404";
 @import "@blocks/service";
 @import "@blocks/gallery-info-cards";
+@import "@blocks/header";
 /* stylelint-enable */
