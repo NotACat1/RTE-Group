@@ -4,203 +4,128 @@
 /* stylelint-enable */
 
 .header {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+  @include reset();
+  width: 100%;
+  background-color: $bgGrayColor;
+  @include media(md) {
+    background-color: $bgDarkColor;
+  }
 
   &__container {
-    background-color: $bgGrayColor;
+    @include reset();
+    @include container-max-widths;
+    box-sizing: border-box;
+    padding: 8px 0;
     display: flex;
-    flex-flow: row;
-    justify-content: space-between;
     align-items: center;
   }
 
-  &__logo {
-    margin: 8px auto 8px 100px;
+  &__logo-icon {
+    display: block;
+    &_desktop {
+      width: 153px;
+      @include media(sm) {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      width: 28px;
+      display: none;
+      @include media(sm) {
+        display: block;
+      }
+    }
   }
 
-  &__logo_small {
-    display: none;
-  }
-
-  &__contacts {
-    margin: 8px 100px 8px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__call-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-  }
-
-  &__phone-number {
+  &__contact {
     @include text_type_header;
+    @include text;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $white;
+    margin-left: auto;
+    margin-right: 24px;
+    @include media(sm) {
+      margin-right: auto;
+    }
+  }
 
-    margin: 0;
-    white-space: nowrap;
+  &__contact-icon {
+    width: 24px;
+  }
+
+  &__contact-text {
+    @include reset();
+    @include text_type_header;
   }
 
   &__place-order-btn {
+    @include reset_button;
     @include text_type_header;
     @include button_type_fill;
-    @include reset_button;
-
-    margin-left: 24px;
-    border-radius: 32px;
+    box-sizing: border-box;
     color: $white;
-    width: 173px;
-    height: 40px;
-    padding: 0;
+    padding: 8px 16px;
+    @include media(md) {
+      display: none;
+    }
+    &_nav {
+      display: none;
+      margin-top: 16px;
+      margin-bottom: 24px;
+      padding: 16px 24px;
+      @include media(md) {
+        display: block;
+      }
+    }
   }
 
   &__list-btn {
+    @include reset_button;
+    width: 24px;
+    height: 24px;
+    background-image: url("~@images/header_list.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     display: none;
-  }
-
-  &__list-close-btn {
-    display: none;
-  }
-
-  &__nav-links {
-    margin: 0 100px 8px;
-    padding-top: 8px;
-  }
-
-  &__link {
-    @include text_type_header;
-    @include text;
-
-    color: $white;
-    padding: 8px 16px;
-    margin-right: 16px;
-  }
-
-  &__link:last-of-type {
-    margin-right: 0;
+    @include media(md) {
+      display: block;
+    }
   }
 
   &__popup {
-    visibility: hidden;
-    opacity: 0;
-    max-width: 360px;
-    width: 100%;
-    margin-top: 16px;
+    position: relative;
   }
-}
 
-@media screen and (width <= 1079px) {
-  .header {
-    max-width: 768px;
-
-    &__logo {
-      margin: 8px 0;
-    }
-
-    &__contacts {
-      margin: 8px 0;
-    }
-
-    &__nav-links {
-      margin: 0 0 8px;
-      padding-top: 8px;
+  &__nav {
+    @include reset();
+    z-index: 4;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 0;
+    background-color: $bgDarkColor;
+    @include media(md) {
+      //display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
-}
 
-@media screen and (width <= 767px) {
-  .header {
-    max-width: 360px;
+  &__nav-container {
+    @include reset();
+    @include container-max-widths;
     width: 100%;
-
-    &__container {
-      background-color: $bgDarkColor;
-    }
-
-    &__logo {
-      display: none;
-    }
-
-    &__logo_small {
-      display: block;
-      margin: 8px 38px 8px 16px;
-      width: 48px;
-      height: 48px;
-    }
-
-    &__contacts {
-      margin: 0;
-    }
-
-    &__place-order-btn {
-      display: none;
-    }
-
-    &__list-btn {
-      background-image: url("~@images/header_list.svg");
-      background-color: $bgDarkColor;
-      background-repeat: no-repeat;
-      background-position: center;
-      border: none;
-      display: block;
-      width: 36px;
-      height: 36px;
-      margin: 8px;
-      margin-left: 50px;
-    }
-
-    &__nav-links {
-      display: none;
-    }
-
-    &__link {
-      padding: 0;
-      margin: 16px 0;
-    }
-
-    &__popup_opened {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    /* ВАЖНО!!! Внимание!! Код частично дублируется */
-    &__popup-nav-links {
-      max-width: 312px;
-      width: 100%;
-      padding-top: 0;
-      margin: 0 24px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    &__popup-place-order-btn {
-      @include text_type_header;
-      @include button_type_fill;
-      @include reset_button;
-
-      margin: 216px 16px 24px;
-      border-radius: 32px;
-      color: $white;
-      width: 328px;
-      height: 56px;
-      padding: 0;
-    }
-
-    &__list-close-btn {
-      background-image: url("~@images/close-btn.png");
-      background-color: $bgDarkColor;
-      background-repeat: no-repeat;
-      background-position: center;
-      border: none;
-      display: block;
-      width: 36px;
-      height: 36px;
-      margin: 8px;
-      margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    @include media(md) {
+      min-height: 576px;
     }
   }
 }
