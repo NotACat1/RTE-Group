@@ -19,9 +19,16 @@
 
   &__list-item {
     padding: 8px 16px;
+    border-radius: 32px;
+    transition: background-color 0.5s ease;
+    &:hover {
+      background: $colorButtonDisabledHover;
+    }
     @include media(md) {
+      border-radius: 0;
       padding: 16px 24px;
     }
+    //@include hover-animation;
   }
 
   &__link {
