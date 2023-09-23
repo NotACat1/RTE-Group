@@ -1,19 +1,14 @@
-const listButton = document.querySelector('.header__list-btn');
-const closeButton = document.querySelector('.header__list-close-btn');
-const headerPopup = document.querySelector('.header__popup');
+export function header() {
+  const listButton = document.querySelector('.header__list-btn');
+  const headerPopup = document.querySelector('.header__nav');
 
-function handleClickOnList(selector) {
-  selector.classList.add('header__popup_opened');
+  console.log(listButton);
+
+  listButton.addEventListener('click', () => {
+    listButton.classList.toggle('header__list-btn_open');
+    listButton.classList.toggle('header__list-btn_close');
+
+    headerPopup.classList.toggle('header__nav_open');
+    headerPopup.classList.toggle('header__nav_close');
+  });
 }
-
-function handleClickOnClose(selector) {
-  selector.classList.remove('header__popup_opened');
-}
-
-listButton.addEventListener('click', function () {
-  handleClickOnList(headerPopup);
-});
-
-closeButton.addEventListener('click', function () {
-  handleClickOnClose(headerPopup);
-});
