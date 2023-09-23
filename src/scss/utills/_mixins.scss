@@ -85,6 +85,14 @@
   color: $colorLinkFooter;
 }
 
+@mixin hover-animation {
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
 @mixin _button() {
   padding-left: 16px;
   padding-right: 16px;
