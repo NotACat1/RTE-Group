@@ -30,3 +30,8 @@ $container-max-widths: (
   lg: 960px,
   xl: 1080px,
 );
+
+$z-index-bg: 2;
+$z-index-media: 5;
+$z-index-content: 10;
+$z-index-popup: 100;

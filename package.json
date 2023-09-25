@@ -68,7 +68,6 @@
       "eslint --fix"
     ],
     "*.{css,scss}": [
-      "stylelint --fix --custom-syntax postcss-scss",
       "prettier --write"
     ],
     "*.{json,md}": [
