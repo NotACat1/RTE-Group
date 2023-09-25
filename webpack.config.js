@@ -13,6 +13,7 @@ const files = [
   'advantages',
   'cases',
   'feedbacks',
+  'contactsCities',
   'feedbacksStaff',
   'infoCities',
   'services',
