@@ -1,3 +1,8 @@
+/* stylelint-disable */
+@import '@scss/utills/variables';
+@import '@scss/utills/mixins';
+/* stylelint-enable */
+
 .input {
   display: flex;
   flex-direction: column;
@@ -69,7 +74,6 @@
     border: none;
     z-index: 2;
 
-
     &:focus,
     &:not(:placeholder-shown) {
       outline: none;
@@ -91,7 +95,6 @@
   }
 
   &__field-error {
-
     &_active {
       @include text;
       @include text_type_fail;
@@ -106,10 +109,14 @@
   .input {
     max-width: 296px;
     width: 100%;
-  }
 
-  &__container {
-    max-width: 296px;
-    width: 100%;
+    &__container {
+      max-width: 296px;
+      width: 100%;
+    }
+    &__caption {
+      max-width: 296px;
+      width: 100%;
+    }
   }
 }

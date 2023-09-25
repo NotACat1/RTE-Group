@@ -1,8 +1,15 @@
+/* stylelint-disable */
+@import '@scss/utills/variables';
+@import '@scss/utills/mixins';
+/* stylelint-enable */
+
 .info-form {
+  @include container-max-widths;
+
   display: grid;
-  grid-template-columns: 576px 480px;
+  grid-template-columns: 576px 432px;
   column-gap: 24px;
-  margin-top: 96px;
+  margin: 96px auto 128px;
 
   &__container {
     display: block;
@@ -10,7 +17,7 @@
 
   &__title {
     @include text;
-    @include text_type_card-title;
+    @include text_type_section;
 
     margin: 0;
   }
@@ -25,7 +32,11 @@
 }
 
 @media screen and (width <= 767px) {
-    .info-form {
-        grid-template-columns: 328px;
+  .info-form {
+    grid-template-columns: 328px;
+
+    &__title {
+      @include text_h_h3;
     }
+  }
 }
