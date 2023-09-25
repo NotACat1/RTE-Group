@@ -33,26 +33,26 @@
       aria-label="Значок выпадающего списка"
     ></button>
   </div>
-	<div class="header__popup">
-		<div class="header__nav header__nav_close">
-			<div class="header__nav-container">
-				<nav class="nav">
-					<ul class="nav__list">
-						<% navHeaderData.navHeader.forEach(({ name, href }) => { %>
-						<li class="nav__list-item">
-							<a class="nav__link" href="<%= href %>"><%= name %></a>
-						</li>
-						<% }); %>
-					</ul>
-				</nav>
-				<button
-					class="header__place-order-btn header__place-order-btn_nav"
-					type="submit"
-					aria-label="Кнопка разместить заказ"
-				>
-					Оформить заказ
-				</button>
-			</div>		
-		</div>
-	</div>
+  <div class="header__popup">
+    <div class="header__nav header__nav_close">
+      <div class="header__nav-container">
+        <nav class="nav">
+          <ul class="nav__list">
+            <% navHeaderData.navHeader.forEach(({ name, href }) => { %>
+            <li class="nav__list-item">
+              <a class="nav__link" href="<%= href %>"><%= name %></a>
+            </li>
+            <% }); %>
+          </ul>
+        </nav>
+        <button
+          class="header__place-order-btn header__place-order-btn_nav"
+          type="submit"
+          aria-label="Кнопка разместить заказ"
+        >
+          Оформить заказ
+        </button>
+      </div>
+    </div>
+  </div>
 </header>
