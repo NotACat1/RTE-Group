@@ -4,9 +4,11 @@
 /* stylelint-enable */
 
 .header {
+  @include container-max-widths;
+
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  // margin: 0 auto;
 
   &__container {
     background-color: $bgGrayColor;
@@ -42,20 +44,8 @@
     @include text_type_header;
 
     margin: 0;
+    margin-right: 24px;
     white-space: nowrap;
-  }
-
-  &__place-order-btn {
-    @include text_type_header;
-    @include button_type_fill;
-    @include reset_button;
-
-    margin-left: 24px;
-    border-radius: 32px;
-    color: $white;
-    width: 173px;
-    height: 40px;
-    padding: 0;
   }
 
   &__list-btn {
@@ -95,7 +85,6 @@
 
 @media screen and (width <= 1079px) {
   .header {
-    max-width: 768px;
 
     &__logo {
       margin: 8px 0;
@@ -114,8 +103,6 @@
 
 @media screen and (width <= 767px) {
   .header {
-    max-width: 360px;
-    width: 100%;
 
     &__container {
       background-color: $bgDarkColor;
@@ -141,8 +128,8 @@
     }
 
     &__list-btn {
-      background-image: url('~@images/header_list.svg');
-      background-color: $bgDarkColor;
+      background-image: url("~@images/header_list.svg");
+      background-color: transparent;
       background-repeat: no-repeat;
       background-position: center;
       border: none;
@@ -178,25 +165,20 @@
     }
 
     &__popup-place-order-btn {
-      @include text_type_header;
-      @include button_type_fill;
-      @include reset_button;
-
       margin: 216px 16px 24px;
-      border-radius: 32px;
-      color: $white;
       width: 328px;
       height: 56px;
       padding: 0;
     }
 
     &__list-close-btn {
-      background-image: url('~@images/close-btn.png');
-      background-color: $bgDarkColor;
+      background-image: url("~@images/close-btn.png");
+      background-color: transparent;
       background-repeat: no-repeat;
       background-position: center;
       border: none;
       display: block;
+      position: relative;
       width: 36px;
       height: 36px;
       margin: 8px;
