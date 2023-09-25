@@ -1,10 +1,10 @@
 <section class="gallery-cities-cards" id="list-cities">
-	<% sitiesGalleryData.sitiesGallery.forEach(({ iconPath, name, link }) => { %>
-		<a class="gallery-cities-cards__link" href="<%= link %>">
-			<article class="gallery-cities-cards__card">
-				<img src="<%= iconPath %>" alt="<%= name %>" />
-				<h2>Доставка в <%= name %></h2>
-			</article>
-		</a>
-	<% }) %>  
+  <% sitiesGalleryData.sitiesGallery.forEach(({ iconPath, name, link }) => { %>
+  <a class="gallery-cities-cards__link" href="<%= link %>">
+    <article class="gallery-cities-cards__card">
+      <img src="<%= iconPath %>" alt="<%= name %>" />
+      <h2>Доставка в <%= name %></h2>
+    </article>
+  </a>
+  <% }) %>
 </section>
