@@ -1,0 +1,42 @@
+/* stylelint-disable */
+@import "@scss/utills/variables";
+@import "@scss/utills/mixins";
+/* stylelint-enable */
+
+.info-form {
+  @include container-max-widths;
+
+  display: grid;
+  grid-template-columns: 576px 432px;
+  column-gap: 24px;
+  margin: 96px auto 128px;
+
+  &__container {
+    display: block;
+  }
+
+  &__title {
+    @include text;
+    @include text_type_section;
+
+    margin: 0;
+  }
+
+  &__about {
+    @include text;
+    @include text_type_regular;
+
+    margin: 0;
+    margin-top: 32px;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .info-form {
+    grid-template-columns: 328px;
+
+    &__title {
+      @include text_h_h3;
+    }
+  }
+}
