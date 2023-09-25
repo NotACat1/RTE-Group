@@ -17,7 +17,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @include media(lg) {
+  @include media(sm) {
     padding: 0;
     background: none;
   }
@@ -35,7 +35,7 @@
     align-items: flex-start;
     gap: 32px;
 
-    @include media(lg) {
+    @include media(sm) {
       max-width: 100%;
       padding: 16px;
       gap: 24px;
@@ -51,7 +51,7 @@
     @include text_type_section;
     margin-bottom: 32px;
 
-    @include media(lg) {
+    @include media(sm) {
       margin-bottom: 16px;
     }
   }

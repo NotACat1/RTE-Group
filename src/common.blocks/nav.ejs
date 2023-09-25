@@ -1,0 +1,10 @@
+<nav class="nav">
+  <ul class="nav__list">
+		<% navHeaderData.navHeader.forEach(({ name, href }) => { %>
+			<li class="nav__list-item">
+				<a class="nav__link" href="<%= href %>"><%= name %></a>
+			</li>
+		<% }); %>
+  </ul>
+  <button class="nav__order-button"></button>
+</nav>

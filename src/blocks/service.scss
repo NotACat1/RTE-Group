@@ -1,20 +1,57 @@
+/* stylelint-disable */
+@import "@scss/utills/variables";
+@import "@scss/utills/mixins";
+/* stylelint-enable */
+
 .service {
-  display: block;
-  padding: 24px 32px;
-  max-width: 528px;
+  position: relative;
+  @include reset;
+  padding: 24px 32px 32px 32px;
   box-sizing: border-box;
+  border-radius: 24px;
+  @include media(lg) {
+    padding: 8px 16px 16px 16px;
+  }
+
+  &__header {
+    @include reset;
+    @include text_type_section;
+    @include media(lg) {
+      @include text_h_h3;
+    }
+  }
 
   &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    @include media(lg) {
+      gap: 16px;
+    }
+  }
+
+  &__container-info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
-    width: 464px;
+    @include media(lg) {
+      gap: 16px;
+      align-items: stretch;
+    }
   }
 
   &__icon {
     width: 96px;
-    height: 96px;
+    @include media(lg) {
+      width: 80px;
+    }
+    &_small {
+      width: 56px;
+    }
   }
 
   &__title {
@@ -30,7 +67,7 @@
     @include text();
     @include text-format(16px, 400, 1.5);
 
-    color: $gray;
+    color: $white;
   }
 
   &_type_even {

@@ -1,11 +1,20 @@
 /* stylelint-disable */
-@import '@scss/utills/_variables';
-@import '@scss/utills/_mixins';
-@import '@blocks/page';
-@import '@blocks/input';
-@import '@blocks/button';
-@import '@blocks/service';
-@import '@blocks/form';
+@import "@scss/utills/_variables";
+@import "@scss/utills/_mixins";
+@import "@blocks/page";
+@import "@blocks/input";
+@import "@blocks/button";
+@import "@blocks/service";
+@import "@blocks/form";
+@import "@blocks/case";
+@import "@blocks/contact";
+@import "@blocks/city";
+@import "@blocks/popup";
+@import "@blocks/drag-drop";
+@import "@blocks/advantage";
+@import "@blocks/feedback";
+@import "@blocks/team";
+@import "@blocks/whyme";
 /* stylelint-enable */
 
 .UI {

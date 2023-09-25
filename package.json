@@ -64,18 +64,19 @@
   ],
   "license": "ISC",
   "lint-staged": {
-    "*.{js,jsx}": "eslint --fix",
+    "*.{js,jsx}": [
+      "eslint --fix"
+    ],
     "*.{css,scss}": [
-      "prettier --write",
-      "stylelint --fix --custom-syntax postcss-scss"
+      "stylelint --fix --custom-syntax postcss-scss",
+      "prettier --write"
     ],
-    "*.{json,md}": "prettier --write",
+    "*.{json,md}": [
+      "prettier --write"
+    ],
     "*.html": [
-      "prettier --write",
-      "htmlhint"
-    ],
-    "!header.html": "",
-    "!index.scss": ""
+      "prettier --write"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
@@ -87,7 +88,9 @@
     "css-loader": "^6.8.1",
     "cssnano": "^6.0.1",
     "eslint": "^8.49.0",
+    "file-loader": "^6.2.0",
     "gh-pages": "^6.0.0",
+    "html-loader": "^4.2.0",
     "html-webpack-partials-plugin": "^0.8.0",
     "html-webpack-plugin": "^5.5.3",
     "htmlhint": "^1.1.4",

@@ -33,16 +33,18 @@
     <meta property="og:locale" content="ru_RU" />
 
     <title>Работа у нас</title>
+
+    <link rel="stylesheet" href="main.css" />
   </head>
 
   <body class="page">
     <div class="page__container">
-      <header></header>
+      <%= require('@common.blocks/header.ejs').default %>
       <main class="main">
         <section class="work-with-us"></section>
         <section class="section-form"></section>
       </main>
-      <footer></footer>
+      <%= require('@common.blocks/footer.ejs').default %>
     </div>
   </body>
 </html>

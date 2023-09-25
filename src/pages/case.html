@@ -32,16 +32,18 @@
     <meta property="og:locale" content="ru_RU" />
 
     <title>Трекинг - важная часть грузоперевозок</title>
+
+    <link rel="stylesheet" href="main.css" />
   </head>
 
   <body class="page">
     <div class="page__container">
-      <header></header>
+      <%= require('@common.blocks/header.ejs').default %>
       <main>
         <section class="info-form" id="about-trucking"></section>
         <section class="info-blocks" id="info-blocks"></section>
       </main>
-      <footer></footer>
+      <%= require('@common.blocks/footer.ejs').default %>
     </div>
   </body>
 </html>

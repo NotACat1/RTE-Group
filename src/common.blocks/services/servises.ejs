@@ -1,0 +1,16 @@
+<% let index = 1; %> <% let even = true; %> <% servicesData.services.forEach(({
+imgPath, name, description }) => { %> <% index++; %> <% if (index % 2 == 0) even =
+!even; %>
+<article class="service <%= even ? 'service_type_even' : 'service_type_odd' %>">
+  <div class="service__container">
+    <div class="service__container-info">
+      <img src="<%= imgPath %>" alt="<%= name %>" class="service__icon" />
+      <p class="service__title"><%= name %></p>
+      <p class="service__about"><%= description %></p>
+    </div>
+    <button class="button button_type_dark">
+      <p class="button__text button__text_type_dark">Подробнее</p>
+    </button>
+  </div>
+</article>
+<% }); %>

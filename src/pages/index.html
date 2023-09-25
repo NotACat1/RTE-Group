@@ -38,7 +38,7 @@
 
   <body class="page">
     <div class="page__container">
-      <template-header></template-header>
+      <%= require('@common.blocks/header.ejs').default %>
       <main>
         <section class="greeting">
           <div class="greeting__content">
@@ -60,7 +60,7 @@
             >
               <img
                 class="big-logo__content"
-                src="<%= require('@images/fleet.jpg') %>"
+                src="@images/fleet.jpg"
                 alt="Автопарк"
               />
             </div>
@@ -70,7 +70,19 @@
           </div>
         </section>
         <section class="contact-form"></section>
-        <section class="gallery-info-cards"></section>
+        <section class="gallery-info-cards">
+          <div class="gallery-info-cards__gallery">
+            <article class="service service_type_even">
+              <h2 class="service__header">Наши услуги</h2>
+              <div
+                class="big-logo big-logo_bg big-logo_sizes_first big-logo_position_first big-logo_border big-logo_rotate_120"
+              ></div>
+            </article>
+            <%=
+            require('@common.blocks/services/servises-with-header.ejs').default
+            %>
+          </div>
+        </section>
         <section class="advantages"></section>
         <section class="map">
           <div class="map__content">
@@ -86,7 +98,7 @@
         </section>
         <section class="cases"></section>
       </main>
-      <footer></footer>
+      <%= require('@common.blocks/footer.ejs').default %>
     </div>
   </body>
 </html>

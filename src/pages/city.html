@@ -32,11 +32,13 @@
     <meta property="og:locale" content="ru_RU" />
 
     <title>Города: Казань</title>
+
+    <link rel="stylesheet" href="main.css" />
   </head>
 
   <body class="page">
     <div class="page__container">
-      <header></header>
+      <%= require('@common.blocks/header.ejs').default %>
       <main>
         <section class="intro" id="intro-cities-kazan"></section>
         <section
@@ -44,11 +46,23 @@
           id="list-advantages"
         ></section>
         <section class="intro" id="intro-cities-kazan-d"></section>
-        <section class="gallery-info-cards" id="list-services-kazan"></section>
+        <section class="gallery-info-cards">
+          <div class="gallery-info-cards__gallery">
+            <article class="service service_type_even">
+              <h2 class="service__header">Транспортные услуги в Казани</h2>
+              <div
+                class="big-logo big-logo_bg big-logo_border big-logo_sizes_slim big-logo_position_third big-logo_rotate_45"
+              ></div>
+            </article>
+            <%=
+            require('@common.blocks/services/servises-with-header.ejs').default
+            %>
+          </div>
+        </section>
         <section class="cases-cards" id="list-cases-kazan"></section>
         <section class="gallery-reviews" id="list-reviews-kazan"></section>
       </main>
-      <footer></footer>
+      <%= require('@common.blocks/footer.ejs').default %>
     </div>
   </body>
 </html>

@@ -1,0 +1,33 @@
+/* stylelint-disable */
+@import "@scss/utills/variables";
+@import "@scss/utills/mixins";
+/* stylelint-enable */
+
+.gallery-info-cards {
+  @include reset;
+  @include container-max-widths;
+
+  &__header {
+    @include reset;
+    @include text_type_section;
+    margin-bottom: 64px;
+    max-width: 528px;
+    @include media(md) {
+      @include text_h_h3;
+      margin-bottom: 40px;
+      max-width: 328px;
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, 528px);
+    @include media(lg) {
+      grid-template-columns: repeat(auto-fill, 328px);
+      gap: 16px;
+    }
+  }
+}

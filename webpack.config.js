@@ -1,3 +1,4 @@
+const _ = require('lodash');
 const path = require('path');
 const fs = require('fs');
 
@@ -8,11 +9,30 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const pagesDir = path.resolve(__dirname, 'src/pages');
 const pages = fs.readdirSync(pagesDir);
 
+const files = [
+  'advantages',
+  'cases',
+  'feedbacks',
+  'feedbacksStaff',
+  'infoCities',
+  'services',
+  'sliders',
+  'navFooter',
+  'navHeader'
+];
+
+const templateParameters = {};
+
+files.forEach(file => {
+  templateParameters[`${file}Data`] = require(`./src/mocks/mock-${file}-data.json`);
+});
+
 const htmlPlugins = pages.map(page => {
   return new HtmlWebpackPlugin({
     filename: page,
     template: path.resolve(pagesDir, page),
     chunks: [page],
+    templateParameters
   });
 });
 
@@ -40,6 +60,7 @@ module.exports = {
       '@images': projectRoot + '/src/images',
       '@blocks': projectRoot + '/src/blocks',
       '@pages': projectRoot + '/src/pages',
+      '@common.blocks': projectRoot + '/src/common.blocks',
     },
     extensions: [ '.js', '.json', '.css', '.scss', '.sass', '.svg', '.png', '.jpeg', '.gif', ],
   },
@@ -52,10 +73,19 @@ module.exports = {
       },
       {
         test: /\.ejs$/i,
-        loader: 'ejs-loader',
+        loader: 'html-loader',
         options: {
-          esModule: false,
-        },
+          preprocessor: (content, loaderContext) => {
+            let result;
+            try {
+              result = _.template(content)(templateParameters);
+            } catch (error) {
+              loaderContext.emitError(error);
+              return content;
+            }
+            return result;
+          },
+        }
       },
       {
         test: /\.s[ac]ss$/i,
