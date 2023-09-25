@@ -19,6 +19,7 @@ const files = [
   'services',
   'sliders',
   'navFooter',
+  'sitiesGallery',
   'navHeader'
 ];
 

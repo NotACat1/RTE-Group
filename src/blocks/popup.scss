@@ -1,6 +1,6 @@
 /* stylelint-disable */
-@import '@scss/utills/variables';
-@import '@scss/utills/mixins';
+@import "@scss/utills/variables";
+@import "@scss/utills/mixins";
 /* stylelint-enable */
 
 .popup {
@@ -41,7 +41,7 @@
 
   &__close {
     background-color: transparent;
-    background-image: url('../images/popup__close@2x.png');
+    background-image: url("../images/popup__close@2x.png");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 24px 24px;
