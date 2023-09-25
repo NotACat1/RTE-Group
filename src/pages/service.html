@@ -37,7 +37,7 @@
   </head>
 
   <body class="page">
-    <div class="page__container">
+    <ul class="page__container">
       <%= require('@common.blocks/header.ejs').default %>
       <main>
         <section
@@ -61,7 +61,7 @@
           class="step-by-step-list"
           id="process-transporting-excavator"
         ></section>
-        <section class="price-table" id="price-list"></section>
+        <%= require('@common.blocks/price-table.ejs').default %>
         <section class="text-info" id="seo-article"></section>
         <section class="gallery-cards" id="cases"></section>
         <section class="gallery-reviews" id="customer-reviews"></section>
