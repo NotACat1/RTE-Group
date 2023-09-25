@@ -1,7 +1,8 @@
-import './scss/index.scss';
-import { Slider } from './components/Slider.js';
-import { header } from './components/script-header.js';
-header();
+import './scss/index.scss'
+import { Slider } from './components/Slider.js'
+import { header } from './components/script-header.js'
+header()
+import { FormValidator } from '../src/components/FormValidator.js'
 
 const listItems = document.querySelectorAll('.list-drop-down__item')
 const slider = document.querySelector('.slider')
@@ -22,8 +23,32 @@ const answers = [
   до 2 дней в зависимости от дорожных условий. Если же расстояние
   меньше, то доставка займет меньше времени.`,
     id: 'logistic-time',
-  }
+  },
 ]
+
+const formSelectors = {
+  formSelector: '.form',
+  inputSelector: '.input__field',
+  submitButtonSelector: '.form__button',
+  inactiveButtonClass: 'button_type_inactive',
+  inputErrorClass: 'input__field-error',
+  inputErrorTextClass: 'input__text_type_error',
+  inputErrorContainerClass: 'input__container_type_error',
+  activeInputErrorClass: 'input__field-error_active',
+  checkboxSelector: '.form__checkbox-control',
+  checkboxErrorClass: 'form__checkbox-control_invalid',
+  checkboxLabelSelector: '.form__checkbox-control-placeholder',
+  checkboxContainerSelector: '.form__checkbox-control-container',
+  checkboxErrorSelector: '.form__checkbox-control-error',
+}
+
+const orderForm = document.querySelector('.form')
+const submitButton = document.querySelector('.form__button')
+const popupRequestConfirmed = document.querySelector('.popup')
+const closeButton = document.querySelector('.popup__close')
+const checkBox = document.querySelector('.form__checkbox-control')
+const inputList = Array.from(document.querySelectorAll('.input__field'))
+export const summaryInput = document.querySelector('#summary')
 
 listItems.forEach((item) => {
   const answer = new DropDown({
@@ -36,3 +61,34 @@ listItems.forEach((item) => {
 
 const sliderItem = new Slider(slider)
 sliderItem.timer()
+
+const orderFormValidation = new FormValidator(formSelectors, orderForm)
+
+orderFormValidation.enableValidation()
+
+function openPopup(popupSelector) {
+  popupSelector.classList.add('popup_opened')
+}
+
+function closePopup(popupSelector) {
+  popupSelector.classList.remove('popup_opened')
+}
+
+function resetForm() {
+  inputList.forEach((inputElement) => {
+    inputElement.value = ''
+    checkBox.checked = false
+  })
+}
+
+if (!submitButton.classList.contains('button_type_disabled')) {
+  orderForm.addEventListener('submit', (evt) => {
+    evt.preventDefault()
+    openPopup(popupRequestConfirmed)
+    resetForm()
+  })
+}
+
+closeButton.addEventListener('click', () => {
+  closePopup(popupRequestConfirmed)
+})

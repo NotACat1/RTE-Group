@@ -1,6 +1,6 @@
 /* stylelint-disable */
-@import "@scss/utills/variables";
-@import "@scss/utills/mixins";
+@import '@scss/utills/variables';
+@import '@scss/utills/mixins';
 /* stylelint-enable */
 
 .button {
@@ -53,6 +53,13 @@
     &:hover {
       background-color: $colorButtonDisabledHover;
       border-color: $colorButtonDisabledHover;
+    }
+  }
+
+  &_type_inactive {
+    &:hover {
+      background-color: $colorGreenDarker;
+      border-color: $colorGreenDarker;
     }
   }
 }
