@@ -1,0 +1,30 @@
+
+
+<div class="city-contacts__gallery">
+	<% contactsCitiesData.contactsCities.forEach(({ city, address, telephone, messengers, mail }) => { %>
+    <article class="city-contacts__contact">
+			<h2 class="city-contacts__contact-title"><%= city %></h2>
+			<ul class="city-contacts__contact-list">
+				<li class="city-contacts__contact-list-item">
+					<h3 class="city-contacts__contact-list-item-title">Адрес</h3>
+					<p class="city-contacts__contact-list-item-text"><%= address %></p>
+				</li>
+				<li class="city-contacts__contact-list-item">
+					<h3 class="city-contacts__contact-list-item-title">Телефон</h3>
+					<div class="city-contacts__contact-list-item-links">
+						<a class="city-contacts__contact-list-item-link" href="tel:<%= telephone.replace(/[^\d+]/g, '') %>"><%= telephone %></a>
+						<% messengers.forEach(({ name, iconPath, link }) => { %>
+							<a class="city-contacts__contact-list-item-link" href="<%= link %>">
+								<img src="<%= iconPath %>" alt="<%= name %>"/>
+							</a>
+						<% }); %>
+					</div>									
+				</li>
+				<li class="city-contacts__contact-list-item">
+					<h3 class="city-contacts__contact-list-item-title">E-mail</h3>
+					<a class="city-contacts__contact-list-item-link city-contacts__contact-list-item-link_underline" href="mailto:<%= mail %>"><%= mail %></a>
+				</li>
+			</ul>
+		</article>
+  <% }); %>
+</div>
