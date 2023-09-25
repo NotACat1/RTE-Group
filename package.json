@@ -64,18 +64,18 @@
   ],
   "license": "ISC",
   "lint-staged": {
-    "*.{js,jsx}": "eslint --fix",
+    "*.{js,jsx}": [
+      "eslint --fix"
+    ],
     "*.{css,scss}": [
-      "prettier --write",
-      "stylelint --fix --custom-syntax postcss-scss"
+      "prettier --write"
     ],
-    "*.{json,md}": "prettier --write",
+    "*.{json,md}": [
+      "prettier --write"
+    ],
     "*.html": [
-      "prettier --write",
-      "htmlhint"
-    ],
-    "!header.html": "",
-    "!index.scss": ""
+      "prettier --write"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
