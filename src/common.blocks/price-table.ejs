@@ -1,29 +1,33 @@
 <section class="price-table" id="price-list">
-	<h2 class="price-table__title">Прайс-лист</h2>
-	<table class="price-table__table">
-		<thead class="price-table__thead">
-			<tr class="price-table__tr">
-				<th class="price-table__th price-table__th_first">#</th>
-				<th class="price-table__th price-table__th_second">Услуга</th>
-				<th class="price-table__th price-table__th_third ">Стомиость</th>
-			</tr>
-		</thead>
-		<tbody class="price-table__tbody">
-			<% priceListData.priceList.forEach(({ id, name, price }) => { %>
-				<tr class="price-table__tr">
-					<td class="price-table__td"><%= id %></td>
-					<td class="price-table__td"><%= name %></td>
-					<td class="price-table__td price-table__td_price"><%= price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") %></td>
-				</tr>
-			<% });	%>
-		</tbody>
-	</table>
-	<ul class="price-table__list">
-		<% priceListData.priceList.forEach(({ name, description, price }) => { %>
-			<li class="price-table__list-item">
-				<h3 class="price-table__list-title"><%= name %> / <%= description %></h3>
-				<p class="price-table__list-paragraph"><%= price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") %></p>
-			</li>
-		<% });	%>
-	</ul>
+  <h2 class="price-table__title">Прайс-лист</h2>
+  <table class="price-table__table">
+    <thead class="price-table__thead">
+      <tr class="price-table__tr">
+        <th class="price-table__th price-table__th_first">#</th>
+        <th class="price-table__th price-table__th_second">Услуга</th>
+        <th class="price-table__th price-table__th_third">Стомиость</th>
+      </tr>
+    </thead>
+    <tbody class="price-table__tbody">
+      <% priceListData.priceList.forEach(({ id, name, price }) => { %>
+      <tr class="price-table__tr">
+        <td class="price-table__td"><%= id %></td>
+        <td class="price-table__td"><%= name %></td>
+        <td class="price-table__td price-table__td_price">
+          <%= price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") %>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  <ul class="price-table__list">
+    <% priceListData.priceList.forEach(({ name, description, price }) => { %>
+    <li class="price-table__list-item">
+      <h3 class="price-table__list-title"><%= name %> / <%= description %></h3>
+      <p class="price-table__list-paragraph">
+        <%= price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") %>
+      </p>
+    </li>
+    <% }); %>
+  </ul>
 </section>
