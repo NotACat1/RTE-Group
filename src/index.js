@@ -1,6 +1,7 @@
-import './scss/index.scss'
-import { Slider } from './components/Slider.js'
-import { DropDown } from './components/DropDown.js'
+import './scss/index.scss';
+import { Slider } from './components/Slider.js';
+import { header } from './components/script-header.js';
+header();
 
 const listItems = document.querySelectorAll('.list-drop-down__item')
 const slider = document.querySelector('.slider')

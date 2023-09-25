@@ -7,7 +7,6 @@
   @include reset;
   @include container-max-widths;
   position: relative;
-  z-index: $z-index-content;
   padding-top: 32px;
   padding-bottom: 104px;
   @include media(md) {

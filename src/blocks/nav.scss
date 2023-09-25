@@ -4,36 +4,37 @@
 /* stylelint-enable */
 
 .nav {
-  max-width: 1280px;
-  padding: 8px 100px;
-  background-color: $bgDarkColor;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-
   &__list {
+    @include reset();
     display: flex;
     flex-direction: row;
     justify-content: start;
     gap: 16px;
     list-style: none;
-    padding: 0;
+    @include media(md) {
+      flex-direction: column;
+      gap: 0;
+    }
   }
 
   &__list-item {
     padding: 8px 16px;
+    border-radius: 32px;
+    transition: background-color 0.5s ease;
+    &:hover {
+      background: $colorButtonDisabledHover;
+    }
+    @include media(md) {
+      border-radius: 0;
+      padding: 16px 24px;
+    }
+    //@include hover-animation;
   }
 
   &__link {
-    text-align: center;
     @include text_type_header;
+    text-align: center;
     text-decoration: none;
     color: $white;
-  }
-
-  &__order-button {
-    display: none;
   }
 }
