@@ -17,6 +17,7 @@ const files = [
   'infoCities',
   'services',
   'sliders',
+  'priceList',
   'navFooter',
   'sitiesGallery',
   'navHeader'
