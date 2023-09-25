@@ -1,0 +1,141 @@
+{
+  "contactsCities": [
+    {
+      "city": "Казань",
+      "address": "ул. Спартаковская 2к 1, оф. 20",
+      "telephone": "+7 347 250-10-50",
+      "messengers": [
+        {
+          "name": "telegram",
+          "iconPath": "~@images/messengers/telegram.svg",
+          "link": ""
+        },
+        {
+          "name": "whatsapp",
+          "iconPath": "~@images/messengers/whatsapp.svg",
+          "link": ""
+        }
+      ],
+      "mail": "yosh@rtexpress.ru"
+    },
+    {
+      "city": "Уфа",
+      "address": "ул. Спартаковская 2к 1, оф. 20",
+      "telephone": "+7 347 250-10-50",
+      "messengers": [
+        {
+          "name": "whatsapp",
+          "iconPath": "~@images/messengers/whatsapp.svg",
+          "link": ""
+        }
+      ],
+      "mail": "ufa@rtexpress.ru"
+    },
+    {
+      "city": "Самара",
+      "address": "ул. Спартаковская 2к 1, оф. 20",
+      "telephone": "+7 347 250-10-50",
+      "messengers": [
+        {
+          "name": "telegram",
+          "iconPath": "~@images/messengers/telegram.svg",
+          "link": ""
+        }
+      ],
+      "mail": "samara@rtexpress.ru"
+    },
+    {
+      "city": "Казань",
+      "address": "ул. Спартаковская 2к 1, оф. 20",
+      "telephone": "+7 347 250-10-50",
+      "messengers": [
+        {
+          "name": "telegram",
+          "iconPath": "~@images/messengers/telegram.svg",
+          "link": ""
+        },
+        {
+          "name": "whatsapp",
+          "iconPath": "~@images/messengers/whatsapp.svg",
+          "link": ""
+        }
+      ],
+      "mail": "yosh@rtexpress.ru"
+    },
+    {
+      "city": "Ульяновск",
+      "address": "ул. Спартаковская 2к 1, оф. 20",
+      "telephone": "+7 347 250-10-50",
+      "messengers": [
+        {
+          "name": "telegram",
+          "iconPath": "~@images/messengers/telegram.svg",
+          "link": ""
+        },
+        {
+          "name": "whatsapp",
+          "iconPath": "~@images/messengers/whatsapp.svg",
+          "link": ""
+        }
+      ],
+      "mail": "ulya@rtexpress.ru"
+    },
+    {
+      "city": "Нижний Новгород",
+      "address": "ул. Спартаковская 2к 1, оф. 20",
+      "telephone": "+7 347 250-10-50",
+      "messengers": [
+        {
+          "name": "whatsapp",
+          "iconPath": "~@images/messengers/whatsapp.svg",
+          "link": ""
+        }
+      ],
+      "mail": "nn@rtexpress.ru"
+    },
+    {
+      "city": "Ижевск",
+      "address": "ул. Спартаковская 2к 1, оф. 20",
+      "telephone": "+7 347 250-10-50",
+      "messengers": [
+        {
+          "name": "telegram",
+          "iconPath": "~@images/messengers/telegram.svg",
+          "link": ""
+        }
+      ],
+      "mail": "izhevsk@rtexpress.ru"
+    },
+    {
+      "city": "Пермь",
+      "address": "ул. Спартаковская 2к 1, оф. 20",
+      "telephone": "+7 347 250-10-50",
+      "messengers": [
+        {
+          "name": "telegram",
+          "iconPath": "~@images/messengers/telegram.svg",
+          "link": ""
+        }
+      ],
+      "mail": "perm@rtexpress.ru"
+    },
+    {
+      "city": "Чебоксары",
+      "address": "ул. Спартаковская 2к 1, оф. 20",
+      "telephone": "+7 347 250-10-50",
+      "messengers": [
+        {
+          "name": "telegram",
+          "iconPath": "~@images/messengers/telegram.svg",
+          "link": ""
+        },
+        {
+          "name": "whatsapp",
+          "iconPath": "~@images/messengers/whatsapp.svg",
+          "link": ""
+        }
+      ],
+      "mail": "chebo@rtexpress.ru"
+    }
+  ]
+}
