@@ -1,6 +1,6 @@
 /* stylelint-disable */
-@import "@scss/utills/variables";
-@import "@scss/utills/mixins";
+@import '@scss/utills/variables';
+@import '@scss/utills/mixins';
 /* stylelint-enable */
 
 .header {
@@ -141,7 +141,7 @@
     }
 
     &__list-btn {
-      background-image: url("~@images/header_list.svg");
+      background-image: url('~@images/header_list.svg');
       background-color: $bgDarkColor;
       background-repeat: no-repeat;
       background-position: center;
@@ -191,7 +191,7 @@
     }
 
     &__list-close-btn {
-      background-image: url("~@images/close-btn.png");
+      background-image: url('~@images/close-btn.png');
       background-color: $bgDarkColor;
       background-repeat: no-repeat;
       background-position: center;

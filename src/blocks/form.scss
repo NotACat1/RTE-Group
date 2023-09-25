@@ -1,6 +1,13 @@
+/* stylelint-disable */
+@import '@scss/utills/variables';
+@import '@scss/utills/mixins';
+/* stylelint-enable */
+
 .form {
+  @include container-max-widths;
+
   padding: 24px;
-  max-width: 448px;
+  max-width: 480px;
   box-sizing: border-box;
 
   &__container {
@@ -76,7 +83,7 @@
     bottom: 0;
     height: 24px;
     width: 24px;
-    background-image: url("../images/form__checkbox-empty@2x.png");
+    background-image: url('../images/form__checkbox-empty@2x.png');
     background-size: contain;
     z-index: 1;
   }
@@ -94,7 +101,33 @@
     z-index: 2;
 
     &:checked ~ .form__checkbox-viewer {
-      background-image: url("../images/form__checkbox-filled@2x.png");
+      background-image: url('../images/form__checkbox-filled@2x.png');
+    }
+
+    &_invalid {
+      background-image: url('../images/checkbox_invalid.png');
+    }
+  }
+}
+
+@media screen and (width <= 767px) {
+  .form {
+    max-width: 360px;
+    padding: 16px;
+    margin-top: 96px;
+
+    &__container {
+      max-width: 296px;
+      width: 100%;
+    }
+
+    &__title {
+      max-width: 296px;
+      width: 100%;
+
+      &_mobile {
+        font-size: 0;
+      }
     }
   }
 }
