@@ -4,6 +4,11 @@
     display: flex;
     justify-content: center;
     gap: 24px;
+
+    @include media(md) {
+      flex-direction: column;
+      gap: 40px;
+    }
   }
   &__ellipse {
     position: absolute;
@@ -15,6 +20,14 @@
     border-radius: 400px;
     border: 2px solid $primaryGreenColor;
     z-index: -1;
+
+    @include media(md) {
+      left: -16px;
+      top: -98px;
+      width: 160px;
+      height: 300px;
+      transform: rotate(135deg);
+    }
   }
   &__half {
     display: flex;
@@ -26,32 +39,18 @@
     stroke-width: 1px;
     border-bottom: 1px solid $stroke;
     margin: 40px 0;
+
+    @include media(md) {
+      margin: 24px 0;
+    }
   }
   &__text {
     @include reset();
     @include text();
     @include text-format(36px, 700, 1.25);
     color: $white;
-  }
-}
 
-@media screen and (max-width: 720px) {
-  .step-by-step-list {
-    &__container {
-      flex-direction: column;
-      gap: 40px;
-    }
-    &__ellipse {
-      left: -16px;
-      top: -98px;
-      width: 160px;
-      height: 300px;
-      transform: rotate(135deg);
-    }
-    &__break {
-      margin: 24px 0;
-    }
-    &__text {
+    @include media(md) {
       @include text-format(28px, 700, 1.25);
     }
   }
