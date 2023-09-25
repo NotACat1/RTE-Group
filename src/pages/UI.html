@@ -95,7 +95,7 @@
             </div>
           </div>
           <div class="UI__item">
-            <div class="form">
+            <form class="form" novalidate>
               <div class="form__container">
                 <p class="form__title form__text form__text_type_title">
                   Оставить заявку на перевозку
@@ -104,27 +104,33 @@
                   <div class="input__container">
                     <input
                       type="text"
+                      id="name"
                       class="input__field input__text input__text_type_field"
                       placeholder=""
+                      required
                     />
                     <label
                       class="input__placeholder input__text input__text_type_placeholder"
                       >Имя*</label
                     >
                   </div>
+                  <span class="input__text_type_error name-error"></span>
                 </div>
                 <div class="input form__field-phone">
                   <div class="input__container">
                     <input
                       type="text"
+                      id="phone-number"
                       class="input__field input__text input__text_type_field"
                       placeholder=""
+                      required
                     />
                     <label
                       class="input__placeholder input__text input__text_type_placeholder"
                       >Телефон*</label
                     >
                   </div>
+                  <span class="input__text_type_error phone-number-error"></span>
                 </div>
                 <div class="input form__field-details">
                   <div class="input__container">
@@ -142,8 +148,10 @@
                     <label for="caption-checkbox" class="form__checkbox"
                       ><input
                         type="checkbox"
+                        id="caption-checkbox"
                         name="caption-checkbox"
                         class="form__checkbox-control"
+                        required
                       />
                       <span class="form__checkbox-viewer"></span>
                     </label>
@@ -161,7 +169,7 @@
                   <p class="button__text">Отправить</p>
                 </button>
               </div>
-            </div>
+            </form>
           </div>
           <div class="UI__item">
             <div class="case">
@@ -232,8 +240,8 @@
           </div>
           <div class="UI__item">
             <div class="popup">
-              <button class="popup__close"></button>
               <div class="popup__container">
+                <button class="popup__close"></button>
                 <div class="popup__half">
                   <img
                     src="../images/popup__icon@2x.png"

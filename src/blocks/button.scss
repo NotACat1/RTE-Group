@@ -51,3 +51,11 @@
     }
   }
 }
+
+@media screen and (width <= 767px) {
+  .button {
+    max-width: 296px;
+    width: 100%;
+  }
+
+}

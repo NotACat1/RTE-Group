@@ -1,0 +1,31 @@
+.info-form {
+  display: grid;
+  grid-template-columns: 576px 480px;
+  column-gap: 24px;
+  margin-top: 96px;
+
+  &__container {
+    display: block;
+  }
+
+  &__title {
+    @include text;
+    @include text_type_card-title;
+
+    margin: 0;
+  }
+
+  &__about {
+    @include text;
+    @include text_type_regular;
+
+    margin: 0;
+    margin-top: 32px;
+  }
+}
+
+@media screen and (width <= 767px) {
+    .info-form {
+        grid-template-columns: 328px;
+    }
+}
