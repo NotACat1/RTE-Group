@@ -1,0 +1,87 @@
+/* stylelint-disable */
+@import "@scss/utills/variables";
+@import "@scss/utills/mixins";
+/* stylelint-enable */
+
+.list-drop-down {
+  @include container-max-widths;
+
+  &__menu {
+    margin-top: 40px;
+  }
+
+  &__title {
+    @include text;
+    @include text_type_section;
+  }
+
+  &__item {
+    border-bottom: 1px solid #333;
+    display: grid;
+    grid-template-columns: 1fr 24px;
+    grid-template-areas:
+      "question caret"
+      "answer answer";
+    column-gap: 24px;
+    align-items: center;
+  }
+
+  &__item-el {
+    @include text;
+    @include text_type_lead;
+
+    margin: 24px 0;
+    color: $white;
+    grid-area: "question";
+  }
+
+  &__btn {
+    @include reset_button;
+
+    background-image: url("../images/CaretDown.png");
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    grid-area: "caret";
+
+    &_clicked {
+      background-image: url("../images/CaretUp.png");
+    }
+  }
+
+  &__answer {
+    @include text_type_regular;
+
+    margin: 0;
+    margin-bottom: 16px;
+    grid-area: "answer";
+    grid-column: span 2;
+    opacity: 0.7;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .list-drop-down {
+    &__menu {
+      max-width: 360px;
+      width: 100%;
+    }
+
+    &__title {
+      @include text;
+      @include text_h_h3;
+    }
+
+    &__item {
+      border-bottom: 1px solid #333;
+      grid-template-columns: 272px 24px;
+    }
+
+    &__item-el {
+      @include text_type_header;
+
+      display: inline;
+      margin: 16px 0;
+    }
+  }
+}

@@ -1,12 +1,13 @@
 /* stylelint-disable */
-@import '@scss/utills/_variables';
-@import '@scss/utills/_mixins';
+@import "@scss/utills/_variables";
+@import "@scss/utills/_mixins";
 /* stylelint-enable */
 
-.not-found {
+.error-page {
   max-width: 1080px;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
   padding-top: 96px;
   padding-bottom: 80px;
 
@@ -49,7 +50,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .not-found {
+  .error-page {
     justify-content: center;
     text-align: center;
     padding-top: 56px;
