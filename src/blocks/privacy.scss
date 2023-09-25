@@ -1,0 +1,32 @@
+.privacy {
+  padding: 96px 100px;
+
+  &__text {
+    @include reset();
+    @include text();
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &__title {
+    @include text-format(36px, 700, 1.25);
+    color: $white;
+  }
+  &__about {
+    @include text-format(16px, 400, 1.5);
+  }
+}
+
+// @media screen and (max-width: map.get($container-max-widths, sm)) {
+//   .privacy {
+//     padding: 56px 16px;
+//     &__container {
+//       gap: 24px;
+//     }
+//     &__title {
+//       @include text-format(28px, 700, 1.25);
+//     }
+//   }
+// }

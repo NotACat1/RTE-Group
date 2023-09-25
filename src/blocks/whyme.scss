@@ -1,7 +1,7 @@
 .whyme {
-  padding: 16px 16px 32px;
   box-sizing: border-box;
   max-width: 528px;
+  min-width: 328px;
 
   &__text {
     @include reset();
@@ -26,7 +26,7 @@
 
   &__container {
     display: grid;
-    grid-template-columns: 56x auto;
+    grid-template-columns: 56px auto;
     grid-template-rows: 50px auto;
     column-gap: 32px;
   }
@@ -58,5 +58,34 @@
   &__about {
     grid-column: 2;
     grid-row: 2;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .whyme {
+    &__container {
+      row-gap: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .whyme {
+    &__container {
+      grid-template-columns: 40px auto;
+      grid-template-rows: 40px auto;
+      column-gap: 16px;
+      row-gap: 16px;
+    }
+    &__circle {
+      width: 40px;
+      height: 40px;
+    }
+    &__number {
+      @include text-format(16px, 500, 1);
+    }
+    &__about {
+      grid-column: span 2;
+    }
   }
 }

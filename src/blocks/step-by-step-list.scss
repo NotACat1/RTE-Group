@@ -1,0 +1,58 @@
+.step-by-step-list {
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+  &__ellipse {
+    position: absolute;
+    left: -505px;
+    top: -223px;
+    width: 900px;
+    height: 600px;
+    transform: rotate(-30deg);
+    border-radius: 400px;
+    border: 2px solid $primaryGreenColor;
+    z-index: -1;
+  }
+  &__half {
+    display: flex;
+    flex-direction: column;
+    max-width: 528px;
+  }
+  &__break {
+    height: 0;
+    stroke-width: 1px;
+    border-bottom: 1px solid $stroke;
+    margin: 40px 0;
+  }
+  &__text {
+    @include reset();
+    @include text();
+    @include text-format(36px, 700, 1.25);
+    color: $white;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .step-by-step-list {
+    &__container {
+      flex-direction: column;
+      gap: 40px;
+    }
+    &__ellipse {
+      left: -16px;
+      top: -98px;
+      width: 160px;
+      height: 300px;
+      transform: rotate(135deg);
+    }
+    &__break {
+      margin: 24px 0;
+    }
+    &__text {
+      @include text-format(28px, 700, 1.25);
+    }
+  }
+}
