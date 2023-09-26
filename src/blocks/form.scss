@@ -100,13 +100,14 @@
     opacity: 0;
     z-index: 2;
 
+    &_invalid ~ .form__checkbox-viewer {
+      background-image: url("../images/checkbox_invalid.png");
+    }
+
     &:checked ~ .form__checkbox-viewer {
       background-image: url("../images/form__checkbox-filled@2x.png");
     }
 
-    &_invalid {
-      background-image: url("../images/checkbox_invalid.png");
-    }
   }
 }
 
