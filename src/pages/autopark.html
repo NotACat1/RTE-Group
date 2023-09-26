@@ -222,7 +222,7 @@
           <h2 class="list-drop-down__title section-title">
             Часто задаваемые вопросы
           </h2>
-          <div class="list-drop-down__menu">
+          <div class="list-drop-down__menu autopark__list-drop-down">
             <div class="list-drop-down__item" id="logistic-time">
               <a class="list-drop-down__item-el" href="#"
                 >Как долго займет доставка моего груза?</a
@@ -262,6 +262,27 @@
       </main>
       <%= require('@common.blocks/footer.ejs').default %>
     </div>
+    <div class="popup">
+      <div class="popup__container">
+        <button class="popup__close"></button>
+        <div class="popup__half">
+          <img
+            src="<%=require('../images/popup__icon@2x.png')%>"
+            alt=""
+            class="popup__image"
+          />
+        </div>
+        <div class="popup__half">
+          <p class="popup__title popup__text popup__text_type_title">
+            Заявка отправлена!
+          </p>
+          <p class="popup__about popup__text popup__text_type_about">
+            Мы свяжемся с вами в ближайшее время
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
     <script src="main.js"></script>
   </body>
 </html>

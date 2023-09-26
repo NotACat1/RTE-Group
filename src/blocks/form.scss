@@ -1,6 +1,6 @@
 /* stylelint-disable */
-@import "@scss/utills/variables";
-@import "@scss/utills/mixins";
+@import '@scss/utills/variables';
+@import '@scss/utills/mixins';
 /* stylelint-enable */
 
 .form {
@@ -10,10 +10,20 @@
   max-width: 480px;
   box-sizing: border-box;
 
+  @include media(md) {
+    max-width: 296px;
+    width: 100%;
+  }
+
   &__container {
     display: grid;
     grid-template-rows: auto 24px auto 16px auto 16px auto 24px auto;
     max-width: 400px;
+
+    @include media(md) {
+      max-width: 296px;
+      width: 100%;
+    }
   }
 
   &__text {
@@ -29,6 +39,15 @@
 
   &__title {
     grid-row: 1;
+
+    @include media(md) {
+      max-width: 296px;
+      width: 100%;
+
+      &_mobile {
+        font-size: 0;
+      }
+    }
   }
 
   &__caption {
@@ -83,7 +102,7 @@
     bottom: 0;
     height: 24px;
     width: 24px;
-    background-image: url("../images/form__checkbox-empty@2x.png");
+    background-image: url('../images/form__checkbox-empty@2x.png');
     background-size: contain;
     z-index: 1;
   }
@@ -101,34 +120,11 @@
     z-index: 2;
 
     &_invalid ~ .form__checkbox-viewer {
-      background-image: url("../images/checkbox_invalid.png");
+      background-image: url('../images/checkbox_invalid.png');
     }
 
     &:checked ~ .form__checkbox-viewer {
-      background-image: url("../images/form__checkbox-filled@2x.png");
-    }
-
-  }
-}
-
-@media screen and (width <= 767px) {
-  .form {
-    max-width: 360px;
-    padding: 16px;
-    margin-top: 96px;
-
-    &__container {
-      max-width: 296px;
-      width: 100%;
-    }
-
-    &__title {
-      max-width: 296px;
-      width: 100%;
-
-      &_mobile {
-        font-size: 0;
-      }
+      background-image: url('../images/form__checkbox-filled@2x.png');
     }
   }
 }

@@ -3,6 +3,7 @@ import { Slider } from './components/Slider.js'
 import { header } from './components/script-header.js'
 import { DropDown } from './components/DropDown.js'
 import { FormValidator } from './components/FormValidator.js'
+import { Popup } from './components/Popup.js'
 
 header()
 
@@ -51,6 +52,19 @@ const checkBox = document.querySelector('.form__checkbox-control')
 const inputList = Array.from(document.querySelectorAll('.input__field'))
 export const summaryInput = document.querySelector('#summary')
 
+function getFormValues() {
+  inputList.forEach((inputElement) => {
+    console.log(inputElement.value)
+  })
+}
+
+function resetForm() {
+  inputList.forEach((inputElement) => {
+    inputElement.value = ''
+    checkBox.checked = false
+  })
+}
+
 const sliderItem = new Slider(slider)
 sliderItem.timer()
 
@@ -67,29 +81,19 @@ const orderFormValidation = new FormValidator({obj: formSelectors, formElement: 
 
 orderFormValidation.enableValidation()
 
-function openPopup(popupSelector) {
-  popupSelector.classList.add('popup_opened')
-}
-
-function closePopup(popupSelector) {
-  popupSelector.classList.remove('popup_opened')
-}
-
-function resetForm() {
-  inputList.forEach((inputElement) => {
-    inputElement.value = ''
-    checkBox.checked = false
-  })
-}
+const popupOrderSubmitted = new Popup(popupRequestConfirmed);
 
 if (!submitButton.classList.contains('button_type_disabled')) {
   orderForm.addEventListener('submit', (evt) => {
     evt.preventDefault()
-    openPopup(popupRequestConfirmed)
+    getFormValues()
+    popupOrderSubmitted.openPopup()
     resetForm()
   })
 }
 
 closeButton.addEventListener('click', () => {
-  closePopup(popupRequestConfirmed)
+  popupOrderSubmitted.closePopup()
 })
+
+popupOrderSubmitted.setEventListeners()
