@@ -1,6 +1,6 @@
 /* stylelint-disable */
-@import "@scss/utills/variables";
-@import "@scss/utills/mixins";
+@import '@scss/utills/variables';
+@import '@scss/utills/mixins';
 /* stylelint-enable */
 
 .info-form {
@@ -29,6 +29,22 @@
     margin: 0;
     margin-top: 32px;
   }
+
+  &__badges {
+    display: flex;
+    flex-direction: row;
+    margin: 32px 0;
+  }
+
+  &__badge {
+    @include text;
+    @include text-format(12px, 400, 100%);
+
+    background-color: $bgGrayColor;
+    border-radius: 12px;
+    padding: 12px;
+    width: 100%;
+  }
 }
 
 @media screen and (width <= 767px) {
@@ -37,6 +53,22 @@
 
     &__title {
       @include text_h_h3;
+    }
+
+    &__badges {
+      flex-direction: column;
+    }
+
+    &__badge {
+      flex-direction: column;
+      margin: 0;
+      max-width: 260px;
+      width:100%;
+    }
+
+    &__badge:last-of-type {
+      margin-top: 8px;
+      max-width: 68px;
     }
   }
 }
