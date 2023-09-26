@@ -1,0 +1,44 @@
+/* stylelint-disable */
+@import "@scss/utills/variables";
+@import "@scss/utills/mixins";
+/* stylelint-enable */
+
+.text-info {
+  @include reset;
+  @include container-max-widths;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+
+  @include media(md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 40px;
+  }
+
+  &__title {
+    @include reset;
+    @include text_type_section;
+    @include media(md) {
+      @include text_h_h3;
+    }
+    color: $white;
+  }
+
+  &__content {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  &__paragraph {
+    @include reset;
+    @include text_type_regular;
+    color: $white;
+  }
+}

@@ -13,11 +13,14 @@ const files = [
   'advantages',
   'cases',
   'feedbacks',
+  'contactsCities',
   'feedbacksStaff',
   'infoCities',
   'services',
   'sliders',
+  'priceList',
   'navFooter',
+  'sitiesGallery',
   'navHeader'
 ];
 

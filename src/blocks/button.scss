@@ -55,6 +55,13 @@
       border-color: $colorButtonDisabledHover;
     }
   }
+
+  &_type_inactive {
+    &:hover {
+      background-color: $colorGreenDarker;
+      border-color: $colorGreenDarker;
+    }
+  }
 }
 
 @media screen and (width <= 767px) {
