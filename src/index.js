@@ -1,11 +1,15 @@
 import './scss/index.scss'
 import { Slider } from './components/Slider.js'
-import { header } from './components/script-header.js'
+import Header from './components/Header.js';
+import { headerSelectors } from './utils/constants.js'
+import { FormValidator } from '../src/components/FormValidator.js'
 import { DropDown } from './components/DropDown.js'
-import { FormValidator } from './components/FormValidator.js'
 import { Popup } from './components/Popup.js'
 
-header()
+[...document.querySelectorAll('.header')].forEach((item) => {
+	const header = new Header(item, headerSelectors);
+	header.eventListener();
+});
 
 const listItems = document.querySelectorAll('.list-drop-down__item')
 const slider = document.querySelector('.slider')
