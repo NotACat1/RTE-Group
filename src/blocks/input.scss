@@ -25,6 +25,10 @@
     &_type_error {
       border-color: $colorTypeFail;
     }
+
+    &_type_error:hover {
+      border-color: $colorTypeFail;
+    }
   }
 
   &__caption {

@@ -1,8 +1,10 @@
 import './scss/index.scss'
 import { Slider } from './components/Slider.js'
 import { header } from './components/script-header.js'
+import { DropDown } from './components/DropDown.js'
+import { FormValidator } from './components/FormValidator.js'
+
 header()
-import { FormValidator } from '../src/components/FormValidator.js'
 
 const listItems = document.querySelectorAll('.list-drop-down__item')
 const slider = document.querySelector('.slider')
@@ -10,7 +12,7 @@ const slider = document.querySelector('.slider')
 const selectors = {
   dropDownButton: '.list-drop-down__btn',
   dropDownButtonState: 'list-drop-down__btn_clicked',
-  listItemState: 'list-drop-down__item-clicked',
+  listItemState: 'list-drop-down__item_clicked',
   answerItem: '.list-drop-down__answer',
 }
 
@@ -27,7 +29,6 @@ const answers = [
 ]
 
 const formSelectors = {
-  formSelector: '.form',
   inputSelector: '.input__field',
   submitButtonSelector: '.form__button',
   inactiveButtonClass: 'button_type_inactive',
@@ -50,6 +51,9 @@ const checkBox = document.querySelector('.form__checkbox-control')
 const inputList = Array.from(document.querySelectorAll('.input__field'))
 export const summaryInput = document.querySelector('#summary')
 
+const sliderItem = new Slider(slider)
+sliderItem.timer()
+
 listItems.forEach((item) => {
   const answer = new DropDown({
     data: answers,
@@ -59,10 +63,7 @@ listItems.forEach((item) => {
   answer.setEventListeners()
 })
 
-const sliderItem = new Slider(slider)
-sliderItem.timer()
-
-const orderFormValidation = new FormValidator(formSelectors, orderForm)
+const orderFormValidation = new FormValidator({obj: formSelectors, formElement: orderForm})
 
 orderFormValidation.enableValidation()
 

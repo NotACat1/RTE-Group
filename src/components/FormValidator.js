@@ -1,7 +1,7 @@
 import { summaryInput } from '../index.js'
 
 export class FormValidator {
-  constructor(obj, formElement) {
+  constructor({obj, formElement}) {
     this._obj = obj
     this._formElement = formElement
 
@@ -25,6 +25,7 @@ export class FormValidator {
   enableValidation() {
     //для каждой формы при сабмите отменяет перезагрузку и
     //выполняет проверку на валидность
+    console.log(this._submitButton)
     this._submitButton.addEventListener('click', (evt) => {
       this._handleSubmit()
     })
