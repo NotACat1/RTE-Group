@@ -14,9 +14,9 @@
 //}
 
 export default class header {
-  constructor({ selectorListButton, selectorNav, classListOpen, classNavOpen, classNavClose }) {
-    this.elemListButton = document.querySelector(selectorListButton);
-    this.elemNav = document.querySelector(selectorNav);
+  constructor(elemHeader, { selectorListButton, selectorNav, classListOpen, classNavOpen, classNavClose }) {
+    this.elemListButton = elemHeader.querySelector(selectorListButton);
+    this.elemNav = elemHeader.querySelector(selectorNav);
 
     this.classListOpen = classListOpen;
     this.classNavOpen = classNavOpen;
