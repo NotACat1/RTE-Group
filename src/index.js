@@ -4,8 +4,8 @@ import Header from './components/Header.js';
 import { headerSelectors } from './utils/constants.js'
 import { FormValidator } from '../src/components/FormValidator.js'
 
-[...document.querySelectorAll('.header')].forEach(() => {
-	const header = new Header(headerSelectors);
+[...document.querySelectorAll('.header')].forEach((item) => {
+	const header = new Header(item, headerSelectors);
 	header.eventListener();
 });
 
