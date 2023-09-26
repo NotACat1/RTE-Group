@@ -1,6 +1,6 @@
 /* stylelint-disable */
-@import '@scss/utills/variables';
-@import '@scss/utills/mixins';
+@import "@scss/utills/variables";
+@import "@scss/utills/mixins";
 /* stylelint-enable */
 
 .form {
@@ -83,7 +83,7 @@
     bottom: 0;
     height: 24px;
     width: 24px;
-    background-image: url('../images/form__checkbox-empty@2x.png');
+    background-image: url("../images/form__checkbox-empty@2x.png");
     background-size: contain;
     z-index: 1;
   }
@@ -101,11 +101,11 @@
     z-index: 2;
 
     &:checked ~ .form__checkbox-viewer {
-      background-image: url('../images/form__checkbox-filled@2x.png');
+      background-image: url("../images/form__checkbox-filled@2x.png");
     }
 
     &_invalid {
-      background-image: url('../images/checkbox_invalid.png');
+      background-image: url("../images/checkbox_invalid.png");
     }
   }
 }

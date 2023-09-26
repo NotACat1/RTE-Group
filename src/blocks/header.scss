@@ -1,188 +1,172 @@
 /* stylelint-disable */
-@import '@scss/utills/variables';
-@import '@scss/utills/mixins';
+@import "@scss/utills/variables";
+@import "@scss/utills/mixins";
 /* stylelint-enable */
 
 .header {
-  @include container-max-widths;
-
-  display: flex;
-  flex-direction: column;
-  // margin: 0 auto;
+  @include reset();
+  width: 100%;
+  background-color: $bgGrayColor;
+  @include media(md) {
+    background-color: $bgDarkColor;
+  }
 
   &__container {
-    background-color: $bgGrayColor;
+    @include reset();
+    @include container-max-widths;
+    background-color: inherit;
+    position: relative;
+    z-index: 100;
+    box-sizing: border-box;
+    padding: 8px 0;
     display: flex;
-    flex-flow: row;
-    justify-content: space-between;
     align-items: center;
   }
 
-  &__logo {
-    margin: 8px auto 8px 100px;
+  &__logo-icon {
+    display: block;
+    &_desktop {
+      width: 153px;
+      @include media(sm) {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      width: 28px;
+      display: none;
+      @include media(sm) {
+        display: block;
+      }
+    }
   }
 
-  &__logo_small {
-    display: none;
-  }
-
-  &__contacts {
-    margin: 8px 100px 8px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__call-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-  }
-
-  &__phone-number {
+  &__contact {
     @include text_type_header;
-
-    margin: 0;
+    @include text;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $white;
+    margin-left: auto;
     margin-right: 24px;
-    white-space: nowrap;
+    @include media(sm) {
+      margin-right: auto;
+    }
+    @include hover-animation;
+  }
+
+  &__contact-icon {
+    width: 17px;
+  }
+
+  &__contact-text {
+    @include reset();
+    @include text_type_header;
+  }
+
+  &__place-order-btn {
+    @include reset_button;
+    @include text_type_header;
+    @include button_type_fill;
+    box-sizing: border-box;
+    color: $white;
+    padding: 8px 16px;
+    @include media(md) {
+      display: none;
+    }
+    &_nav {
+      display: none;
+      margin-top: 16px;
+      margin-bottom: 24px;
+      padding: 16px 24px;
+      @include media(md) {
+        display: block;
+      }
+    }
   }
 
   &__list-btn {
+    @include reset_button;
+    width: 24px;
+    height: 24px;
+    background-image: url("~@images/header_list.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     display: none;
-  }
+    @include media(md) {
+      display: block;
+      transition: background-image 0.5s ease;
+    }
 
-  &__list-close-btn {
-    display: none;
-  }
+    &_open {
+      background-image: url("~@images/close-btn.svg");
+    }
 
-  &__nav-links {
-    margin: 0 100px 8px;
-    padding-top: 8px;
-  }
-
-  &__link {
-    @include text_type_header;
-    @include text;
-
-    color: $white;
-    padding: 8px 16px;
-    margin-right: 16px;
-  }
-
-  &__link:last-of-type {
-    margin-right: 0;
+    &_close {
+      background-image: url("~@images/header_list.svg");
+    }
   }
 
   &__popup {
-    visibility: hidden;
-    opacity: 0;
-    max-width: 360px;
+    position: relative;
+  }
+
+  &__nav {
+    @include reset();
+    z-index: 4;
     width: 100%;
-    margin-top: 16px;
+    box-sizing: border-box;
+    padding: 8px 0;
+    background-color: $bgDarkColor;
+    @include media(md) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      &_open {
+        animation: slideDown 0.5s ease forwards;
+      }
+
+      &_close {
+        animation: slideUp 0.5s ease forwards;
+      }
+    }
+  }
+
+  &__nav-container {
+    @include reset();
+    @include container-max-widths;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    @include media(md) {
+      min-height: 576px;
+    }
   }
 }
 
-@media screen and (width <= 1079px) {
-  .header {
-
-    &__logo {
-      margin: 8px 0;
-    }
-
-    &__contacts {
-      margin: 8px 0;
-    }
-
-    &__nav-links {
-      margin: 0 0 8px;
-      padding-top: 8px;
-    }
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media screen and (width <= 767px) {
-  .header {
-
-    &__container {
-      background-color: $bgDarkColor;
-    }
-
-    &__logo {
-      display: none;
-    }
-
-    &__logo_small {
-      display: block;
-      margin: 8px 38px 8px 16px;
-      width: 48px;
-      height: 48px;
-    }
-
-    &__contacts {
-      margin: 0;
-    }
-
-    &__place-order-btn {
-      display: none;
-    }
-
-    &__list-btn {
-      background-image: url("~@images/header_list.svg");
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-position: center;
-      border: none;
-      display: block;
-      width: 36px;
-      height: 36px;
-      margin: 8px;
-      margin-left: 50px;
-    }
-
-    &__nav-links {
-      display: none;
-    }
-
-    &__link {
-      padding: 0;
-      margin: 16px 0;
-    }
-
-    &__popup_opened {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    /* ВАЖНО!!! Внимание!! Код частично дублируется */
-    &__popup-nav-links {
-      max-width: 312px;
-      width: 100%;
-      padding-top: 0;
-      margin: 0 24px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    &__popup-place-order-btn {
-      margin: 216px 16px 24px;
-      width: 328px;
-      height: 56px;
-      padding: 0;
-    }
-
-    &__list-close-btn {
-      background-image: url("~@images/close-btn.png");
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-position: center;
-      border: none;
-      display: block;
-      position: relative;
-      width: 36px;
-      height: 36px;
-      margin: 8px;
-      margin-left: 50px;
-    }
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
   }
 }

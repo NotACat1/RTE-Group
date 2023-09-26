@@ -41,7 +41,11 @@
     <div class="page__container">
       <%= require('@common.blocks/header.ejs').default %>
       <main class="main">
-        <section class="city-contacts"></section>
+        <section class="city-contacts">
+          <h1 class="city-contacts__title">Контакты</h1>
+          <%= require('@common.blocks/city-contacts__gallery.ejs').default %>
+          <div class="city-contacts__form"></div>
+        </section>
         <section class="section-form"></section>
       </main>
       <%= require('@common.blocks/footer.ejs').default %>
