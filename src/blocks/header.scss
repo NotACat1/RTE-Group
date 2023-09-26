@@ -5,6 +5,8 @@
 
 .header {
   @include reset();
+  position: relative;
+  z-index: $z-index-hight-content;
   width: 100%;
   background-color: $bgGrayColor;
   @include media(md) {

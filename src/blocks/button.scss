@@ -57,9 +57,12 @@
   }
 
   &_type_inactive {
+    background-color: $colorGreenDarker;
+    border-color: $colorGreenDarker;
+
     &:hover {
-      background-color: $colorGreenDarker;
-      border-color: $colorGreenDarker;
+      background-color: $colorButtonDisabledHover;
+      border-color: $colorButtonDisabledHover;
     }
   }
 }

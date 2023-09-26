@@ -14,6 +14,7 @@ $colorInputBorderHover: #fff;
 $coverMapColor: #d3d3d3;
 $colorShadowsBlack: rgb(0 0 0 / 15%);
 $colorBorder: rgb(255 255 255 / 8%);
+$colorBorderTable: #333;
 
 $breakpoints: (
   xs: 0,
@@ -34,4 +35,5 @@ $container-max-widths: (
 $z-index-bg: 2;
 $z-index-media: 5;
 $z-index-content: 10;
+$z-index-hight-content: 50;
 $z-index-popup: 100;
