@@ -42,9 +42,83 @@
       <%= require('@common.blocks/header.ejs').default %>
       <main>
         <section class="info-form"></section>
-        <section class="feature-info"></section>
+        <section class="feature-info">
+          <div class="feature-info__photo-content">
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_first_slide.jpg')%>"
+              alt="первый слайд"
+            />
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_second_slide.jpg')%>"
+              alt="второй слайд"
+            />
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_third_slide.jpg')%>"
+              alt="третий слайд"
+            />
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_forth_slide.jpg')%>"
+              alt=" четвертый слайд"
+            />
+          </div>
+          <div class="feature-info__text-content">
+            <p class="feature-info__text">
+              Наши тралы, выпущенные на заводе Тверьстроймаш, известны своей
+              высокой грузоподъемностью. Способные перевозить грузы весом в 60,
+              70, 80 и 90 тонн, они готовы удовлетворить любые ваши потребности
+              в грузоперевозках.
+            </p>
+            <p class="feature-info__text">
+              Независимо от того, насколько большой или тяжелый ваш груз, вы
+              можете быть уверены, что мы найдем для него подходящее
+              транспортное средство.
+            </p>
+          </div>
+        </section>
         <%= require('@common.blocks/slider.ejs').default %>
-        <section class="feature-info feature-info_type_left-text"></section>
+        <section class="feature-info feature-info_type_left-text">
+          <div class="feature-info__photo-content">
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_fith_slide.jpg')%>"
+              alt="первый слайд"
+            />
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_sixth_slide.jpg')%>"
+              alt="второй слайд"
+            />
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_seventh_slide.jpg')%>"
+              alt="третий слайд"
+            />
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_eighth_slide.jpg')%>"
+              alt=" четвертый слайд"
+            />
+          </div>
+          <div class="feature-info__text-content">
+            <p class="feature-info__text">
+              Кроме того, наш автопарк оборудован тягачами от ведущего
+              производителя MAN. Эти транспортные средства отличаются
+              надежностью и мощностью, обеспечивая комфортную и бесперебойную
+              доставку ваших грузов.
+            </p>
+            <p class="feature-info__text">
+              Наш автопарк - это залог вашего спокойствия. В RTE Group мы не
+              просто перевозим грузы, мы строим доверительные отношения с нашими
+              клиентами, обеспечивая им лучший сервис в отрасли. Мы всегда рады
+              обсудить ваши потребности в грузоперевозках и предложить вам
+              оптимальное решение.
+            </p>
+          </div>
+        </section>
         <section class="cases-cards"></section>
         <section class="gallery-reviews"></section>
         <section class="list-drop-down"></section>
