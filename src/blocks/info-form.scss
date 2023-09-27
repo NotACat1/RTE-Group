@@ -24,6 +24,7 @@
     @include text_type_section;
 
     margin: 0;
+    padding-top:24px;
 
     @include media(md) {
       @include text_h_h3;
