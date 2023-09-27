@@ -1,6 +1,9 @@
 .feedback {
-  max-width: 300px;
+  max-width: 333px;
 
+  @include media(sm) {
+    max-width: 328px;
+  }
   &__container {
     display: grid;
     grid-template-rows: auto;
@@ -33,12 +36,12 @@
     justify-content: center;
     width: 48px;
     height: 48px;
+    background-color: $colorButtonDisabledHover;
+    border-radius: 48px;
   }
 
   &__image {
     position: absolute;
-    background-color: $colorButtonDisabledHover;
-    border-radius: 48px;
     height: 48px;
     width: 48px;
   }

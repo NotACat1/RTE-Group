@@ -1,0 +1,63 @@
+.info-blocks {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    &_type_caption {
+      flex-direction: row;
+      padding: 24px;
+      background-color: $bgGrayColor;
+      border-radius: 20px;
+    }
+  }
+  &__list {
+    margin: 0;
+    padding-left: 25px;
+    &_type_number {
+      padding-left: 15px;
+    }
+  }
+  &__half {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+  &__text {
+    @include reset();
+    @include text();
+    color: $white;
+    &_type_h1 {
+      @include text-format(36px, 700, 1.25);
+    }
+    &_type_h2 {
+      @include text-format(28px, 700, 1.25);
+    }
+    &_type_h3 {
+      @include text-format(20px, 700, 1.25);
+    }
+    &_type_h4 {
+      @include text-format(18px, 700, 1.25);
+    }
+    &_type_h5 {
+      @include text-format(16px, 700, 1.25);
+    }
+    &_type_h6 {
+      @include text-format(14px, 700, 1.25);
+    }
+    &_type_about {
+      @include text-format(16px, 400, 1.5);
+    }
+    &_type_smalltext {
+      @include text-format(12px, 400, 1);
+    }
+  }
+}

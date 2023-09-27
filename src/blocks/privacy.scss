@@ -1,0 +1,29 @@
+.privacy {
+  padding: 96px 100px;
+
+  @include media(sm) {
+    padding: 56px 16px;
+  }
+  &__text {
+    @include reset();
+    @include text();
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    @include media(sm) {
+      gap: 24px;
+    }
+  }
+  &__title {
+    @include text-format(36px, 700, 1.25);
+    color: $white;
+    @include media(sm) {
+      @include text-format(28px, 700, 1.25);
+    }
+  }
+  &__about {
+    @include text-format(16px, 400, 1.5);
+  }
+}

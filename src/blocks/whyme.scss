@@ -1,7 +1,7 @@
 .whyme {
-  padding: 16px 16px 32px;
   box-sizing: border-box;
   max-width: 528px;
+  min-width: 328px;
 
   &__text {
     @include reset();
@@ -26,9 +26,19 @@
 
   &__container {
     display: grid;
-    grid-template-columns: 56x auto;
+    grid-template-columns: 56px auto;
     grid-template-rows: 50px auto;
     column-gap: 32px;
+
+    @include media(lg) {
+      row-gap: 24px;
+    }
+    @include media(md) {
+      grid-template-columns: 40px auto;
+      grid-template-rows: 40px auto;
+      column-gap: 16px;
+      row-gap: 16px;
+    }
   }
 
   &__circle {
@@ -42,12 +52,20 @@
     box-sizing: border-box;
     border-radius: 32px;
     border: 2px solid $primaryGreenColor;
+    @include media(md) {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &__number {
     @include text-format(24px, 500, 1);
 
     color: $primaryGreenColor;
+
+    @include media(md) {
+      @include text-format(16px, 500, 1);
+    }
   }
 
   &__title {
@@ -58,5 +76,9 @@
   &__about {
     grid-column: 2;
     grid-row: 2;
+
+    @include media(md) {
+      grid-column: span 2;
+    }
   }
 }
