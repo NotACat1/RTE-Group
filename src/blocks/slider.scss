@@ -1,8 +1,9 @@
 .slider {
   --slides: 1;
   --current: 1;
-
+  max-width: 1280px;
   width: 100%;
+  margin: 0 auto;
   height: 440px;
   border: none;
   position: relative;
@@ -26,6 +27,7 @@
     margin-right: 24px;
     border-radius: 16px;
     box-sizing: border-box;
+    object-fit: cover;
   }
 
   &__item:last-of-type {

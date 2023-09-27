@@ -110,6 +110,7 @@
     &:not(:placeholder-shown) ~ .input__text_type_error {
       color: $colorTypeFail;
     }
+
   }
 
   &__field-error {
@@ -121,4 +122,5 @@
       margin: 8px 24px;
     }
   }
+
 }

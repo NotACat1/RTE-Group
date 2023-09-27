@@ -1,7 +1,7 @@
-import { summaryInput } from '../index.js'
+import { summaryInput } from '../utils/constants.js'
 
 export class FormValidator {
-  constructor({obj, formElement}) {
+  constructor({ obj, formElement }) {
     this._obj = obj
     this._formElement = formElement
 
@@ -74,7 +74,7 @@ export class FormValidator {
   }
   _checkInputValidity(inputElement) {
     if (!inputElement.validity.valid && !this._checkbox.checked) {
-      this._showInputError(inputElement, inputElement.validationMessage)
+      this._showInputError(inputElement, inputElement.dataset.errorMessage)
     } else {
       this._hideInputError(inputElement)
     }

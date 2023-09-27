@@ -1,4 +1,4 @@
-const answerTemplate = document.querySelector('#list-drop-down__answer').content
+import {answerTemplate} from '../utils/constants.js'
 
 export class DropDown {
   constructor({ data, obj, selector }) {
