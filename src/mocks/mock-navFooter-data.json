@@ -22,15 +22,15 @@
     },
     {
       "name": "Контакты",
-      "href": "./"
+      "href": "./contacts.html"
     },
     {
       "name": "Работа у нас",
-      "href": "./"
+      "href": "./job.html"
     },
     {
       "name": "Политика конфиденциальности",
-      "href": "./"
+      "href": "./privacy.html"
     }
   ]
 }
