@@ -1,8 +1,15 @@
 import './scss/index.scss'
 import { Slider } from './components/Slider.js'
-import { header } from './components/script-header.js'
-header()
+import Header from './components/Header.js';
+import { headerSelectors } from './utils/constants.js'
 import { FormValidator } from '../src/components/FormValidator.js'
+import { DropDown } from './components/DropDown.js'
+import { Popup } from './components/Popup.js'
+
+[...document.querySelectorAll('.header')].forEach((item) => {
+	const header = new Header(item, headerSelectors);
+	header.eventListener();
+});
 
 const listItems = document.querySelectorAll('.list-drop-down__item')
 const slider = document.querySelector('.slider')
@@ -10,7 +17,7 @@ const slider = document.querySelector('.slider')
 const selectors = {
   dropDownButton: '.list-drop-down__btn',
   dropDownButtonState: 'list-drop-down__btn_clicked',
-  listItemState: 'list-drop-down__item-clicked',
+  listItemState: 'list-drop-down__item_clicked',
   answerItem: '.list-drop-down__answer',
 }
 
@@ -27,7 +34,6 @@ const answers = [
 ]
 
 const formSelectors = {
-  formSelector: '.form',
   inputSelector: '.input__field',
   submitButtonSelector: '.form__button',
   inactiveButtonClass: 'button_type_inactive',
@@ -50,28 +56,10 @@ const checkBox = document.querySelector('.form__checkbox-control')
 const inputList = Array.from(document.querySelectorAll('.input__field'))
 export const summaryInput = document.querySelector('#summary')
 
-listItems.forEach((item) => {
-  const answer = new DropDown({
-    data: answers,
-    obj: selectors,
-    selector: item,
+function getFormValues() {
+  inputList.forEach((inputElement) => {
+    console.log(inputElement.value)
   })
-  answer.setEventListeners()
-})
-
-const sliderItem = new Slider(slider)
-sliderItem.timer()
-
-const orderFormValidation = new FormValidator(formSelectors, orderForm)
-
-orderFormValidation.enableValidation()
-
-function openPopup(popupSelector) {
-  popupSelector.classList.add('popup_opened')
-}
-
-function closePopup(popupSelector) {
-  popupSelector.classList.remove('popup_opened')
 }
 
 function resetForm() {
@@ -81,14 +69,35 @@ function resetForm() {
   })
 }
 
+const sliderItem = new Slider(slider)
+sliderItem.timer()
+
+listItems.forEach((item) => {
+  const answer = new DropDown({
+    data: answers,
+    obj: selectors,
+    selector: item,
+  })
+  answer.setEventListeners()
+})
+
+const orderFormValidation = new FormValidator({obj: formSelectors, formElement: orderForm})
+
+orderFormValidation.enableValidation()
+
+const popupOrderSubmitted = new Popup(popupRequestConfirmed);
+
 if (!submitButton.classList.contains('button_type_disabled')) {
   orderForm.addEventListener('submit', (evt) => {
     evt.preventDefault()
-    openPopup(popupRequestConfirmed)
+    getFormValues()
+    popupOrderSubmitted.openPopup()
     resetForm()
   })
 }
 
 closeButton.addEventListener('click', () => {
-  closePopup(popupRequestConfirmed)
+  popupOrderSubmitted.closePopup()
 })
+
+popupOrderSubmitted.setEventListeners()

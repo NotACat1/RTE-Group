@@ -34,7 +34,7 @@ export class Slider {
         this.reset(value);
       }
       this.setCurrent(value);
-    }, 30000);
+    }, 1000);
   }
 }
   

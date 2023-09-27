@@ -1,0 +1,52 @@
+/* stylelint-disable */
+@import "@scss/utills/variables";
+@import "@scss/utills/mixins";
+/* stylelint-enable */
+
+.feature-info {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  padding: 128px 0;
+  max-width: 1080px;
+  margin: 0 auto;
+  @include media(lg) {
+    max-width: 328px;
+    flex-direction: column;
+    padding: 80px 0;
+    gap: 24px;
+  }
+
+  &__photo-content {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    gap: 16px;
+    @include media(lg) {
+      grid-template-columns: 160px 160px;
+      gap: 8px;
+    }
+  }
+
+  &__photo-item {
+    object-fit: cover;
+    border-radius: 16px;
+    width: 250px;
+    @include media(lg) {
+      object-fit: cover;
+      border-radius: 16px;
+      width: 160px;
+    }
+  }
+
+  &__text-content {
+    @include reset;
+    @include text_type_regular;
+    margin: auto 0;
+  }
+  &_type_left-text {
+    flex-direction: row-reverse;
+    @include media(lg) {
+      flex-direction: column;
+    }
+  }
+}

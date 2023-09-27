@@ -40,7 +40,106 @@
     <div class="page__container">
       <%= require('@common.blocks/header.ejs').default %>
       <main>
-        <section class="info-form" id="get-service"></section>
+        <section class="info-form" id="get-service">
+          <div class="info-form__container">
+            <h1 class="info-form__title">Услуги</h1>
+            <p class="info-form__about">
+              RTE Group оказывает полный комплекс услуг по перевозке крупногабаритных и
+              негабаритных грузов, а также доставке специальной техники. Надежный,
+              продуманный сервис, разработкой которого занимались специалисты с
+              20-летним опытом в логистике. Строгое соблюдение сроков, гарантия
+              результата по договору, новый автопарк — это лишь малая часть преимуществ,
+              которые обеспечит RTE Group.   География работы — вся Россия и ближнее
+              зарубежье. Не имеет значения, насколько удален ваш регион  — мы готовы
+              предложить решение логистической задачи «под ключ»: от проработки маршрута
+              до погрузки оборудования на транспорт и выгрузки в конечной точке.
+              Ознакомьтесь со списком услуг и получите бесплатную консультацию.
+            </p>
+          </div>
+          <form class="form" novalidate>
+            <div class="form__container">
+              <p class="form__title form__text form__text_type_title">
+                Оставить заявку на перевозку
+              </p>
+              <div class="input form__field-name">
+                <div class="input__container name-container">
+                  <input
+                    type="text"
+                    id="name"
+                    class="input__field input__text input__text_type_field"
+                    placeholder=""
+                    required
+                  />
+                  <label
+                    class="input__placeholder input__text input__text_type_placeholder name-placeholder"
+                    >Имя*</label
+                  >
+                </div>
+                <span class="input__text_type_error name-error"></span>
+              </div>
+              <div class="input form__field-phone">
+                <div class="input__container phone-number-container">
+                  <input
+                    type="text"
+                    id="phone-number"
+                    class="input__field input__text input__text_type_field"
+                    placeholder=""
+                    required
+                  />
+                  <label
+                    class="input__placeholder input__text input__text_type_placeholder phone-number-placeholder"
+                    >Телефон*</label
+                  >
+                </div>
+                <span class="input__text_type_error phone-number-error"></span>
+              </div>
+              <div class="input form__field-details">
+                <div class="input__container">
+                  <textarea
+                    type="text"
+                    id="summary"
+                    class="input__field input__text input__text_type_field"
+                    placeholder=""
+                  ></textarea>
+                  <label
+                    class="input__placeholder input__text input__text_type_placeholder"
+                    >Краткая характеристика груза</label
+                  >
+                </div>
+                <div
+                  class="input__caption form__caption form__checkbox-control-container"
+                >
+                  <label
+                    for="form__checkbox-control"
+                    class="form__checkbox form__checkbox-control-placeholder"
+                    ><input
+                      type="checkbox"
+                      name="caption-checkbox"
+                      id="form__checkbox-control"
+                      class="input__field form__checkbox-control"
+                      required
+                    />
+                    <span class="form__checkbox-viewer"></span>
+                  </label>
+                  <p
+                    class="input__text input__text_type_caption form__text form__text_type_caption"
+                  >
+                    Согласен на обработку персональных данных в соответствии с
+                    <a href="#" class="form__link" target="_blank"
+                      >политикой конфиденциальности</a
+                    >
+                  </p>
+                  <span
+                    class="input__text_type_error form__checkbox-control-error form__checkbox-control-error_inactive"
+                  ></span>
+                </div>
+              </div>
+              <button type="submit" class="button button_type_default form__button">
+                <p class="button__text">Отправить</p>
+              </button>
+            </div>
+          </form>
+        </section>        
         <section class="gallery-info-cards">
           <div class="gallery-info-cards__gallery">
             <%= require('@common.blocks/services/servises.ejs').default %>
@@ -209,6 +308,27 @@
       </main>
       <%= require('@common.blocks/footer.ejs').default %>
     </div>
+    <div class="popup">
+      <div class="popup__container">
+        <button class="popup__close"></button>
+        <div class="popup__half">
+          <img
+            src="<%=require('../images/popup__icon@2x.png')%>"
+            alt=""
+            class="popup__image"
+          />
+        </div>
+        <div class="popup__half">
+          <p class="popup__title popup__text popup__text_type_title">
+            Заявка отправлена!
+          </p>
+          <p class="popup__about popup__text popup__text_type_about">
+            Мы свяжемся с вами в ближайшее время
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
     <script src="main.js"></script>
   </body>
 </html>

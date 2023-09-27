@@ -5,6 +5,8 @@
 
 .header {
   @include reset();
+  position: relative;
+  z-index: $z-index-hight-content;
   width: 100%;
   background-color: $bgGrayColor;
   @include media(md) {
@@ -104,10 +106,6 @@
     &_open {
       background-image: url("~@images/close-btn.svg");
     }
-
-    &_close {
-      background-image: url("~@images/header_list.svg");
-    }
   }
 
   &__popup {
@@ -125,6 +123,7 @@
       position: absolute;
       top: 0;
       left: 0;
+
       &_open {
         animation: slideDown 0.5s ease forwards;
       }

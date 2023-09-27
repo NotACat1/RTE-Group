@@ -41,10 +41,181 @@
     <div class="page__container">
       <%= require('@common.blocks/header.ejs').default %>
       <main>
-        <section class="info-form"></section>
-        <section class="feature-info"></section>
+         <section class="info-form" id="get-service">
+          <div class="info-form__container">
+            <h1 class="info-form__title">Автопарк</h1>
+            <p class="info-form__about">
+              Наш автопарк - это отражение нашего стремления к инновациям,
+              надежности и высочайшему качеству обслуживания. Мы гордимся нашим
+              автопарком, состоящим исключительно из новейшей техники 2022-2023
+              годов производства. Это залог не только безопасности, но и
+              эффективности наших перевозок.
+            </p>
+          </div>
+          <form class="form" novalidate>
+            <div class="form__container">
+              <p class="form__title form__text form__text_type_title">
+                Оставить заявку на перевозку
+              </p>
+              <div class="input form__field-name">
+                <div class="input__container name-container">
+                  <input
+                    type="text"
+                    id="name"
+                    class="input__field input__text input__text_type_field"
+                    placeholder=""
+                    required
+                  />
+                  <label
+                    class="input__placeholder input__text input__text_type_placeholder name-placeholder"
+                    >Имя*</label
+                  >
+                </div>
+                <span class="input__text_type_error name-error"></span>
+              </div>
+              <div class="input form__field-phone">
+                <div class="input__container phone-number-container">
+                  <input
+                    type="text"
+                    id="phone-number"
+                    class="input__field input__text input__text_type_field"
+                    placeholder=""
+                    required
+                  />
+                  <label
+                    class="input__placeholder input__text input__text_type_placeholder phone-number-placeholder"
+                    >Телефон*</label
+                  >
+                </div>
+                <span class="input__text_type_error phone-number-error"></span>
+              </div>
+              <div class="input form__field-details">
+                <div class="input__container">
+                  <textarea
+                    type="text"
+                    id="summary"
+                    class="input__field input__text input__text_type_field"
+                    placeholder=""
+                  ></textarea>
+                  <label
+                    class="input__placeholder input__text input__text_type_placeholder"
+                    >Краткая характеристика груза</label
+                  >
+                </div>
+                <div
+                  class="input__caption form__caption form__checkbox-control-container"
+                >
+                  <label
+                    for="form__checkbox-control"
+                    class="form__checkbox form__checkbox-control-placeholder"
+                    ><input
+                      type="checkbox"
+                      name="caption-checkbox"
+                      id="form__checkbox-control"
+                      class="input__field form__checkbox-control"
+                      required
+                    />
+                    <span class="form__checkbox-viewer"></span>
+                  </label>
+                  <p
+                    class="input__text input__text_type_caption form__text form__text_type_caption"
+                  >
+                    Согласен на обработку персональных данных в соответствии с
+                    <a href="#" class="form__link" target="_blank"
+                      >политикой конфиденциальности</a
+                    >
+                  </p>
+                  <span
+                    class="input__text_type_error form__checkbox-control-error form__checkbox-control-error_inactive"
+                  ></span>
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="button button_type_default form__button"
+              >
+                <p class="button__text">Отправить</p>
+              </button>
+            </div>
+          </form>
+        </section>
+        <section class="feature-info">
+          <div class="feature-info__photo-content">
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_first_slide.jpg')%>"
+              alt="первый слайд"
+            />
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_second_slide.jpg')%>"
+              alt="второй слайд"
+            />
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_third_slide.jpg')%>"
+              alt="третий слайд"
+            />
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_forth_slide.jpg')%>"
+              alt=" четвертый слайд"
+            />
+          </div>
+          <div class="feature-info__text-content">
+            <p class="feature-info__text">
+              Наши тралы, выпущенные на заводе Тверьстроймаш, известны своей
+              высокой грузоподъемностью. Способные перевозить грузы весом в 60,
+              70, 80 и 90 тонн, они готовы удовлетворить любые ваши потребности
+              в грузоперевозках.
+            </p>
+            <p class="feature-info__text">
+              Независимо от того, насколько большой или тяжелый ваш груз, вы
+              можете быть уверены, что мы найдем для него подходящее
+              транспортное средство.
+            </p>
+          </div>
+        </section>
         <%= require('@common.blocks/slider.ejs').default %>
-        <section class="feature-info feature-info_type_left-text"></section>
+        <section class="feature-info feature-info_type_left-text">
+          <div class="feature-info__photo-content">
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_fith_slide.jpg')%>"
+              alt="первый слайд"
+            />
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_sixth_slide.jpg')%>"
+              alt="второй слайд"
+            />
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_seventh_slide.jpg')%>"
+              alt="третий слайд"
+            />
+            <img
+              class="feature-info__photo-item"
+              src="<%=require('../images/car_eighth_slide.jpg')%>"
+              alt=" четвертый слайд"
+            />
+          </div>
+          <div class="feature-info__text-content">
+            <p class="feature-info__text">
+              Кроме того, наш автопарк оборудован тягачами от ведущего
+              производителя MAN. Эти транспортные средства отличаются
+              надежностью и мощностью, обеспечивая комфортную и бесперебойную
+              доставку ваших грузов.
+            </p>
+            <p class="feature-info__text">
+              Наш автопарк - это залог вашего спокойствия. В RTE Group мы не
+              просто перевозим грузы, мы строим доверительные отношения с нашими
+              клиентами, обеспечивая им лучший сервис в отрасли. Мы всегда рады
+              обсудить ваши потребности в грузоперевозках и предложить вам
+              оптимальное решение.
+            </p>
+          </div>
+        </section>
         <section class="cases-cards"></section>
         <section class="gallery-reviews">
           <p class="gallery-reviews__title">Отзывы клиентов</p>
@@ -126,9 +297,71 @@
             </div>
           </div>
         </section>
-        <section class="list-drop-down"></section>
+        <section class="list-drop-down" id="frequent-questions">
+          <h2 class="list-drop-down__title section-title">
+            Часто задаваемые вопросы
+          </h2>
+          <div class="list-drop-down__menu autopark__list-drop-down">
+            <div class="list-drop-down__item" id="logistic-time">
+              <a class="list-drop-down__item-el" href="#"
+                >Как долго займет доставка моего груза?</a
+              >
+              <button type="button" class="list-drop-down__btn"></button>
+              <template id="list-drop-down__answer">
+                <p class="list-drop-down__answer"></p>
+              </template>
+            </div>
+            <div class="list-drop-down__item" id="price">
+              <a class="list-drop-down__item-el" href="#"
+                >Как узнать стоимость перевозки моего груза?</a
+              >
+              <button type="button" class="list-drop-down__btn"></button>
+            </div>
+            <div class="list-drop-down__item" id="transport-types">
+              <a class="list-drop-down__item-el" href="#"
+                >Какие виды транспорта вы предлагаете для перевозки моего
+                груза?</a
+              >
+              <button type="button" class="list-drop-down__btn"></button>
+            </div>
+            <div class="list-drop-down__item" id="parts-weight">
+              <a class="list-drop-down__item-el" href="#"
+                >Какой объем груза я могу перевезти на вашем транспорте?</a
+              >
+              <button type="button" class="list-drop-down__btn"></button>
+            </div>
+            <div class="list-drop-down__item" id="parts-drop-on-off">
+              <a class="list-drop-down__item-el" href="#"
+                >Как происходит загрузка и выгрузка груза?</a
+              >
+              <button type="button" class="list-drop-down__btn"></button>
+            </div>
+          </div>
+        </section>
       </main>
       <%= require('@common.blocks/footer.ejs').default %>
     </div>
+    <div class="popup">
+      <div class="popup__container">
+        <button class="popup__close"></button>
+        <div class="popup__half">
+          <img
+            src="<%=require('../images/popup__icon@2x.png')%>"
+            alt=""
+            class="popup__image"
+          />
+        </div>
+        <div class="popup__half">
+          <p class="popup__title popup__text popup__text_type_title">
+            Заявка отправлена!
+          </p>
+          <p class="popup__about popup__text popup__text_type_about">
+            Мы свяжемся с вами в ближайшее время
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="main.js"></script>
   </body>
 </html>
