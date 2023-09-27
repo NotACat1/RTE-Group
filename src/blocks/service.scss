@@ -8,6 +8,7 @@
   @include reset;
   padding: 24px 32px 32px 32px;
   box-sizing: border-box;
+  border: 1px solid transparent;
   border-radius: 24px;
   @include media(lg) {
     padding: 8px 16px 16px 16px;
@@ -71,10 +72,10 @@
   }
 
   &_type_even {
-    background-color: $bgDarkColor;
+    background-color: $bgGrayColor;
   }
 
   &_type_odd {
-    background-color: $bgGrayColor;
+    border-color: $stroke;
   }
 }
