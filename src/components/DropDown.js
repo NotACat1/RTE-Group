@@ -1,6 +1,4 @@
-const answerTemplate = document.querySelector(
-  '#list-drop-down__answer'
-).content
+const answerTemplate = document.querySelector('#list-drop-down__answer').content
 
 export class DropDown {
   constructor({ data, obj, selector }) {
@@ -16,12 +14,13 @@ export class DropDown {
   }
   _createAnswer() {
     this._element = this._getAnswer()
-    this._checkQuestionId();
+    this._checkQuestionId()
     this._data.forEach((item) => {
       ///чтобы ответ соответствовал вопросу
       if (item.id === this._checkQuestionId()) {
-      const answerText = item.answer
-      this._element.textContent = answerText}
+        const answerText = item.answer
+        this._element.textContent = answerText
+      }
     })
     return this._element
   }
@@ -52,4 +51,3 @@ export class DropDown {
     })
   }
 }
-

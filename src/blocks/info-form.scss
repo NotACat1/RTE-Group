@@ -1,6 +1,6 @@
 /* stylelint-disable */
-@import "@scss/utills/variables";
-@import "@scss/utills/mixins";
+@import '@scss/utills/variables';
+@import '@scss/utills/mixins';
 /* stylelint-enable */
 
 .info-form {
@@ -11,6 +11,10 @@
   column-gap: 24px;
   margin: 96px auto 128px;
 
+  @include media(md) {
+    grid-template-columns: 328px;
+  }
+
   &__container {
     display: block;
   }
@@ -20,6 +24,10 @@
     @include text_type_section;
 
     margin: 0;
+
+    @include media(md) {
+      @include text_h_h3;
+    }
   }
 
   &__about {
@@ -29,14 +37,36 @@
     margin: 0;
     margin-top: 32px;
   }
-}
 
-@media screen and (width <= 767px) {
-  .info-form {
-    grid-template-columns: 328px;
+  &__badges {
+    display: flex;
+    flex-direction: row;
+    margin: 32px 0;
 
-    &__title {
-      @include text_h_h3;
+    @include media(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__badge {
+    @include text;
+    @include text-format(12px, 400, 100%);
+
+    background-color: $bgGrayColor;
+    border-radius: 12px;
+    padding: 12px;
+    width: 100%;
+
+    @include media(md) {
+      flex-direction: column;
+      margin: 0;
+      max-width: 260px;
+      width: 100%;
+    }
+
+    &__badge:last-of-type {
+      margin-top: 8px;
+      max-width: 68px;
     }
   }
 }
