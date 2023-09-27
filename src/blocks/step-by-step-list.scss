@@ -10,25 +10,6 @@
       gap: 40px;
     }
   }
-  &__ellipse {
-    position: absolute;
-    left: -505px;
-    top: -223px;
-    width: 900px;
-    height: 600px;
-    transform: rotate(-30deg);
-    border-radius: 400px;
-    border: 2px solid $primaryGreenColor;
-    z-index: -1;
-
-    @include media(md) {
-      left: -16px;
-      top: -98px;
-      width: 160px;
-      height: 300px;
-      transform: rotate(135deg);
-    }
-  }
   &__half {
     display: flex;
     flex-direction: column;
