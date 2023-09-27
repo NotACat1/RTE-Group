@@ -8,6 +8,7 @@
 
   padding: 24px;
   max-width: 480px;
+  width: 100%;
   box-sizing: border-box;
 
   @include media(md) {
@@ -19,6 +20,7 @@
     display: grid;
     grid-template-rows: auto 24px auto 16px auto 16px auto 24px auto;
     max-width: 400px;
+    width: 100%;
 
     @include media(md) {
       max-width: 296px;
@@ -125,6 +127,20 @@
 
     &:checked ~ .form__checkbox-viewer {
       background-image: url('../images/form__checkbox-filled@2x.png');
+    }
+  }
+
+  &__desktop-contacts {
+
+    @include media(md) {
+      display: none;
+    }
+  }
+  &__mobile-contacts {
+    display: none;
+
+    @include media(md) {
+      display: inline-block;
     }
   }
 }
