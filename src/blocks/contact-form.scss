@@ -1,0 +1,50 @@
+/* stylelint-disable */
+@import '@scss/utills/variables';
+@import '@scss/utills/mixins';
+/* stylelint-enable */
+
+.contact-form {
+  @include container-max-widths;
+
+  display: grid;
+  grid-template-columns: 432px 476px;
+  column-gap: 72px;
+  margin: 96px auto 128px;
+
+  @include media(md) {
+    grid-template-columns: 328px;
+    row-gap: 80px;
+  }
+
+  &__button {
+    @include button_type_outline;
+    @include button_type_transparent;
+    max-width: 480px;
+    width: 100%;
+    padding: 0;
+    height: 56px;
+
+    @include media(md) {
+        max-width: 328px;
+      }
+  }
+
+  &____button-text {
+    margin: 0;
+    padding: 16px 24px;
+  }
+
+  &__about {
+    margin: 32px 0;
+
+    &:first-of-type {
+      margin-bottom: 24px;
+    }
+    &:nth-of-type(2) {
+      margin: 0;
+    }
+    &:last-of-type {
+      margin-top: 24px;
+    }
+  }
+}
