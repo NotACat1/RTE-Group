@@ -2,6 +2,12 @@
 
 ## Описание проекта
 
+Наш проект представляет собой создание современного веб-сайта для компании RTE Group - команды опытных профессионалов, обладающих обширным опытом в областях строительства и ЖКХ. Мы нацелены на предоставление высококачественных услуг, связанных с перевозкой крупногабаритных и негабаритных грузов.
+
+Ссылка на сайт: [https://notacat1.github.io/RTE-Group/](https://notacat1.github.io/RTE-Group/)
+
+Ссылка на макет: [https://www.figma.com/file/FB7NTbq3ViFpXqsszoYXzV/RT-Express-(Copy)?type=design&node-id=288%3A13491&mode=dev](https://www.figma.com/file/FB7NTbq3ViFpXqsszoYXzV/RT-Express-(Copy)?type=design&node-id=288%3A13491&mode=dev)
+
 ## Реализованный функционал
 
 ## Используемые технологии
