@@ -1,13 +1,12 @@
-import {answerTemplate} from '../utils/constants.js'
-
 export class DropDown {
   constructor({ data, obj, selector }) {
     this._data = data
     this._obj = obj
     this._selector = selector
+    this._answerTemplate = document.querySelector('#list-drop-down__answer').content
   }
   _getAnswer() {
-    const answerItem = answerTemplate
+    const answerItem = this._answerTemplate
       .querySelector(this._obj.answerItem)
       .cloneNode(true)
     return answerItem

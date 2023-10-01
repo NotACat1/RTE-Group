@@ -10,6 +10,7 @@
   grid-template-columns: 432px 476px;
   column-gap: 72px;
   margin: 96px auto 128px;
+  z-index: 3;
 
   @include media(md) {
     grid-template-columns: 328px;
