@@ -1,15 +1,23 @@
 /* stylelint-disable */
-@import "@scss/utills/_variables";
-@import "@scss/utills/_mixins";
+@import '@scss/utills/_variables';
+@import '@scss/utills/_mixins';
 /* stylelint-enable */
 
 .error-page {
+  @include container-max-widths;
   max-width: 1080px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   padding-top: 96px;
   padding-bottom: 80px;
+
+  @include media(md) {
+    justify-content: center;
+    text-align: center;
+    padding-top: 56px;
+    padding-bottom: 80px;
+  }
 
   &__title {
     @include text;
@@ -23,6 +31,11 @@
     @include text-format(28px, 700, 1.25);
     margin-top: 40px;
     margin-bottom: 16px;
+
+    @include media(md) {
+      @include text_type_card-title;
+      margin-top: 32px;
+    }
   }
 
   &__text {
@@ -30,7 +43,10 @@
     @include reset;
     max-width: 300px;
     color: $gray;
-    @include text-format(24px, 500, 1.45);
+
+    @include media(md) {
+      @include text_type_regular;
+    }
   }
 
   &__btn {
@@ -46,31 +62,19 @@
       color: $white;
       text-decoration: none;
     }
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .error-page {
-    justify-content: center;
-    text-align: center;
-    padding-top: 56px;
-    padding-bottom: 80px;
-
-    &__subtitle {
-      font-size: 20px;
-      margin-top: 32px;
-    }
-
-    &__btn {
+    @include media(md) {
       width: 100%;
       margin-top: 32px;
     }
+  }
 
-    &__text {
-      @include text-format(24px, 500, 1.45);
-    }
+  &__img {
+    width: 215px;
+    height: 243px;
+    padding: 71px 85px 69px 83px;
 
-    &__img {
+    @include media(md) {
       display: none;
     }
   }
