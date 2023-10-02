@@ -50,5 +50,3 @@ export const closeButton = document.querySelector('.popup__close')
 export const checkBox = document.querySelector('.form__checkbox-control')
 export const inputList = Array.from(document.querySelectorAll('.input__field'))
 export const summaryInput = document.querySelector('#summary')
-
-export const answerTemplate = document.querySelector('#list-drop-down__answer').content

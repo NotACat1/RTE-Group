@@ -36,10 +36,13 @@ function resetForm() {
     checkBox.checked = false
   })
 }
-
+ 
+if (slider !== null) {
 const sliderItem = new Slider(slider)
 sliderItem.timer()
+}
 
+if (listItems !== null) {
 listItems.forEach((item) => {
   const answer = new DropDown({
     data: dropDownAnswers,
@@ -48,13 +51,15 @@ listItems.forEach((item) => {
   })
   answer.setEventListeners()
 })
-
+}
+ 
+if (orderForm !== null) {
 const orderFormValidation = new FormValidator({
   obj: formSelectors,
   formElement: orderForm,
 })
-
 orderFormValidation.enableValidation()
+}
 
 const popupOrderSubmitted = new Popup(popupRequestConfirmed)
 
@@ -67,8 +72,12 @@ if (!submitButton.classList.contains('button_type_disabled')) {
   })
 }
 
+if (popupOrderSubmitted !== null && closeButton !== null) {
 closeButton.addEventListener('click', () => {
   popupOrderSubmitted.closePopup()
 })
+}
 
+if (popupRequestConfirmed !== null) {
 popupOrderSubmitted.setEventListeners()
+}

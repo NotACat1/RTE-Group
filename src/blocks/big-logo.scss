@@ -9,6 +9,7 @@
   border-radius: 400px;
   position: absolute;
   z-index: 2;
+  pointer-events: none;
 
   &_bg {
     z-index: $z-index-bg;
