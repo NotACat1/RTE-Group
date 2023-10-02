@@ -1,0 +1,17 @@
+.work-with-us {
+  @include container-max-widths;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin-top: 96px;
+  margin-bottom: 128px;
+
+  &__main-content {
+    max-width: 608px;
+    width: 100%;
+  }
+
+  &__form {
+    max-width: 448px;
+  }
+}
