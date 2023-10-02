@@ -1,9 +1,10 @@
 .feedback {
   max-width: 333px;
 
-  @include media(sm) {
+  @include media(md) {
     max-width: 328px;
   }
+
   &__container {
     display: grid;
     grid-template-rows: auto;

@@ -1,10 +1,12 @@
 /* stylelint-disable */
-@import "@scss/utills/variables";
-@import "@scss/utills/mixins";
+@import '@scss/utills/variables';
+@import '@scss/utills/mixins';
 /* stylelint-enable */
 
 .list-drop-down {
   @include container-max-widths;
+
+  margin-bottom: 80px;
 
   &__menu {
     margin-top: 40px;
@@ -20,8 +22,8 @@
     display: grid;
     grid-template-columns: 1fr 24px;
     grid-template-areas:
-      "question caret"
-      "answer answer";
+      'question caret'
+      'answer answer';
     column-gap: 24px;
     align-items: center;
   }
@@ -32,20 +34,20 @@
 
     margin: 24px 0;
     color: $white;
-    grid-area: "question";
+    grid-area: 'question';
   }
 
   &__btn {
     @include reset_button;
 
-    background-image: url("../images/CaretDown.png");
+    background-image: url('../images/CaretDown.png');
     background-repeat: no-repeat;
     width: 24px;
     height: 24px;
-    grid-area: "caret";
+    grid-area: 'caret';
 
     &_clicked {
-      background-image: url("../images/CaretUp.png");
+      background-image: url('../images/CaretUp.png');
     }
   }
 
@@ -54,7 +56,7 @@
 
     margin: 0;
     margin-bottom: 16px;
-    grid-area: "answer";
+    grid-area: 'answer';
     grid-column: span 2;
     opacity: 0.7;
   }

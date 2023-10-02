@@ -1,8 +1,14 @@
 .step-by-step-list {
+  @include media(md) {
+    @include container-max-widths;
+  }
+
   &__container {
+    @include container-max-widths;
+    margin-top: 208px;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 24px;
 
     @include media(md) {
@@ -10,26 +16,34 @@
       gap: 40px;
     }
   }
+
   &__half {
     display: flex;
     flex-direction: column;
     max-width: 528px;
   }
+
   &__break {
     height: 0;
     stroke-width: 1px;
     border-bottom: 1px solid $stroke;
     margin: 40px 0;
 
+    &:last-of-type {
+      margin-bottom: 208px;
+    }
+
     @include media(md) {
       margin: 24px 0;
     }
   }
+
   &__text {
     @include reset();
     @include text();
     @include text-format(36px, 700, 1.25);
     color: $white;
+    z-index: 100;
 
     @include media(md) {
       @include text-format(28px, 700, 1.25);
