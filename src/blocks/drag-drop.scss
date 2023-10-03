@@ -9,6 +9,10 @@
     background-color: $bgGrayColor;
   }
 
+  @include media(md) {
+    padding: 16px 24px;
+    }
+
   &__close {
     background-color: transparent;
     background-image: url("../images/popup__close@2x.png");
@@ -35,12 +39,17 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
+    position: relative;
 
     &_type_dropped {
       flex-direction: row;
       gap: 16px;
     }
-  }
+
+    @include media(md) {
+      flex-direction: row;
+      }
+    }
 
   &__image {
     height: 40px;
@@ -57,8 +66,15 @@
     @include text();
     @include text-format(16px, 400, 1.5);
 
-    max-width: 280px;
+    max-width: 304px;
+    width: 100%;
     color: $gray;
     text-align: center;
+
+    @include media(lg) {
+      &_invisible {
+        display: none;
+      }
+    }
   }
 }
