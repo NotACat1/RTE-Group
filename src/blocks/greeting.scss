@@ -1,6 +1,6 @@
 /* stylelint-disable */
-@import "@scss/utills/variables";
-@import "@scss/utills/mixins";
+@import '@scss/utills/variables';
+@import '@scss/utills/mixins';
 /* stylelint-enable */
 
 .greeting {
@@ -17,8 +17,10 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: 576px auto;
+    
     @include media(lg) {
       grid-template-columns: 100%;
+      flex-direction: row-reverse;
     }
 
     min-height: 550px;
@@ -102,6 +104,7 @@
 
     @include media(lg) {
       grid-area: 1 / 1;
+      overflow: hidden;
     }
 
     @include media(sm) {

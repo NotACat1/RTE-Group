@@ -17,6 +17,8 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  margin-bottom: 208px;
+
   @include media(sm) {
     padding: 0;
     background: none;
@@ -59,5 +61,6 @@
   &__content-paragraph {
     @include reset;
     @include text_type_regular;
+    margin-bottom: 16px;
   }
 }
