@@ -1,0 +1,58 @@
+<header class="header">
+  <div class="header__container">
+    <a class="header__logo-link" rel="link" href="./index.html">
+      <img
+        class="header__logo-icon header__logo-icon_desktop"
+        src="~@images/logo_header.svg"
+        alt="Логотип компании РТ Экспресс"
+      />
+      <img
+        class="header__logo-icon header__logo-icon_mobile"
+        src="~@images/header_logo_small.svg"
+        alt="Логотип компании РТ Экспресс"
+      />
+    </a>
+    <a class="header__contact" rel="link" href="">
+      <img
+        class="header__contact-icon"
+        src="~@images/call_Icon.svg"
+        alt="Иконка трубки телефона"
+      />
+      <p class="header__contact-text">+7 917 275-90-13</p>
+    </a>
+    <button
+      class="header__place-order-btn"
+      type="submit"
+      aria-label="Кнопка разместить заказ"
+    >
+      Оформить заказ
+    </button>
+    <button
+      class="header__list-btn header__list-btn_close"
+      type="button"
+      aria-label="Значок выпадающего списка"
+    ></button>
+  </div>
+  <div class="header__popup">
+    <div class="header__nav header__nav_close">
+      <div class="header__nav-container">
+        <nav class="nav">
+          <ul class="nav__list">
+            <% navHeaderData.navHeader.forEach(({ name, href }) => { %>
+            <li class="nav__list-item">
+              <a class="nav__link" href="<%= href %>"><%= name %></a>
+            </li>
+            <% }); %>
+          </ul>
+        </nav>
+        <button
+          class="header__place-order-btn header__place-order-btn_nav"
+          type="submit"
+          aria-label="Кнопка разместить заказ"
+        >
+          Оформить заказ
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

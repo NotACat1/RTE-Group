@@ -1,0 +1,53 @@
+.contact {
+  max-width: 264px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__text {
+    @include reset();
+    @include text();
+
+    color: $white;
+
+    &_type_title {
+      @include text-format(20px, 700, 1.3);
+    }
+
+    &_type_name {
+      @include text-format(16px, 600, 1.5);
+    }
+
+    &_type_info {
+      @include text-format(16px, 400, 1.5);
+
+      display: inline-block;
+    }
+
+    &_type_link {
+      @include text-format(16px, 400, 1.5);
+
+      text-decoration: underline;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__phone {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+}

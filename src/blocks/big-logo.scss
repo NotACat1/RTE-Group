@@ -1,0 +1,132 @@
+/* stylelint-disable */
+@import "@scss/utills/variables";
+@import "@scss/utills/mixins";
+/* stylelint-enable */
+
+.big-logo {
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 400px;
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+
+  &_bg {
+    z-index: $z-index-bg;
+  }
+
+  &_sizes {
+    &_slim {
+      width: 400px;
+      height: 880px;
+      @include media(sm) {
+        width: 681px;
+        height: 310px;
+      }
+    }
+    &_first {
+      width: 600px;
+      height: 900px;
+    }
+    &_second {
+      width: 900px;
+      height: 600px;
+      @include media(sm) {
+        width: 160px;
+        height: 300px;
+      }
+    }
+  }
+
+  &_position {
+    &_first {
+      top: -539px;
+      left: -382px;
+    }
+    &_second {
+      top: -59px;
+      left: -525px;
+      @include media(sm) {
+        top: -218px;
+        left: -138px;
+      }
+    }
+    &_third {
+      top: -343px;
+      right: -176px;
+      @include media(sm) {
+        top: -131px;
+        right: -337px;
+      }
+    }
+    &_fourth {
+      top: -361px;
+      right: -159px;
+      @include media(sm) {
+        top: -146px;
+        right: -326px;
+      }
+    }
+  }
+
+  &_fill {
+    background: $colorGreenDarker;
+  }
+
+  &_border {
+    border: 2px solid $primaryGreenColor;
+  }
+
+  @include media(sm) {
+    &_border:not(&_bg) {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &_rotate {
+    &_120 {
+      transform: rotate(120deg);
+      & > * {
+        transform: rotate(-120deg);
+      }
+    }
+    &_330 {
+      transform: rotate(-30deg);
+      & > * {
+        transform: rotate(30deg);
+      }
+      @include media(sm) {
+        transform: rotate(-45deg);
+        & > * {
+          transform: rotate(45deg);
+        }
+      }
+    }
+    &_45 {
+      transform: rotate(45deg);
+      & > * {
+        transform: rotate(-45deg);
+      }
+      @include media(sm) {
+        transform: rotate(-45deg);
+        & > * {
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 240px;
+    right: -380px;
+
+    width: 1000px;
+    @include media(sm) {
+      top: 51px;
+      right: 117px;
+      width: 643px;
+    }
+  }
+}

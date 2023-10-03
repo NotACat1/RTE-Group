@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Meta tags of site pages -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="description"
+      content="Компания RTE Group. Каждый кейс — это уникальная история, демонстрирующая наши ценности и обязательства перед клиентами."
+    />
+    <meta name="keywords" content="HTML5, CSS" />
+    <meta name="author" content="Web-разработка: Ильяс Сибгатуллин" />
+    <meta name="author" content="Web-разработка: Даниил Рябов" />
+    <meta name="author" content="Web-разработка: Виктор Воронков" />
+    <meta name="author" content="Web-разработка: Анна Кособуцкая" />
+    <meta name="author" content="Web-разработка: Екатерина Яковлева" />
+    <meta name="author" content="Web-разработка: Андрей Ланцов" />
+    <meta name="author" content="Web-разработка: Богдан Тимощук" />
+    <meta name="author" content="Web-разработка: Светлана Подсобляева" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="Трекинг - важная часть грузоперевозок" />
+    <meta
+      property="og:description"
+      content="Компания RTE Group. Каждый кейс — это уникальная история, демонстрирующая наши ценности и обязательства перед клиентами."
+    />
+    <meta property="og:url" content="https://rt-express.ru/about" />
+    <meta property="og:image" content="https://i.imgur.com/eRmjgqB.png" />
+    <meta property="og:site_name" content="РТ Экспресс" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <title>Трекинг - важная часть грузоперевозок</title>
+
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body class="page">
+    <div class="page__container">
+      <%= require('@common.blocks/header.ejs').default %>
+      <main>
+        <section class="info-form" id="get-service">
+          <div class="info-form__container">
+            <h1 class="info-form__title">
+              Трекинг – важная часть грузоперевозок
+            </h1>
+            <div class="info-form__badges">
+              <p class="info-form__badge">Перевозка крупногабаритных грузов</p>
+              <p class="info-form__badge">Казань</p>
+            </div>
+            <p class="info-form__about">
+              Мы хотим поделиться с вами опытом, накопленным за годы успешной
+              работы в сфере негабаритных грузоперевозок. Каждый кейс — это
+              уникальная история, демонстрирующая наши ценности и обязательства
+              перед клиентами. Они показывают, как мы решаем сложные задачи,
+              преодолеваем непредвиденные препятствия и находим эффективные
+              решения для наших заказчиков.
+            </p>
+          </div>
+          <form class="form" novalidate>
+            <div class="form__container">
+              <p class="form__title form__text form__text_type_title">
+                Оставить заявку на перевозку
+              </p>
+              <div class="input form__field-name">
+                <div class="input__container name-container">
+                  <input
+                    type="text"
+                    id="name"
+                    class="input__field input__text input__text_type_field"
+                    placeholder=""
+                    required
+                    data-error-message="Поле обязательно для заполнения"
+                  />
+                  <label
+                    class="input__placeholder input__text input__text_type_placeholder name-placeholder"
+                    >Имя*</label
+                  >
+                </div>
+                <span class="input__text_type_error name-error"></span>
+              </div>
+              <div class="input form__field-phone">
+                <div class="input__container phone-number-container">
+                  <input
+                    type="text"
+                    id="phone-number"
+                    class="input__field input__text input__text_type_field"
+                    placeholder=""
+                    required
+                    data-error-message="Поле обязательно для заполнения"
+                  />
+                  <label
+                    class="input__placeholder input__text input__text_type_placeholder phone-number-placeholder"
+                    >Телефон*</label
+                  >
+                </div>
+                <span class="input__text_type_error phone-number-error"></span>
+              </div>
+              <div class="input form__field-details">
+                <div class="input__container">
+                  <textarea
+                    type="text"
+                    id="summary"
+                    class="input__field input__text input__text_type_field"
+                    placeholder=""
+                  ></textarea>
+                  <label
+                    class="input__placeholder input__text input__text_type_placeholder"
+                    >Краткая характеристика груза</label
+                  >
+                </div>
+                <div
+                  class="input__caption form__caption form__checkbox-control-container"
+                >
+                  <label
+                    for="form__checkbox-control"
+                    class="form__checkbox form__checkbox-control-placeholder"
+                    ><input
+                      type="checkbox"
+                      name="caption-checkbox"
+                      id="form__checkbox-control"
+                      class="input__field form__checkbox-control"
+                      required
+                    />
+                    <span class="form__checkbox-viewer"></span>
+                  </label>
+                  <p
+                    class="input__text input__text_type_caption form__text form__text_type_caption"
+                  >
+                    Согласен на обработку персональных данных в соответствии с
+                    <a href="#" class="form__link" target="_blank"
+                      >политикой конфиденциальности</a
+                    >
+                  </p>
+                  <span
+                    class="input__text_type_error form__checkbox-control-error form__checkbox-control-error_inactive"
+                  ></span>
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="button button_type_default form__button"
+              >
+                <p class="button__text">Отправить</p>
+              </button>
+            </div>
+          </form>
+        </section>
+        <section class="info-blocks" id="info-blocks">
+          <div class="info-blocks__container">
+            <div class="info-blocks__item">
+              <p
+                class="info-blocks__h1 info-blocks__text info-blocks__text_type_h1"
+              >
+                Трекинг грузоперевозок: эффективный контроль и управление
+              </p>
+            </div>
+            <div class="info-blocks__item">
+              <p
+                class="info-blocks__h2 info-blocks__text info-blocks__text_type_h2"
+              >
+                Введение
+              </p>
+              <p
+                class="info-blocks__about info-blocks__text info-blocks__text_type_about"
+              >
+                В современном мире грузоперевозки играют важную роль в
+                экономике. Бизнесы поставляют свои товары по всему миру, и
+                эффективное управление грузами становится ключевым фактором
+                успеха. Одним из инструментов, который помогает контролировать и
+                отслеживать грузы на каждом этапе доставки, является трекинг
+                грузоперевозок.
+              </p>
+            </div>
+            <div class="info-blocks__item">
+              <p
+                class="info-blocks__h3 info-blocks__text info-blocks__text_type_h3"
+              >
+                Что такое трекинг грузоперевозок?
+              </p>
+              <p
+                class="info-blocks__about info-blocks__text info-blocks__text_type_about"
+              >
+                Трекинг грузоперевозок - это процесс отслеживания местоположения
+                и статуса груза на протяжении всего пути доставки. Он позволяет
+                бизнесам и клиентам быть в курсе, где находится их груз, и
+                контролировать его передвижение.
+              </p>
+            </div>
+            <div class="info-blocks__item">
+              <p
+                class="info-blocks__h4 info-blocks__text info-blocks__text_type_h4"
+              >
+                Преимущества трекинга грузоперевозок
+              </p>
+              <ul class="info-blocks__list info-blocks__list_type_bullet">
+                <li
+                  class="info-blocks__list-item info-blocks__text info-blocks__text_type_about"
+                >
+                  Большая прозрачность - трекинг груза дает возможность видеть
+                  точное местоположение и статус груза в реальном времени.
+                </li>
+                <li
+                  class="info-blocks__list-item info-blocks__text info-blocks__text_type_about"
+                >
+                  Улучшенное управление - благодаря трекингу грузоперевозок,
+                  бизнесы могут оптимизировать свои логистические процессы и
+                  улучшить свою эффективность.
+                </li>
+                <li
+                  class="info-blocks__list-item info-blocks__text info-blocks__text_type_about"
+                >
+                  Быстрые реакции - в случае задержек или проблем с доставкой,
+                  трекинг грузоперевозок позволяет оперативно реагировать и
+                  принимать необходимые меры.
+                </li>
+              </ul>
+            </div>
+            <div class="info-blocks__item">
+              <p
+                class="info-blocks__h5 info-blocks__text info-blocks__text_type_h5"
+              >
+                Технологии трекинга грузоперевозок
+              </p>
+              <ol class="info-blocks__list info-blocks__list_type_number">
+                <li
+                  class="info-blocks__list-item info-blocks__text info-blocks__text_type_about"
+                >
+                  Большая прозрачность - трекинг груза дает возможность видеть
+                  точное местоположение и статус груза в реальном времени.
+                </li>
+                <li
+                  class="info-blocks__list-item info-blocks__text info-blocks__text_type_about"
+                >
+                  Улучшенное управление - благодаря трекингу грузоперевозок,
+                  бизнесы могут оптимизировать свои логистические процессы и
+                  улучшить свою эффективность.
+                </li>
+                <li
+                  class="info-blocks__list-item info-blocks__text info-blocks__text_type_about"
+                >
+                  Быстрые реакции - в случае задержек или проблем с доставкой,
+                  трекинг грузоперевозок позволяет оперативно реагировать и
+                  принимать необходимые меры.
+                </li>
+              </ol>
+            </div>
+            <div class="info-blocks__item">
+              <p
+                class="info-blocks__h6 info-blocks__text info-blocks__text_type_h6"
+              >
+                Пример трекинга грузоперевозок
+              </p>
+              <p
+                class="info-blocks__about info-blocks__text info-blocks__text_type_about"
+              >
+                Допустим, компания решила отправить товары из своего склада в
+                другой город. С помощью трекинга грузоперевозок, она может:
+              </p>
+              <ul class="info-blocks__list info-blocks__list_type_bullet">
+                <li
+                  class="info-blocks__list-item info-blocks__text info-blocks__text_type_about"
+                >
+                  Установить GPS-трекеры на грузовые автомобили, чтобы
+                  отслеживать их местоположение в реальном времени.
+                </li>
+                <li
+                  class="info-blocks__list-item info-blocks__text info-blocks__text_type_about"
+                >
+                  Получать уведомления о статусе доставки, например, когда груз
+                  покидает склад или прибывает на пункт назначения.
+                </li>
+              </ul>
+            </div>
+            <div class="info-blocks__item">
+              <p
+                class="info-blocks__smalltext info-blocks__text info-blocks__text_type_smalltext"
+              >
+                Мелкий текст
+              </p>
+            </div>
+            <div class="info-blocks__item info-blocks__item_type_caption">
+              <div class="info-blocks__half">
+                <img
+                  src="../images/info-block__quote@2x.png"
+                  alt=""
+                  class="info-blocks__icon"
+                />
+              </div>
+              <div class="info-blocks__half">
+                <p
+                  class="info-blocks__about info-blocks__text info-blocks__text_type_about"
+                >
+                  Трекинг грузоперевозок - это процесс отслеживания
+                  местоположения и статуса груза на протяжении всего пути
+                  доставки. Он позволяет бизнесам и клиентам быть в курсе, где
+                  находится их груз, и контролировать его передвижение.
+                </p>
+                <p
+                  class="info-blocks__smalltext info-blocks__text info-blocks__text_type_smalltext"
+                >
+                  Иван Голубев
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <%= require('@common.blocks/footer.ejs').default %>
+    </div>
+    <div class="popup">
+      <div class="popup__container">
+        <button class="popup__close"></button>
+        <div class="popup__half">
+          <img
+            src="<%=require('../images/popup__icon@2x.png')%>"
+            alt=""
+            class="popup__image"
+          />
+        </div>
+        <div class="popup__half">
+          <p class="popup__title popup__text popup__text_type_title">
+            Заявка отправлена!
+          </p>
+          <p class="popup__about popup__text popup__text_type_about">
+            Мы свяжемся с вами в ближайшее время
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="main.js"></script>
+  </body>
+</html>

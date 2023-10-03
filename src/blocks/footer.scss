@@ -1,0 +1,86 @@
+/* stylelint-disable */
+@import "@scss/utills/variables";
+@import "@scss/utills/mixins";
+/* stylelint-enable */
+
+.footer {
+  @include reset;
+  background-color: $bgDarkColor;
+  width: 100%;
+  margin-bottom: 40px;
+  @include media(lg) {
+    margin-bottom: 32px;
+  }
+
+  &__content {
+    @include reset;
+    @include container-max-widths;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    @include media(lg) {
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      gap: 24px;
+    }
+  }
+
+  &__logo {
+    opacity: 0.5;
+    color: $colorLinkFooter;
+
+    &_desktop {
+      width: 153px;
+      padding: 7px;
+      @include media(lg) {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      width: 135px;
+      padding: 8px 9px;
+      display: none;
+      @include media(lg) {
+        display: block;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    gap: 56px;
+    @include media(lg) {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__menu-list {
+    @include reset;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @include media(lg) {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  &__menu-link {
+    @include reset;
+    @include text_type_footer;
+  }
+
+  &__copyright {
+    @include reset;
+    @include text_type_regular;
+    color: $colorLinkFooter;
+    @include media(lg) {
+      @include text_type_regular;
+    }
+  }
+}

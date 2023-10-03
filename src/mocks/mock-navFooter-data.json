@@ -1,0 +1,36 @@
+{
+  "navFooter": [
+    {
+      "name": "Услуги",
+      "href": "./services.html"
+    },
+    {
+      "name": "О компании",
+      "href": "./about.html"
+    },
+    {
+      "name": "Автопарк",
+      "href": "./autopark.html"
+    },
+    {
+      "name": "Кейсы",
+      "href": "./cases.html"
+    },
+    {
+      "name": "Города",
+      "href": "./cities.html"
+    },
+    {
+      "name": "Контакты",
+      "href": "./contacts.html"
+    },
+    {
+      "name": "Работа у нас",
+      "href": "./job.html"
+    },
+    {
+      "name": "Политика конфиденциальности",
+      "href": "./privacy.html"
+    }
+  ]
+}

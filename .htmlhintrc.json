@@ -1,0 +1,13 @@
+{
+  "tag-pair": true,
+  "doctype-first": false,
+  "id-unique": true,
+  "attr-lowercase": true,
+  "attr-value-double-quotes": true,
+  "doctype-html5": true,
+  "tagname-lowercase": true,
+  "attr-no-duplication": true,
+  "spec-char-escape": true,
+  "id-class-value": "underline",
+  "style-disabled": true
+}

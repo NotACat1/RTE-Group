@@ -1,0 +1,124 @@
+/* stylelint-disable */
+@import "@scss/utills/_mixins";
+@import "@scss/utills/_variables";
+/* stylelint-enable */
+
+.price-table {
+  @include reset;
+  @include container-max-widths;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+  box-sizing: border-box;
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  @include media(md) {
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    @include reset;
+    @include text_type_section;
+    @include media(md) {
+      @include text_h_h3;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    @include media(md) {
+      display: none;
+    }
+  }
+
+  &__thead {
+    background: $colorButtonDisabledHover;
+  }
+
+  &__tr {
+    box-sizing: border-box;
+    border-top: 1px solid $colorBorderTable;
+    border-bottom: 1px solid $colorBorderTable;
+  }
+
+  &__th {
+    box-sizing: border-box;
+    padding: 16px 24px;
+    text-align: start;
+    color: $white;
+    @include text_type_header;
+
+    &_first {
+      width: 60px;
+    }
+
+    &_second {
+      width: auto;
+    }
+
+    &_third {
+      width: 400px;
+    }
+  }
+
+  &__td {
+    box-sizing: border-box;
+    padding: 16px 24px;
+    text-align: start;
+    color: $white;
+    @include text_type_regular;
+
+    &_price::after {
+      content: " \20BD";
+    }
+  }
+
+  &__list {
+    @include reset;
+    width: 100%;
+    display: none;
+    list-style: none;
+    flex-direction: column;
+    align-items: flex-start;
+    @include media(md) {
+      display: flex;
+    }
+  }
+
+  &__list-item {
+    align-self: stretch;
+    box-sizing: border-box;
+    padding: 8px 0;
+    border-bottom: 1px solid $colorBorderTable;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__list-title {
+    @include reset;
+    @include text_type_header;
+    color: $white;
+  }
+
+  &__list-paragraph {
+    @include reset;
+    @include text_type_regular;
+    color: $white;
+    opacity: 0.7;
+
+    &::after {
+      content: " \20BD";
+    }
+  }
+}

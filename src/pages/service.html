@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Meta tags of site pages -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="description"
+      content="RTE Group предлагает специализированные услуги по перевозке экскаваторов для строительных и горнодобывающих проектов. Компания обеспечивает высокое качество услуг благодаря опытным специалистам, современному автопарку и вниманию к деталям. Важность безопасности и своевременности перевозки крупногабаритного оборудования признается компанией, и она гарантирует точную и надежную доставку экскаваторов."
+    />
+    <meta name="keywords" content="HTML5, CSS" />
+    <meta name="author" content="Web-разработка: Ильяс Сибгатуллин" />
+    <meta name="author" content="Web-разработка: Даниил Рябов" />
+    <meta name="author" content="Web-разработка: Виктор Воронков" />
+    <meta name="author" content="Web-разработка: Анна Кособуцкая" />
+    <meta name="author" content="Web-разработка: Екатерина Яковлева" />
+    <meta name="author" content="Web-разработка: Андрей Ланцов" />
+    <meta name="author" content="Web-разработка: Богдан Тимощук" />
+    <meta name="author" content="Web-разработка: Светлана Подсобляева" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="Перевозка экскаватора" />
+    <meta
+      property="og:description"
+      content="RTE Group предлагает специализированные услуги по перевозке экскаваторов для строительных и горнодобывающих проектов. Компания обеспечивает высокое качество услуг благодаря опытным специалистам, современному автопарку и вниманию к деталям. Важность безопасности и своевременности перевозки крупногабаритного оборудования признается компанией, и она гарантирует точную и надежную доставку экскаваторов."
+    />
+    <meta property="og:url" content="https://rt-express.ru/about" />
+    <meta property="og:image" content="https://i.imgur.com/eRmjgqB.png" />
+    <meta property="og:site_name" content="РТ Экспресс" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <title>Перевозка экскаватора</title>
+
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body class="page">
+    <div class="page__container">
+      <%= require('@common.blocks/header.ejs').default %>
+      <main>
+        <section class="info-form" id="get-service">
+          <div class="info-form__container">
+            <h1 class="info-form__title">Перевозка экскаватора</h1>
+            <p class="info-form__about">
+              Экскаваторы – это важная часть многих строительных и
+              горнодобывающих проектов, и их безопасная и своевременная
+              перевозка является ключевым элементом успеха вашего бизнеса. В RTE
+              Group мы понимаем эту ответственность и предлагаем
+              специализированные услуги по перевозке экскаваторов, на которые вы
+              можете полагаться. Наши опытные специалисты, современный автопарк
+              и внимание к деталям обеспечивают непревзойденное качество услуги,
+              адаптированной под ваши уникальные потребности. Мы знаем, как
+              важна каждая деталь в перевозке крупногабаритного оборудования, и
+              мы здесь, чтобы убедиться, что ваш экскаватор будет доставлен в
+              надлежащем состоянии и точно в срок.
+            </p>
+          </div>
+          <form class="form" novalidate>
+            <div class="form__container">
+              <p class="form__title form__text form__text_type_title">
+                Оставить заявку на перевозку
+              </p>
+              <div class="input form__field-name">
+                <div class="input__container name-container">
+                  <input
+                    type="text"
+                    id="name"
+                    class="input__field input__text input__text_type_field"
+                    placeholder=""
+                    required
+                    data-error-message="Поле обязательно для заполнения"
+                  />
+                  <label
+                    class="input__placeholder input__text input__text_type_placeholder name-placeholder"
+                    >Имя*</label
+                  >
+                </div>
+                <span class="input__text_type_error name-error"></span>
+              </div>
+              <div class="input form__field-phone">
+                <div class="input__container phone-number-container">
+                  <input
+                    type="text"
+                    id="phone-number"
+                    class="input__field input__text input__text_type_field"
+                    placeholder=""
+                    required
+                    data-error-message="Поле обязательно для заполнения"
+                  />
+                  <label
+                    class="input__placeholder input__text input__text_type_placeholder phone-number-placeholder"
+                    >Телефон*</label
+                  >
+                </div>
+                <span class="input__text_type_error phone-number-error"></span>
+              </div>
+              <div class="input form__field-details">
+                <div class="input__container">
+                  <textarea
+                    type="text"
+                    id="summary"
+                    class="input__field input__text input__text_type_field"
+                    placeholder=""
+                  ></textarea>
+                  <label
+                    class="input__placeholder input__text input__text_type_placeholder"
+                    >Краткая характеристика груза</label
+                  >
+                </div>
+                <div
+                  class="input__caption form__caption form__checkbox-control-container"
+                >
+                  <label
+                    for="form__checkbox-control"
+                    class="form__checkbox form__checkbox-control-placeholder"
+                    ><input
+                      type="checkbox"
+                      name="caption-checkbox"
+                      id="form__checkbox-control"
+                      class="input__field form__checkbox-control"
+                      required
+                    />
+                    <span class="form__checkbox-viewer"></span>
+                  </label>
+                  <p
+                    class="input__text input__text_type_caption form__text form__text_type_caption"
+                  >
+                    Согласен на обработку персональных данных в соответствии с
+                    <a href="#" class="form__link" target="_blank"
+                      >политикой конфиденциальности</a
+                    >
+                  </p>
+                  <span
+                    class="input__text_type_error form__checkbox-control-error form__checkbox-control-error_inactive"
+                  ></span>
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="button button_type_default form__button"
+              >
+                <p class="button__text">Отправить</p>
+              </button>
+            </div>
+          </form>
+        </section>
+        <section
+          class="gallery-info-cards"
+          id="advantages-excavator-transportation"
+        >
+          <h2 class="gallery-info-cards__header">
+            Преимущества перевозки экскаватора с&nbsp;RTE Group
+          </h2>
+          <div class="gallery-info-cards__gallery">
+            <%=
+            require('@common.blocks/services/advantages-excavator-transportation.ejs').default
+            %>
+          </div>
+        </section>
+        <section
+          class="step-by-step-list"
+          id="process-transporting-excavator"
+        ></section>
+        <%= require('@common.blocks/price-table.ejs').default %>
+        <section class="text-info" id="seo-article">
+          <h2 class="text-info__title">SEO-статья</h2>
+          <div class="text-info__content">
+            <p class="text-info__paragraph">
+              Мы&nbsp;хотим поделиться с&nbsp;вами опытом, накопленным
+              за&nbsp;годы успешной работы в&nbsp;сфере негабаритных
+              грузоперевозок.
+            </p>
+            <p class="text-info__paragraph">
+              Каждый кейс&nbsp;&mdash; это уникальная история, демонстрирующая
+              наши ценности и&nbsp;обязательства перед клиентами. Они
+              показывают, как мы&nbsp;решаем сложные задачи, преодолеваем
+              непредвиденные препятствия и&nbsp;находим эффективные решения для
+              наших заказчиков.
+            </p>
+            <p class="text-info__paragraph">
+              В&nbsp;наших кейсах вы&nbsp;найдете реальные примеры перевозок,
+              от&nbsp;небольших, но&nbsp;нестандартных грузов до&nbsp;крупных
+              и&nbsp;особо сложных проектов. Эти примеры подтверждают нашу
+              способность адаптироваться к&nbsp;различным условиям
+              и&nbsp;потребностям, предоставляя высококачественные услуги
+              в&nbsp;разных сегментах рынка.
+            </p>
+            <p class="text-info__paragraph">
+              Наши кейсы&nbsp;&mdash; это не&nbsp;просто истории успеха; это
+              подтверждение нашего постоянного стремления к&nbsp;совершенству
+              и&nbsp;нашего непрерывного развития в&nbsp;области негабаритных
+              грузоперевозок. Мы&nbsp;приглашаем вас познакомиться с&nbsp;нашим
+              опытом, узнать больше о&nbsp;нашем подходе и&nbsp;увидеть, как RTE
+              Group может стать вашим партнером в&nbsp;решении ваших
+              логистических задач.
+            </p>
+          </div>
+        </section>
+        <section class="gallery-cards" id="cases"></section>
+        <section class="gallery-reviews" id="customer-reviews">
+          <p class="gallery-reviews__title">Отзывы клиентов</p>
+          <div class="gallery-reviews__container">
+            <div class="feedback">
+              <div class="feedback__container">
+                <div class="feedback__short">
+                  <p
+                    class="feedback__shortname feedback__text feedback__text_type_title"
+                  >
+                    КП
+                  </p>
+                </div>
+                <p
+                  class="feedback__title feedback__text feedback__text_type_title"
+                >
+                  Константин Петров
+                </p>
+                <p
+                  class="feedback__about feedback__text feedback__text_type_about"
+                >
+                  Очень приятно работать с этой компанией профессионалов. Все
+                  очень организованно от загрузки до выгрузки, оплата без
+                  проблем, в общем от работы только положительные эмоции.
+                  Рекомендую, а компании желаю успехов и процветания. Отдельное
+                  спасибо Андрею!
+                </p>
+              </div>
+            </div>
+            <div class="feedback">
+              <div class="feedback__container">
+                <div class="feedback__short">
+                  <p
+                    class="feedback__shortname feedback__text feedback__text_type_title"
+                  >
+                    КП
+                  </p>
+                </div>
+                <p
+                  class="feedback__title feedback__text feedback__text_type_title"
+                >
+                  Константин Петров
+                </p>
+                <p
+                  class="feedback__about feedback__text feedback__text_type_about"
+                >
+                  Очень приятно работать с этой компанией профессионалов. Все
+                  очень организованно от загрузки до выгрузки, оплата без
+                  проблем, в общем от работы только положительные эмоции.
+                  Рекомендую, а компании желаю успехов и процветания. Отдельное
+                  спасибо Андрею!
+                </p>
+              </div>
+            </div>
+            <div class="feedback">
+              <div class="feedback__container">
+                <div class="feedback__short">
+                  <p
+                    class="feedback__shortname feedback__text feedback__text_type_title"
+                  >
+                    КП
+                  </p>
+                </div>
+                <p
+                  class="feedback__title feedback__text feedback__text_type_title"
+                >
+                  Константин Петров
+                </p>
+                <p
+                  class="feedback__about feedback__text feedback__text_type_about"
+                >
+                  Очень приятно работать с этой компанией профессионалов. Все
+                  очень организованно от загрузки до выгрузки, оплата без
+                  проблем, в общем от работы только положительные эмоции.
+                  Рекомендую, а компании желаю успехов и процветания. Отдельное
+                  спасибо Андрею!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="list-drop-down" id="frequent-questions">
+          <h2 class="list-drop-down__title section-title">
+            Часто задаваемые вопросы
+          </h2>
+          <div class="list-drop-down__menu">
+            <div class="list-drop-down__item" id="logistic-time">
+              <a class="list-drop-down__item-el" href="#"
+                >Как долго займет доставка моего груза?</a
+              >
+              <button type="button" class="list-drop-down__btn"></button>
+              <template id="list-drop-down__answer">
+                <p class="list-drop-down__answer"></p>
+              </template>
+            </div>
+            <div class="list-drop-down__item" id="price">
+              <a class="list-drop-down__item-el" href="#"
+                >Как узнать стоимость перевозки моего груза?</a
+              >
+              <button type="button" class="list-drop-down__btn"></button>
+            </div>
+            <div class="list-drop-down__item" id="transport-types">
+              <a class="list-drop-down__item-el" href="#"
+                >Какие виды транспорта вы предлагаете для перевозки моего
+                груза?</a
+              >
+              <button type="button" class="list-drop-down__btn"></button>
+            </div>
+            <div class="list-drop-down__item" id="parts-weight">
+              <a class="list-drop-down__item-el" href="#"
+                >Какой объем груза я могу перевезти на вашем транспорте?</a
+              >
+              <button type="button" class="list-drop-down__btn"></button>
+            </div>
+            <div class="list-drop-down__item" id="parts-drop-on-off">
+              <a class="list-drop-down__item-el" href="#"
+                >Как происходит загрузка и выгрузка груза?</a
+              >
+              <button type="button" class="list-drop-down__btn"></button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <%= require('@common.blocks/footer.ejs').default %>
+    </div>
+    <div class="popup">
+      <div class="popup__container">
+        <button class="popup__close"></button>
+        <div class="popup__half">
+          <img
+            src="<%=require('../images/popup__icon@2x.png')%>"
+            alt=""
+            class="popup__image"
+          />
+        </div>
+        <div class="popup__half">
+          <p class="popup__title popup__text popup__text_type_title">
+            Заявка отправлена!
+          </p>
+          <p class="popup__about popup__text popup__text_type_about">
+            Мы свяжемся с вами в ближайшее время
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

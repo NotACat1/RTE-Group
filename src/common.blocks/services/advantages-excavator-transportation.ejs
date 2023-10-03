@@ -1,0 +1,13 @@
+<% let index = 0; %> <% let even = false; %> <%
+advantagesData.advantages.forEach(({ name, imgPath, description }) => { %> <%
+index++; %> <% if (index % 2 == 0) even = !even; %>
+<article class="service <%= even ? 'service_type_even' : 'service_type_odd' %>">
+  <div class="service__container">
+    <div class="service__container-info">
+      <img src="<%= imgPath %>" alt="<%= name %>" class="service__icon service__icon_small" />
+      <h3 class="service__title"><%= name %></h3>
+      <p class="service__about"><%= description %></p>
+    </div>
+  </div>
+</article>
+<% }); %>

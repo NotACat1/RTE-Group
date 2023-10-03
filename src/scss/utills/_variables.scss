@@ -1,0 +1,41 @@
+$bgDarkColor: #1a1a1a;
+$bgGrayColor: #222;
+$primaryGreenColor: #0c6;
+$gray: #808080;
+$white: #fff;
+$colorTypeFail: #f53;
+$screenWidthMedium: 1079px;
+$screenWidthSmall: 767px;
+$colorLinkFooter: #939393;
+$colorGreenDarker: #00994c;
+$colorInputBorderDefault: rgb(128 128 128 / 50%);
+$colorButtonDisabledHover: rgb(255 255 255 / 4%);
+$colorInputBorderHover: #fff;
+$coverMapColor: #d3d3d3;
+$colorShadowsBlack: rgb(0 0 0 / 15%);
+$colorBorder: rgb(255 255 255 / 8%);
+$stroke: rgba(255, 255, 255, 0.08);
+$colorBorderTable: #333;
+
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$container-max-widths: (
+  xs: 328px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1080px,
+);
+
+$z-index-bg: 2;
+$z-index-media: 5;
+$z-index-content: 10;
+$z-index-hight-content: 50;
+$z-index-popup: 100;

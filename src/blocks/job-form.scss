@@ -1,0 +1,150 @@
+/* stylelint-disable */
+@import '@scss/utills/variables';
+@import '@scss/utills/mixins';
+/* stylelint-enable */
+
+.job-form {
+  padding: 24px;
+  max-width: 448px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #222;
+  border-radius: 24px;
+
+  @include media(md) {
+    max-width: 328px;
+    width: 100%;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-rows: auto 24px auto 16px auto 16px auto 24px auto;
+    max-width: 400px;
+    width: 100%;
+
+    @include media(md) {
+      max-width: 296px;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    @include reset();
+    @include text();
+
+    color: $white;
+
+    &_type_title {
+      @include text-format(20px, 700, 1.3);
+    }
+  }
+
+  &__title {
+    grid-row: 1;
+
+    @include media(md) {
+      max-width: 296px;
+      width: 100%;
+
+      &_mobile {
+        font-size: 0;
+      }
+    }
+  }
+
+  &__caption {
+    display: flex;
+    grid-row: 11;
+    padding: 16px 0 0;
+  }
+
+  &__link {
+    color: $primaryGreenColor;
+    text-decoration: none;
+  }
+
+  &__button {
+    grid-row: 13;
+  }
+
+  &__field-name {
+    grid-row: 3;
+  }
+
+  &__field-phone {
+    grid-row: 7;
+  }
+
+  &__field-e-mail {
+    grid-row: 5;
+  }
+
+  &__field-details {
+    grid-row: 9;
+    height: auto;
+    margin-bottom: 24px;
+  }
+
+  &__field-details > .input__container {
+    min-height: 114px;
+  }
+
+  &__field-details > .input__container > .input__field {
+    resize: none;
+    min-height: calc(114px - 25px);
+    overflow: hidden;
+  }
+
+  &__checkbox {
+    display: inline-block;
+    position: relative;
+    height: 24px;
+    width: 24px;
+    margin-right: 23px;
+  }
+
+  &__checkbox-viewer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 24px;
+    width: 24px;
+    background-image: url('../images/form__checkbox-empty@2x.png');
+    background-size: contain;
+    z-index: 1;
+  }
+
+  &__checkbox-control {
+    @include reset();
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+
+    &_invalid ~ .form__checkbox-viewer {
+      background-image: url('../images/checkbox_invalid.png');
+    }
+
+    &:checked ~ .form__checkbox-viewer {
+      background-image: url('../images/form__checkbox-filled@2x.png');
+    }
+  }
+
+  &__desktop-contacts {
+    @include media(md) {
+      display: none;
+    }
+  }
+  &__mobile-contacts {
+    display: none;
+
+    @include media(md) {
+      display: inline-block;
+    }
+  }
+}

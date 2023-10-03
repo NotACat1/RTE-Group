@@ -1,0 +1,11 @@
+<section class="slider" style="--slides: 8; --current: 2">
+  <div class="slider__container">
+		<% slidersData.sliders.forEach(({ href, alt }) => { %>
+			<img
+				class="slider__item-el"
+				src="<%= href %>"
+				alt="<%= alt %>"
+			/>
+		<% }); %>
+  </div>
+</section>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Meta tags of site pages -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="description"
+      content="Компания RTE Group осуществляет перевозки по всем городам России."
+    />
+    <meta name="keywords" content="HTML5, CSS" />
+    <meta name="author" content="Web-разработка: Ильяс Сибгатуллин" />
+    <meta name="author" content="Web-разработка: Даниил Рябов" />
+    <meta name="author" content="Web-разработка: Виктор Воронков" />
+    <meta name="author" content="Web-разработка: Анна Кособуцкая" />
+    <meta name="author" content="Web-разработка: Екатерина Яковлева" />
+    <meta name="author" content="Web-разработка: Андрей Ланцов" />
+    <meta name="author" content="Web-разработка: Богдан Тимощук" />
+    <meta name="author" content="Web-разработка: Светлана Подсобляева" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="Города" />
+    <meta
+      property="og:description"
+      content="Компания RTE Group осуществляет перевозки по всем городам России."
+    />
+    <meta property="og:url" content="https://rt-express.ru/cities" />
+    <meta property="og:image" content="https://i.imgur.com/eRmjgqB.png" />
+    <meta property="og:site_name" content="РТ Экспресс" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <title>Города</title>
+
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body class="page">
+    <div class="page__container">
+      <%= require('@common.blocks/header.ejs').default %>
+      <main>
+        <section class="intro" id="intro-cities">
+          <h2 class="intro__title">Города</h2>
+          <div class="intro__block-text">
+            <p class="intro__paragraph">
+              В&nbsp;мире негабаритных грузоперевозок границы и&nbsp;расстояния
+              часто теряют свою значимость. В&nbsp;RTE Group мы&nbsp;понимаем,
+              что потребности в&nbsp;перевозках могут возникнуть в&nbsp;любом
+              уголке нашей огромной страны, и&nbsp;мы&nbsp;готовы ответить
+              на&nbsp;эти потребности.
+            </p>
+            <p class="intro__paragraph">
+              Наша компания не&nbsp;привязана к&nbsp;какому-то конкретному
+              городу или региону России. Мы&nbsp;верим в&nbsp;то, что
+              качественные грузоперевозки должны быть доступны всем, независимо
+              от&nbsp;их&nbsp;географического местоположения. Благодаря широкой
+              сети партнеров и&nbsp;опытному персоналу, мы&nbsp;можем принимать
+              заказы на&nbsp;негабаритные грузоперевозки из&nbsp;любого города
+              России.
+            </p>
+            <p class="intro__paragraph">
+              С&nbsp;нами вы&nbsp;можете быть уверены, что ваш груз будет
+              доставлен своевременно и&nbsp;безопасно, независимо от&nbsp;того,
+              находитесь&nbsp;ли вы&nbsp;в&nbsp;Москве, Владивостоке или
+              в&nbsp;любом другом регионе страны. Мы&nbsp;осуществляем
+              транспортировку грузов с&nbsp;соблюдением всех стандартов качества
+              и&nbsp;с&nbsp;учетом индивидуальных потребностей клиента.
+            </p>
+          </div>
+          <div
+            class="big-logo big-logo_bg big-logo_fill big-logo_sizes_slim big-logo_position_third big-logo_rotate_45"
+          ></div>
+        </section>
+        <%= require('@common.blocks/gallery-cities-cards.ejs').default %>
+      </main>
+      <%= require('@common.blocks/footer.ejs').default %>
+    </div>
+  </body>
+</html>

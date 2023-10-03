@@ -1,0 +1,40 @@
+/* stylelint-disable */
+@import "@scss/utills/_mixins";
+@import "@scss/utills/_variables";
+/* stylelint-enable */
+
+.nav {
+  &__list {
+    @include reset();
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 16px;
+    list-style: none;
+    @include media(md) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  &__list-item {
+    padding: 8px 16px;
+    border-radius: 32px;
+    transition: background-color 0.5s ease;
+    &:hover {
+      background: $colorButtonDisabledHover;
+    }
+    @include media(md) {
+      border-radius: 0;
+      padding: 16px 24px;
+    }
+    //@include hover-animation;
+  }
+
+  &__link {
+    @include text_type_header;
+    text-align: center;
+    text-decoration: none;
+    color: $white;
+  }
+}

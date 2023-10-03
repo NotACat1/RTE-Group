@@ -1,0 +1,73 @@
+/* stylelint-disable */
+@import '@scss/utills/variables';
+@import '@scss/utills/mixins';
+/* stylelint-enable */
+
+.info-form {
+  @include container-max-widths;
+
+  display: grid;
+  grid-template-columns: 576px 432px;
+  column-gap: 24px;
+  margin: 96px auto 128px;
+
+  @include media(md) {
+    grid-template-columns: 328px;
+  }
+
+  &__container {
+    display: block;
+  }
+
+  &__title {
+    @include text;
+    @include text_type_section;
+
+    margin: 0;
+    padding-top:24px;
+
+    @include media(md) {
+      @include text_h_h3;
+    }
+  }
+
+  &__about {
+    @include text;
+    @include text_type_regular;
+
+    margin: 0;
+    margin-top: 32px;
+  }
+
+  &__badges {
+    display: flex;
+    flex-direction: row;
+    margin: 32px 0;
+
+    @include media(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__badge {
+    @include text;
+    @include text-format(12px, 400, 100%);
+
+    background-color: $bgGrayColor;
+    border-radius: 12px;
+    padding: 12px;
+    width: 100%;
+
+    @include media(md) {
+      flex-direction: column;
+      margin: 0;
+      max-width: 260px;
+      width: 100%;
+    }
+
+    &__badge:last-of-type {
+      margin-top: 8px;
+      max-width: 68px;
+    }
+  }
+}

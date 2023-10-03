@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Meta tags of site pages -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="description"
+      content="RTE Group — это ведущая транспортная компания, специализирующаяся на негабаритных грузоперевозках. Мы стремимся обеспечивать безопасные, эффективные и надежные услуги, отвечая самым высоким стандартам отрасли. Наша миссия — содействовать успеху вашего бизнеса, обеспечивая логистические решения, на которые вы можете полагаться.
+В RTE Group мы верим в честность, прозрачность и ответственность во всех аспектах нашей деятельности. Наши ценности отражают нашу стратегию и определяют, как мы работаем с нашими клиентами, партнерами и сотрудниками"
+    />
+    <meta name="keywords" content="HTML5, CSS" />
+    <meta name="author" content="Web-разработка: Ильяс Сибгатуллин" />
+    <meta name="author" content="Web-разработка: Даниил Рябов" />
+    <meta name="author" content="Web-разработка: Виктор Воронков" />
+    <meta name="author" content="Web-разработка: Анна Кособуцкая" />
+    <meta name="author" content="Web-разработка: Екатерина Яковлева" />
+    <meta name="author" content="Web-разработка: Андрей Ланцов" />
+    <meta name="author" content="Web-разработка: Богдан Тимощук" />
+    <meta name="author" content="Web-разработка: Светлана Подсобляева" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="О компании" />
+    <meta
+      property="og:description"
+      content="RTE Group — это ведущая транспортная компания, специализирующаяся на негабаритных грузоперевозках. Мы стремимся обеспечивать безопасные, эффективные и надежные услуги, отвечая самым высоким стандартам отрасли. Наша миссия — содействовать успеху вашего бизнеса, обеспечивая логистические решения, на которые вы можете полагаться.
+В RTE Group мы верим в честность, прозрачность и ответственность во всех аспектах нашей деятельности. Наши ценности отражают нашу стратегию и определяют, как мы работаем с нашими клиентами, партнерами и сотрудниками"
+    />
+    <meta property="og:url" content="https://rt-express.ru/about" />
+    <meta property="og:image" content="https://i.imgur.com/eRmjgqB.png" />
+    <meta property="og:site_name" content="РТ Экспресс" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <title>О компании</title>
+
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body class="page">
+    <div class="page__container">
+      <%= require('@common.blocks/header.ejs').default %>
+      <main>
+        <section class="intro" id="about"></section>
+        <section class="ideas-cards" id="ideas"></section>
+        <section class="team-text" id="team-text"></section>
+        <section class="gallery-info-cards" id="team-cards"></section>
+      </main>
+      <%= require('@common.blocks/footer.ejs').default %>
+    </div>
+  </body>
+</html>

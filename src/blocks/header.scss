@@ -1,0 +1,171 @@
+/* stylelint-disable */
+@import "@scss/utills/variables";
+@import "@scss/utills/mixins";
+/* stylelint-enable */
+
+.header {
+  @include reset();
+  position: relative;
+  z-index: $z-index-hight-content;
+  width: 100%;
+  background-color: $bgGrayColor;
+  @include media(md) {
+    background-color: $bgDarkColor;
+  }
+
+  &__container {
+    @include reset();
+    @include container-max-widths;
+    background-color: inherit;
+    position: relative;
+    z-index: 100;
+    box-sizing: border-box;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-icon {
+    display: block;
+    &_desktop {
+      width: 153px;
+      @include media(sm) {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      width: 28px;
+      display: none;
+      @include media(sm) {
+        display: block;
+      }
+    }
+  }
+
+  &__contact {
+    @include text_type_header;
+    @include text;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $white;
+    margin-left: auto;
+    margin-right: 24px;
+    @include media(sm) {
+      margin-right: auto;
+    }
+    @include hover-animation;
+  }
+
+  &__contact-icon {
+    width: 17px;
+  }
+
+  &__contact-text {
+    @include reset();
+    @include text_type_header;
+  }
+
+  &__place-order-btn {
+    @include reset_button;
+    @include text_type_header;
+    @include button_type_fill;
+    box-sizing: border-box;
+    color: $white;
+    padding: 8px 16px;
+    @include media(md) {
+      display: none;
+    }
+    &_nav {
+      display: none;
+      margin-top: 16px;
+      margin-bottom: 24px;
+      padding: 16px 24px;
+      @include media(md) {
+        display: block;
+      }
+    }
+  }
+
+  &__list-btn {
+    @include reset_button;
+    width: 24px;
+    height: 24px;
+    background-image: url("~@images/header_list.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    @include media(md) {
+      display: block;
+      transition: background-image 0.5s ease;
+    }
+
+    &_open {
+      background-image: url("~@images/close-btn.svg");
+    }
+  }
+
+  &__popup {
+    position: relative;
+  }
+
+  &__nav {
+    @include reset();
+    z-index: 4;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 0;
+    background-color: $bgDarkColor;
+    @include media(md) {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &_open {
+        animation: slideDown 0.5s ease forwards;
+      }
+
+      &_close {
+        animation: slideUp 0.5s ease forwards;
+      }
+    }
+  }
+
+  &__nav-container {
+    @include reset();
+    @include container-max-widths;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    @include media(md) {
+      min-height: 576px;
+    }
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}

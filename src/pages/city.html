@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Meta tags of site pages -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="description"
+      content="Негабаритные перевозки и транспортные услуги в Казани."
+    />
+    <meta name="keywords" content="HTML5, CSS" />
+    <meta name="author" content="Web-разработка: Ильяс Сибгатуллин" />
+    <meta name="author" content="Web-разработка: Даниил Рябов" />
+    <meta name="author" content="Web-разработка: Виктор Воронков" />
+    <meta name="author" content="Web-разработка: Анна Кособуцкая" />
+    <meta name="author" content="Web-разработка: Екатерина Яковлева" />
+    <meta name="author" content="Web-разработка: Андрей Ланцов" />
+    <meta name="author" content="Web-разработка: Богдан Тимощук" />
+    <meta name="author" content="Web-разработка: Светлана Подсобляева" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="Города" />
+    <meta
+      property="og:description"
+      content="Негабаритные перевозки и транспортные услуги в Казани."
+    />
+    <meta property="og:url" content="https://rt-express.ru/cities/kazan" />
+    <meta property="og:image" content="https://i.imgur.com/eRmjgqB.png" />
+    <meta property="og:site_name" content="РТ Экспресс" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <title>Города: Казань</title>
+
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body class="page">
+    <div class="page__container">
+      <%= require('@common.blocks/header.ejs').default %>
+      <main>
+        <section class="intro" id="intro-cities-kazan"></section>
+        <section
+          class="gallery-advantages-cards"
+          id="list-advantages"
+        ></section>
+        <section class="intro" id="intro-cities-kazan-d"></section>
+        <section class="gallery-info-cards">
+          <div class="gallery-info-cards__gallery">
+            <article class="service service_type_even">
+              <h2 class="service__header">Транспортные услуги в Казани</h2>
+              <div
+                class="big-logo big-logo_bg big-logo_border big-logo_sizes_slim big-logo_position_third big-logo_rotate_45"
+              ></div>
+            </article>
+            <%=
+            require('@common.blocks/services/servises-with-header.ejs').default
+            %>
+          </div>
+        </section>
+        <section class="cases-cards" id="list-cases-kazan"></section>
+        <section class="gallery-reviews" id="list-reviews-kazan">
+          <p class="gallery-reviews__title">Отзывы клиентов</p>
+          <div class="gallery-reviews__container">
+            <div class="feedback">
+              <div class="feedback__container">
+                <div class="feedback__short">
+                  <p
+                    class="feedback__shortname feedback__text feedback__text_type_title"
+                  >
+                    КП
+                  </p>
+                </div>
+                <p
+                  class="feedback__title feedback__text feedback__text_type_title"
+                >
+                  Константин Петров
+                </p>
+                <p
+                  class="feedback__about feedback__text feedback__text_type_about"
+                >
+                  Очень приятно работать с этой компанией профессионалов. Все
+                  очень организованно от загрузки до выгрузки, оплата без
+                  проблем, в общем от работы только положительные эмоции.
+                  Рекомендую, а компании желаю успехов и процветания. Отдельное
+                  спасибо Андрею!
+                </p>
+              </div>
+            </div>
+            <div class="feedback">
+              <div class="feedback__container">
+                <div class="feedback__short">
+                  <p
+                    class="feedback__shortname feedback__text feedback__text_type_title"
+                  >
+                    КП
+                  </p>
+                </div>
+                <p
+                  class="feedback__title feedback__text feedback__text_type_title"
+                >
+                  Константин Петров
+                </p>
+                <p
+                  class="feedback__about feedback__text feedback__text_type_about"
+                >
+                  Очень приятно работать с этой компанией профессионалов. Все
+                  очень организованно от загрузки до выгрузки, оплата без
+                  проблем, в общем от работы только положительные эмоции.
+                  Рекомендую, а компании желаю успехов и процветания. Отдельное
+                  спасибо Андрею!
+                </p>
+              </div>
+            </div>
+            <div class="feedback">
+              <div class="feedback__container">
+                <div class="feedback__short">
+                  <p
+                    class="feedback__shortname feedback__text feedback__text_type_title"
+                  >
+                    КП
+                  </p>
+                </div>
+                <p
+                  class="feedback__title feedback__text feedback__text_type_title"
+                >
+                  Константин Петров
+                </p>
+                <p
+                  class="feedback__about feedback__text feedback__text_type_about"
+                >
+                  Очень приятно работать с этой компанией профессионалов. Все
+                  очень организованно от загрузки до выгрузки, оплата без
+                  проблем, в общем от работы только положительные эмоции.
+                  Рекомендую, а компании желаю успехов и процветания. Отдельное
+                  спасибо Андрею!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <%= require('@common.blocks/footer.ejs').default %>
+    </div>
+  </body>
+</html>
