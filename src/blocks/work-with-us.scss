@@ -1,17 +1,87 @@
 .work-with-us {
   @include container-max-widths;
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
+  display: grid;
+  grid-template-areas:
+    'title form'
+    'content form'
+    'content .';
+  grid-template-columns: repeat(2, minmax(1fr, 608px));
+  column-gap: 24px;
   margin-top: 96px;
   margin-bottom: 128px;
+
+  @include media(md) {
+    grid-template-areas:
+    'title'
+    'form'
+    'content';
+    grid-template-columns: 328px;
+  }
 
   &__main-content {
     max-width: 608px;
     width: 100%;
+    grid-area: content;
+
+    @include media(md) {
+      max-width: 328px;
+    }
   }
 
   &__form {
     max-width: 448px;
+    grid-area: form;
+
+    @include media(md) {
+      max-width: 328px;
+    }
+  }
+
+  &__title {
+    @include text;
+    @include text_type_section;
+    margin: 0;
+    grid-area: title;
+
+    @include media(md) {
+      @include text_h_h3;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__subtitle {
+    @include text;
+    @include text_h_h3;
+    margin: 80px 0 40px 0;
+
+    @include media(md) {
+      @include text_type_card-title;
+      margin: 48px 0 24px 0;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  &__table-row {
+    @include text_type_header;
+    box-sizing: border-box;
+    border-top: 1px solid $colorBorderTable;
+    border-bottom: 1px solid $colorBorderTable;
+    box-sizing: border-box;
+    padding: 16px 24px;
+    text-align: start;
+    color: $white;
+  }
+
+  &__table-column {
+    box-sizing: border-box;
+    padding: 16px 24px;
+    text-align: start;
+    color: $white;
+    @include text_type_regular;
   }
 }
